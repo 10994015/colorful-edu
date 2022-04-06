@@ -7,6 +7,7 @@
         <div><img src="./images/banner.png"></div>
         <div><img src="./images/banner2.png"></div>
         <div><img src="./images/banner3.png"></div>
+        <div><img src="./images/banner4.png"></div>
     </div>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
