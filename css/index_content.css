@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#index_content {
+  min-width: 100%;
+  margin-top: 60px;
+}
+
+#index_content .responsive {
+  min-width: 100%;
+  position: relative;
+}
+
+#index_content .responsive > div {
+  min-width: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+#index_content .responsive > div > img {
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=index_content.css.map */

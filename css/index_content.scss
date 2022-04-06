@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+}
+#index_content{
+    min-width:100%;
+    margin-top:60px;
+    .responsive{
+        min-width:100%;
+        position: relative;
+        >div{
+            min-width:100%;
+            cursor: grab;
+            >img{
+                min-width: 100%;
+                object-fit: cover;
+                
+            }
+        }
+    }
+}
