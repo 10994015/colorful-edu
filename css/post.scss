@@ -1,0 +1,142 @@
+#text{
+    display: flex;
+    flex-direction: column;
+    width:56%;
+    margin:auto;
+    padding-top: 8em;
+    padding-bottom: 50px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    @media screen and (max-width:1024px){
+        width:80%;
+    }
+    > img{
+        width:100%;
+        margin:25px auto;
+        min-height: 200px;
+        height: auto;
+        object-fit: cover;
+         @media screen and (max-width:550px){
+            height: 300px;
+        }
+    }
+    > h2{
+        font-size: 30px;
+        color:#333;
+        margin:auto;
+        width:100%;
+        display: block;
+    }
+    > p{
+        width:100%;
+        color:#666;
+        margin:25px auto;
+        font-size: 18px;
+        @media screen and (max-width:1024px){
+            margin:25px auto 75px;
+        }
+    }
+    > .smallVideoBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width:100%;
+        > video{
+            margin:5px 0;
+            margin-right: 5px;
+        }
+    }
+    > .smallImgBox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width:100%;
+        margin:auto;
+         @media screen and (max-width:500px){
+                justify-content: center;
+            }
+        > img{
+            width:30%;
+            height: 250px;
+            margin:5px 0;
+            margin-right: 10px;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+            @media screen and (max-width:768px){
+                width:48%;
+            }
+            @media screen and (max-width:500px){
+                width:100%;
+                margin-right: 0;
+                margin: 10px 0;
+            }
+        }
+    }
+    >.moudel{
+        width:100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 99999999999999999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        >.back{
+            width:100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left:0;
+            background-color: rgba(0,0,0,.5);
+        }
+        >.moudel-imgbox{
+            max-height: 600px;
+            width:auto;
+            border:8px #fff solid;
+            border-radius: 5px;
+            overflow: hidden;
+            z-index: 999999999999999;
+            position: relative;
+            >img{
+                height: 600px;
+                width:auto;
+            }
+            > i{
+                position: absolute;
+                top: 10px;
+                right:10px;
+                font-size: 36px;
+                cursor: pointer;
+            }
+        }
+       
+    }
+}
+
+#error{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100vh;
+    flex-direction: column;
+    >img{
+        width:250px;
+        margin:15px 0;
+    }
+    > h1{
+        color:#f00;
+        font-size: 50px;
+        margin:15px 0;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+    > a{
+        color:#111;
+        margin:15px 0;
+        font-size: 24px;
+        &:hover{
+            border-bottom:2px #000 solid;
+        }
+    }
+}
