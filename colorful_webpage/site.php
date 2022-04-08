@@ -44,15 +44,15 @@
   <div class="leaseModule" id="leaseModule">
       <div class="contentModule">
           <div class="header">我要租借 <i class="fas fa-times" id="leaseClose"></i></div>
-          <form class="content">
-              <label for="leaseSite"><p>租借場地: <span>(必填)</span> </p><input id="leaseSite" value="冰芬美語" disabled></label>
-              <label for="leaseName"><p>您的大名:<span>(必填)</span></p><input id="leaseName" placeholder="ex:王冰芬" required></label>
-              <label for="leasePhone"><p>聯絡電話:<span>(必填)</span></p><input id="leasePhone" required></label>
-              <label for="leaseEmail"><p>電子信箱:<span>(必填)</span></p><input type="email" id="leaseEmail" required></label>
-              <label for="leaseTimeStart"><p>租借時間:<span>(必填)</span></p><input type="date" id="leasleaseTimeStarteTime" required></label>
-              <label for="leaseTimeEnd"><p>至</p><input type="date" id="leaseTimeEnd" required></label>
-              <label for="leaseUse"><p>租借用途:</p><textarea placeholder="請簡短說明..." name="" id="leaseUse"></textarea></label>
-              <label for="submit"><input type="submit" id="submit" value="租借"></label>
+          <form class="content" action="./ref/lendSend.php" method="POST">
+              <div><p>租借場地: <span>(必填)</span> </p><input id="leaseSite" name="leaseSite" value="冰芬美語" disabled></div>
+              <div><p>您的大名:<span>(必填)</span></p><input id="leaseName" name="leaseName" placeholder="ex:王冰芬" required></div>
+              <div><p>聯絡電話:<span>(必填)</span></p><input id="leasePhone" name="leasePhone" required></div>
+              <div><p>電子信箱:<span>(必填)</span></p><input type="email" id="leaseEmail" name="leaseEmail" required></div>
+              <div><p>租借時間:<span>(必填)</span></p><input type="date" id="leaseTimeStart" name="leaseTimeStart" required></div>
+              <div><p>至</p><input type="date" id="leaseTimeEnd" name="leaseTimeEnd" required></div>
+              <div><p>租借用途:</p><textarea placeholder="請簡短說明..." name="leaseUse" id="leaseUse" value=""></textarea></div>
+              <div><input type="submit" id="submit" name="submit" value="租借"></div>
           </form>
       </div>
   </div>

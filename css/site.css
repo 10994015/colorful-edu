@@ -290,21 +290,21 @@
           align-items: center;
 }
 
-#site .leaseModule .contentModule > form > label {
+#site .leaseModule .contentModule > form > div {
   padding: 3px 0;
 }
 
-#site .leaseModule .contentModule > form > label > p {
+#site .leaseModule .contentModule > form > div > p {
   font-weight: 600;
   margin-bottom: 1px;
 }
 
-#site .leaseModule .contentModule > form > label > p > span {
+#site .leaseModule .contentModule > form > div > p > span {
   font-size: 14px;
   color: #555;
 }
 
-#site .leaseModule .contentModule > form > label > input {
+#site .leaseModule .contentModule > form > div > input {
   width: 300px;
   height: 28px;
   padding: 0 5px;
@@ -313,7 +313,7 @@
   border-radius: 6px;
 }
 
-#site .leaseModule .contentModule > form > label > textarea {
+#site .leaseModule .contentModule > form > div > textarea {
   width: 300px;
   height: 40px;
   padding: 6px 5px;
@@ -322,7 +322,7 @@
   border-radius: 6px;
 }
 
-#site .leaseModule .contentModule > form > label > input[type="submit"] {
+#site .leaseModule .contentModule > form > div > input[type="submit"] {
   background-color: #FF876E;
   height: 40px;
   border: none;
@@ -332,7 +332,7 @@
   cursor: pointer;
 }
 
-#site .leaseModule .contentModule > form > label > input[type="submit"]:hover {
+#site .leaseModule .contentModule > form > div > input[type="submit"]:hover {
   background-color: #fa684b;
   -webkit-transition: .5s;
   transition: .5s;
