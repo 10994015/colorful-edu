@@ -95,7 +95,7 @@ try{
         <a href="./newsCreate.php">新增公告</a>
         <?php foreach($RS_mb as $item){ ?>
         <div class="list">
-            <img src="..<?php echo $item['imgsrc']; ?>" alt="">
+            <img src="<?php echo $item['imgsrc']; ?>" alt="">
             <div class="content">
                 <h4><?php echo $item['title']; ?></h4>
                 <p class="contentText"><?php echo $item['content']; ?></p>

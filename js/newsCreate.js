@@ -9,7 +9,13 @@ const selectImgClose = document.getElementById('selectImgClose');
 const imglist = document.getElementsByClassName('imglist');
 
 const chkSelectBtn = document.getElementById('chkSelectBtn');
+const beforeImg = document.getElementById('beforeImg');
+const imgsrc = document.getElementById('imgsrc');
+const content = document.getElementById('content');
+const title = document.getElementById('title');
+const createSubmit = document.getElementById('createSubmit');
 
+let simgsrc = null;
 uploadImgBtn.addEventListener('click',()=>{
     uplaodImgBox.style.display = "flex";
 })
@@ -33,12 +39,39 @@ const clearBorder = ()=>{
 const chkimg = (e)=>{
     clearBorder();
     e.target.style.border = "3px #333 solid";
+    simgsrc = e.target.src;
+    chkSelectBtn.classList.remove('disabled');
+    chkSelectBtn.addEventListener('click',chkSelectFn)
+
 }
 
 for(let i=0;i<imglist.length;i++){
     imglist[i].addEventListener('click', chkimg);
 }
+const chkSelectFn = ()=>{
+    beforeImg.src = simgsrc;
+    imgsrc.value = simgsrc;
+    alert('選擇成功!');
+    chageColmun();
+    selectImgBox.style.display = "none";
+}
 
-chkSelectBtn.addEventListener('click',()=>{
-    
-})
+let url = location.href;
+if(url.split('?')[1] != undefined){
+    let queryString = url.split('?')[1].split('=')[0];
+    let queryStringData = url.split('?')[1].split('=')[1];
+    if(queryString==='upload' && queryStringData==='ok'){
+        selectImgBox.style.display = "flex";
+    }
+}
+title.addEventListener('change',chageColmun);
+content.addEventListener('change',chageColmun);
+
+
+function chageColmun(){
+    if(title.value !='' && imgsrc.value !='' && content.value !=''){
+        createSubmit.disabled = false;
+    }else{
+        createSubmit.disabled = true;
+    }
+}

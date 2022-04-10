@@ -1,6 +1,17 @@
 <?php 
+require_once('../config/conn.php');
 if(isset($_POST['title']) && $_POST['title']!=""){
     $title = $_POST['title'];
     $content = $_POST['content'];
-    print_r($image);
+    $imgsrc = $_POST['imgsrc'];
+    $sql_str = "INSERT INTO news (title,content,imgsrc) VALUES (:title,:content,:imgsrc)";
+    $stmt = $conn -> prepare($sql_str);
+
+    $stmt -> bindParam(':title' ,$title);
+    $stmt -> bindParam(':content' ,$content);
+    $stmt -> bindParam(':imgsrc' ,$imgsrc);
+    $stmt ->execute();
+
+    
+    echo "<script>alert('新增成功!');window.location.href = 'news.php' </script>";
 }

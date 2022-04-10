@@ -31,6 +31,11 @@ try{
         form >input , form textarea{
             width:100%;
             margin:10px 0;
+            height: 30px;
+        }
+        form textarea{
+            height: 200px;
+            resize: none;
         }
         form >div{
             display: flex;
@@ -71,7 +76,7 @@ try{
         #uploadImgBtn{
             position:absolute;
             top: 10px;
-            left:10px;
+            left:35px;
             display: block;
             width:100px;
             height: 35px;
@@ -114,6 +119,8 @@ try{
             box-sizing: border-box;
             position:relative;
             overflow-y:scroll; 
+            padding-top: 170px;
+            
         }
         #selectImgBox > .box > .imgbox{
             display: flex;
@@ -131,9 +138,6 @@ try{
             cursor: pointer;
         }
         #chkSelectBtn{
-            position:absolute;
-            right:10px;
-            bottom:10px;
             display: block;
             width:100px;
             height: 35px;
@@ -144,6 +148,28 @@ try{
             font-weight: 600;
             text-decoration: none;
             font-size: 16px;
+            margin-top: 25px;
+        }
+        #beforeImg{
+            width:150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        #selectImgBtn{
+            width:110px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #333;
+            color:#fff;
+            text-align: center;
+            font-weight: 600;
+            display: block;
+            cursor: pointer;
+            margin-bottom: 8px;
+        }
+        #chkSelectBtn.disabled{
+            background-color: #ccc;
+            cursor: default;
         }
     </style>
 </head>
@@ -151,12 +177,12 @@ try{
     <div class="createNews">
         <h3>新增公告</h3>
         <form action="./newsCreateCheck.php" method="POST">
-            <input type="text" placeholder="請輸入標題..."  name="title">
-            
             <div id="selectImgBtn">選擇封面照</div>
-            <div></div>
-            <textarea name="" name="content" cols="30" rows="10"  placeholder="請輸入內文..."></textarea>
-            <input type="submit" name="submit" value="新增" />
+            <img src="../images/no.png" id="beforeImg">
+            <input type="text" placeholder="請輸入標題..."  name="title" id="title">
+            <input type="hidden" value="" name="imgsrc" id="imgsrc">
+            <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
+            <input type="submit" name="submit" value="新增" id="createSubmit" disabled />
         </form>
        <div id="uplaodImgBox">
            <div class="box">
@@ -176,7 +202,7 @@ try{
                <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
                <?php } ?>
            </div>
-           <a href="javascript:;" id="chkSelectBtn">選擇</a>
+           <a href="javascript:;" id="chkSelectBtn" class="disabled">選擇</a>
            </div>
        </div>
     </div>

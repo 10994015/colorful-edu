@@ -45,7 +45,8 @@ if (isset($_FILES['upload_img'])) {
         $result = unlink($path.$file_name);
         echo '<br>---------檔案刪除' . $result;
       }
-      header('Location:newsCreate.php');
+      // header('Location:newsCreate.php');
+      echo "<script>alert('上傳成功!');window.location.href = 'newsCreate.php?upload=ok' </script>";
    
     } else {
       //這裡表示上傳有錯誤, 匹配錯誤編號顯示對應的訊息
