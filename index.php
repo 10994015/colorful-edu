@@ -18,6 +18,8 @@ if( isset($_GET['page']) && $_GET['page']!='' ){
    
 </head>
 <body>
+    <h1 class="hidden">冰芬文教</h1>
+    <p  class="hidden">冰芬文教幫助您進行課程規劃，另外還有人才培育與場地租借的服務，有興趣的朋友歡迎聯絡我們，一起加入冰芬文教!</p>
     <header id="header">
         <a href="./" id="logo"><img src="./images/logo.png" alt=""></a>
         <ul id="list">
