@@ -11,22 +11,22 @@
             <div class="contactus">
                 <h2>聯絡資訊</h2>
                 <p>聯絡電話:03-5670018</p>
-                <p>客服中心:<br>Jenny.Peng@ice-finland.pro</p>
+                <p>客服中心:<br>service@ice-finland.pro</p>
                 <p>地址:<br>300新竹市東區光復路一段271號3樓(原聯合補習班址、台新銀行樓上)</p>
                 <p>企業合作:
                     <!-- cuclass -->
-                    清大Stem Shcool
+                    清大Steam Shcool
                     憶旺智慧
                 </p>
             </div>
             <div class="about">
                 <h2>關於冰芬</h2>
-                <a href="?page=about">關於我們</a>
-                <a href="?page=contact">聯絡我們</a>
-                <a href="?page=faq">常見問題</a>
-                <a href="?page=addmember">加入會員</a>
-                <a href="?page=privacypolicy">隱私政策</a>
-                <a href="?page=serve">服務條款</a>
+                <a href="./?page=course">關於我們</a>
+                <a href="./?page=contact">聯絡我們</a>
+                <a href="javascript:;">常見問題</a>
+                <a href="javascript:;">加入會員</a>
+                <a href="javascript:;">隱私政策</a>
+                <a href="javascript:;">服務條款</a>
             </div>
             <div class="link">
                 <h2>追蹤我們</h2>

@@ -60,7 +60,8 @@
                 margin: auto;
             }
             >img{
-                min-width:350px;
+                width:350px;
+                max-width:350px;
                 height: 210px;
                 object-fit: cover;
                 margin-right: 25px;

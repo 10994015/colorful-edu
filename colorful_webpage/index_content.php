@@ -14,15 +14,15 @@
         <div class="content">
             <a href="javascript:;">
                 <h2>STEAM SCHOOL</h2>
-                <img src="./images/003.png" alt="">
+                <img src="./images/003.png" class="courseImg">
             </a>
             <a href="javascript:;">
                 <h2>機器人STEAM教室</h2>
-                <img src="./images/001.png" alt="">
+                <img src="./images/001.png" class="courseImg">
             </a>
             <a href="javascript:;">
                 <h2>夏令營新生家長說明會</h2>
-                <img src="./images/002.png" alt="">
+                <img src="./images/002.png" class="courseImg">
             </a>
         </div>
     </div>
@@ -91,8 +91,16 @@
         </div>
         <a href="?page=site" class="seemore">SEE MORE</a>
     </div>
+    <div id="courseImgModule">
+        <div class="back" id="moduleBack"></div>
+        <div class="moduleBox">
+            <i class="fas fa-times" id="moduleClose"></i>
+            <img src="./images/a.jpg" id="moduleImg">
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./shared/slick-1.6.0/slick/slick.min.js"></script>
 <script src="./js/slick.js"></script>
+<script src="./js/index_content.js"></script>

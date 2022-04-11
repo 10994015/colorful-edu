@@ -11,7 +11,18 @@ if(isset($_POST['leaseName'])){
       
         $result2 = sendMail($leaseSite,$leaseName,$leasePhone,$leaseEmail,$leaseTimeStart,$leaseTimeEnd,$leaseUse);
         if($result2 == 1){
-            echo "<script> alert('發送成功\n我們會盡快回復您!'); location.href='../?page=site'</script>";
+            // header('Location:../?page=site');
+            ?>
+            <script>
+            window.onload = ()=>{
+                alertFn();
+                function alertFn(){
+                    alert('發送成功!我們將盡快與您聯絡!');
+                    window.location.href = '../?page=site';
+                }
+            }
+            </script>
+            <?php
         }else{
             header('Location:../?page=error');
         }
@@ -32,10 +43,10 @@ function sendMail($leaseSite,$leaseName,$leasePhone,$leaseEmail,$leaseTimeStart,
                 .'租借用途:'.$leaseUse;
                 
 
-    $header = "From: a0938599191@gmail.com\r\n";
+    $header = "From: service@ice-finland.pro\r\n";
     $header .= "Content-type: text/html; charset=utf8";
 
     //mail(收件者,信件主旨,信件內容,信件檔頭資訊)
-    $result = mail('a0938599191@gmail.com', $subject, $content, $header);
+    $result = mail('service@ice-finland.pro', $subject, $content, $header);
     return $result;
 }

@@ -99,7 +99,8 @@
 }
 
 #latestnews > .post .post-item > img {
-  min-width: 350px;
+  width: 350px;
+  max-width: 350px;
   height: 210px;
   -o-object-fit: cover;
      object-fit: cover;
