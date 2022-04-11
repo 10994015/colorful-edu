@@ -19,7 +19,7 @@ catch(PDOException $e){
       <div class="post">
           <?php foreach($RS_news as $item){ ?>
           <div class="post-item">
-              <img src="<?php echo ".".$item['imgsrc']; ?>" alt="">
+              <img src="<?php echo $item['imgsrc']; ?>" alt="">
               <div class="content">
                   <h2 class="title"><?php echo $item['title'];?></h2>
                   <p><?php echo nl2br($item['content']); ?> </p>
