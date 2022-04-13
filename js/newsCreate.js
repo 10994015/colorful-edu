@@ -15,6 +15,15 @@ const content = document.getElementById('content');
 const title = document.getElementById('title');
 const createSubmit = document.getElementById('createSubmit');
 
+
+function deleteImgFn(e){
+    console.log(e);
+    chkthis = confirm('確定要刪除嗎?');
+    if(chkthis){
+        window.location.href = `./deleteNewsImg.php?id=${e}`;
+        return;
+    }
+}
 let simgsrc = null;
 uploadImgBtn.addEventListener('click',()=>{
     uplaodImgBox.style.display = "flex";

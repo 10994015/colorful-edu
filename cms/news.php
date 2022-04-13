@@ -34,12 +34,23 @@ if(isset($_SESSION['username'])){
             </div>
             <div class="btnbox">
                 <a href="./newsUpdate.php?id=<?php echo $item['id'];?>">編輯</a>
-                <a href="./newsDelete.php?id=<?php echo $item['id'];?>">刪除</a>
+                <a href="javascript:;" onclick="deleteNewFn(<?php echo $item['id'];?>)">刪除</a>
             </div>
         </div>
         <?php } ?>
     </div>
 </div>
+
+<script>
+function deleteNewFn(id){
+    let chk = confirm('確定要刪除嗎?');
+    if(!chk){
+       return; 
+    }
+    window.location.href = `./newsDelete.php?id=${id}`;
+}
+
+</script>
 </body>
 </html>
 

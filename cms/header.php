@@ -14,7 +14,6 @@ const header = document.getElementById('header');
 const menuIcon = document.getElementById('menuIcon');
 menu.addEventListener('click',()=>{
     header.classList.toggle('close');
-    console.log(header.classList[0]);
     
     if(header.classList[0]==='close'){
         menuIcon.className = 'fas fa-bars';

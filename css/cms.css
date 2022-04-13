@@ -495,9 +495,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -506,7 +503,7 @@
           box-sizing: border-box;
   position: relative;
   overflow-y: scroll;
-  padding-top: 170px;
+  padding-top: 30px;
 }
 
 #newCreate #selectImgBox > .box > .imgbox {
@@ -518,10 +515,36 @@
   width: 100%;
   height: auto;
   padding: 10px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-#newCreate #selectImgBox > .box > .imgbox > img {
+#newCreate #selectImgBox > .box > .imgbox > .imgboxlist {
+  position: relative;
+}
+
+#newCreate #selectImgBox > .box > .imgbox > .imgboxlist:hover > a {
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#newCreate #selectImgBox > .box > .imgbox > .imgboxlist > a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  font-size: 20px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#newCreate #selectImgBox > .box > .imgbox > .imgboxlist > ay:hover {
+  color: #f00;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+#newCreate #selectImgBox > .box > .imgbox > .imgboxlist > img {
   width: 220px;
   height: 150px;
   margin: 5px;
@@ -530,7 +553,7 @@
   cursor: pointer;
 }
 
-#newCreate #chkSelectBtn {
+#newCreate #chkSelectBtn, #newCreate #chkDeleteBtn {
   display: block;
   width: 100px;
   height: 35px;
@@ -541,7 +564,7 @@
   font-weight: 600;
   text-decoration: none;
   font-size: 16px;
-  margin-top: 25px;
+  margin: 25px 10px;
 }
 
 #newCreate #beforeImg {
@@ -564,7 +587,13 @@
   margin-bottom: 8px;
 }
 
-#newCreate #chkSelectBtn.disabled {
+#newCreate .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#newCreate #chkSelectBtn.disabled, #newCreate #chkDeleteBtn.disabled {
   background-color: #ccc;
   cursor: default;
 }
@@ -594,5 +623,184 @@
   color: #B80816;
   font-size: 18px;
   font-weight: 600;
+}
+
+#newsUpdate {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #212121;
+  color: #fff;
+}
+
+#newsUpdate > form {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#newsUpdate > form > span {
+  display: block;
+  width: 120px;
+  height: 35px;
+  background-color: #f1f1f1;
+  color: #222;
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+#newsUpdate > form > img {
+  width: 250px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 10px 0;
+}
+
+#newsUpdate > form > p {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#newsUpdate > form > input {
+  width: 100%;
+  margin: 10px 0;
+  height: 30px;
+}
+
+#newsUpdate > form > textarea {
+  width: 100%;
+  margin: 10px 0;
+  resize: vertical;
+}
+
+#newsUpdate > form > .btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#newsUpdate > form > .btnBox > input[type='submit'] {
+  width: 150px;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #14844C;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0px 10px;
+}
+
+#newsUpdate > form > .btnBox > a {
+  width: 150px;
+  height: 40px;
+  background-color: #f1f1f1;
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  margin: 0px 10px;
+}
+
+#newsUpdate > #updateImgBox {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+#newsUpdate > #updateImgBox > .box {
+  width: 800px;
+  height: 500px;
+  overflow-y: scroll;
+  background-color: #fff;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#newsUpdate > #updateImgBox > .box > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+#newsUpdate > #updateImgBox > .box > .imgbox {
+  min-height: 400px;
+}
+
+#newsUpdate > #updateImgBox > .box > .imgbox img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#newsUpdate > #updateImgBox > .box > .imgbox img.click {
+  border: 2px #000 solid;
+  padding: 5px;
+}
+
+#newsUpdate > #updateImgBox > .box > #selectImg {
+  display: block;
+  width: 120px;
+  height: 35px;
+  background-color: #222;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 10px;
+  text-decoration: none;
 }
 /*# sourceMappingURL=cms.css.map */

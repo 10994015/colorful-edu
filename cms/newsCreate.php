@@ -48,10 +48,15 @@ if(isset($_SESSION['username'])){
             <div id="uploadImgBtn">上傳新照片</div>
             <div class="imgbox">
                 <?php foreach($RS_img as $item){ ?>
-                <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
+                <div class="imgboxlist">
+                    <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
+                    <a href="javascript:;" value="" id="chkDeleteImg" onclick="deleteImgFn(<?php echo $item['id']; ?>)"><i class="fas fa-times"></i></a>
+                </div>
                 <?php } ?>
             </div>
-            <a href="javascript:;" id="chkSelectBtn" class="disabled">選擇</a>
+            <div class="btnBox">
+                <a href="javascript:;" id="chkSelectBtn" class="disabled">選擇</a>
+            </div>
             </div>
         </div>
         </div>
