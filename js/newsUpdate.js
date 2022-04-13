@@ -6,6 +6,20 @@ const imglist = document.getElementsByClassName('imglist');
 const selectImg = document.getElementById('selectImg');
 const smallimg = document.getElementById('smallimg');
 let src = '';
+
+const show = document.getElementById('show');
+if(show.value==1){
+    show.checked = true;
+}else{
+    show.checked = false;
+}
+show.addEventListener('change',()=>{
+    if(show.checked){
+        show.value=1;
+    }else{
+        show.value=0;
+    }
+})
 updateImgBtn.addEventListener('click',()=>{
     updateImgBox.style.display = 'flex';
 })

@@ -31,6 +31,7 @@ if(isset($_SESSION['username'])){
             <div class="content">
                 <h4><?php echo $item['title']; ?></h4>
                 <p class="contentText"><?php echo $item['content']; ?></p>
+                <span><?php if($item['isShow']==1){echo "(顯示)";}else{echo "(不顯示)";} ?></span>
             </div>
             <div class="btnbox">
                 <a href="./newsUpdate.php?id=<?php echo $item['id'];?>">編輯</a>

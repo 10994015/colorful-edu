@@ -36,6 +36,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
     <form action="./chkupdateNews.php" method="post">
         <span id="updateImgBtn">編輯封面</span>
         <img src="<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
+        <label for="show"> <input type="checkbox" name="isShow" id="show" value="<?php echo $row_RS_mb['isShow'];?>"> <p>顯示</p></label>
         <p>標題</p>
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
         <p>內容</p>

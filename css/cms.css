@@ -294,6 +294,11 @@
   height: 90px;
 }
 
+#news .news .list .content > span {
+  color: #aaa;
+  font-size: 14px;
+}
+
 #news .news .list .content > .contentText {
   width: 500px;
   display: -webkit-box;
@@ -674,6 +679,15 @@
   text-align: center;
   line-height: 35px;
   cursor: pointer;
+}
+
+#newsUpdate > form > label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #newsUpdate > form > img {

@@ -189,6 +189,10 @@
         width:600px;
         height:90px;
     }
+    .news .list .content > span{
+        color:#aaa;
+        font-size: 14px;
+    }
     .news .list .content > .contentText{
         width:500px;
         display: -webkit-box;
@@ -449,6 +453,10 @@
             text-align: center;
             line-height: 35px;
             cursor:pointer;
+        }
+        >label{
+            display: flex;
+            align-items: center;
         }
         >img{
             width:250px;

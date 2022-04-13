@@ -3,7 +3,7 @@ require_once('../config/conn.php');
 
 if(isset($_POST['id'])){
     try{
-        $sql_str = "UPDATE news SET title = :title,content=:content,imgsrc=:imgsrc WHERE id  = :id";
+        $sql_str = "UPDATE news SET title = :title,content=:content,imgsrc=:imgsrc,isShow=:isShow WHERE id  = :id";
         //執行$conn物件中的prepare()預處理器
         $stmt = $conn->prepare($sql_str);
      
@@ -12,12 +12,14 @@ if(isset($_POST['id'])){
         $content      = $_POST['content'];
         $id      = $_POST['id'];
         $imgsrc      = $_POST['imgsrc'];
+        $isShow      = $_POST['isShow'];
      
         //設定準備好的$stmt物件中對應的參數值
         $stmt->bindParam(':title' ,$title);
         $stmt->bindParam(':content' ,$content);
         $stmt->bindParam(':id' ,$id);
         $stmt->bindParam(':imgsrc' ,$imgsrc);
+        $stmt->bindParam(':isShow' ,$isShow);
      
         //執行準備好的$stmt物件工作
         $stmt->execute();
