@@ -14,7 +14,17 @@ const imgsrc = document.getElementById('imgsrc');
 const content = document.getElementById('content');
 const title = document.getElementById('title');
 const createSubmit = document.getElementById('createSubmit');
+const show = document.getElementById('show');
 
+show.addEventListener('change',()=>{
+    if(show.checked){
+        show.value=1;
+    }else{
+        show.value=0;
+    }
+    console.log(show.value);
+    
+})
 
 function deleteImgFn(e){
     console.log(e);

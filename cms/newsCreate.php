@@ -28,6 +28,7 @@ if(isset($_SESSION['username'])){
             <form action="./newsCreateCheck.php" method="POST">
                 <div id="selectImgBtn">選擇封面照</div>
                 <img src="../images/no.png" id="beforeImg">
+                <label for="show"> <input type="checkbox" value="0" id="show" name="isShow"> <p>顯示</p></label>
                 <input type="text" placeholder="請輸入標題..."  name="title" id="title">
                 <input type="hidden" value="" name="imgsrc" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>

@@ -54,10 +54,14 @@
             display: flex;
             border-bottom: 1px #ccc solid;
             padding:15px 0;
+            display: none;
             @media screen and (max-width:1024px){
                 flex-direction: column;
                 width:90%;
                 margin: auto;
+            }
+            &.isShow{
+                display: flex;
             }
             >img{
                 width:350px;
