@@ -71,7 +71,7 @@ selectImg.addEventListener('click',()=>{
     const simglist = createSmallImgBox.querySelectorAll('.smallImg');
     const createSmallImgBtn = document.getElementById('createSmallImgBtn');
     const createSmallBtnChk = document.getElementById('createSmallBtnChk');
-
+    
     createSmallImgBtn.addEventListener('click',()=>{
         createSmallImgBox.style.display = "flex";
     })
@@ -142,7 +142,7 @@ selectImg.addEventListener('click',()=>{
         smallImgArr.splice(idx, 1)
         console.log(smallImgArr);
         // console.log(smallImgArr.join(''));
-        // smallhtml ='';
+        smallhtml ='';
         for(let q=0;q<smallImgArr.length;q++){
             smallhtml += smallImgArr[q].outerHTML;
         }
@@ -159,10 +159,3 @@ selectImg.addEventListener('click',()=>{
     }
 // }
 
-newsUpdate.addEventListener('change',()=>{
-    console.log('change');
-    
-    // for(let i=0;i<smallImg.length;i++){
-    //     smallImg[i].addEventListener('click',deleteSmallImgFn);
-    // }
-})

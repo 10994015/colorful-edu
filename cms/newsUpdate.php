@@ -46,7 +46,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <div id="smallimglist">
             <?php  echo $row_RS_mb['smallimg']; ?>
         </div>
-        <input type="hidden" name="smallimg" value='' id="smallImgData">
+        <input type="hidden" name="smallimg" value='<?php echo $row_RS_mb['smallimg'];?>' id="smallImgData">
         <input type="hidden" name="imgsrc" id="imgsrc" value="<?php echo $row_RS_mb['imgsrc'];?>">
         <input type="hidden" value="<?php echo $row_RS_mb['id']; ?>" name="id">
         <div class="btnBox">
