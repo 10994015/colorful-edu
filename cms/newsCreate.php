@@ -64,7 +64,7 @@ if(isset($_SESSION['username'])){
         <div id="selectImgBox">
             <div class="box">
             <i class="fas fa-times" id="selectImgClose"></i>
-            <div id="uploadImgBtn">上傳新照片</div>
+            <div id="uploadImgBtn" style="display: none;">上傳新照片</div>
             <div class="imgbox">
                 <?php foreach($RS_img as $item){ ?>
                 <div class="imgboxlist">
