@@ -749,6 +749,7 @@
           align-items: center;
   background-color: #212121;
   color: #fff;
+  padding: 50px 0;
 }
 
 #newsUpdate > form {
@@ -830,6 +831,7 @@
      object-fit: cover;
   margin: 5px;
   cursor: pointer;
+  position: relative;
 }
 
 #newsUpdate > form > .createSmallImgBtn {
