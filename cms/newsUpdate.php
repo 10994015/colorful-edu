@@ -13,6 +13,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
 
         $str = "SELECT * FROM uploads";
         $RS_img = $conn -> query($str);
+        $RS_simg = $conn -> query($str);
         $total_RS_img = $RS_img -> rowCount();
     }catch (PDOException $e ){
         die("ERROR!!!: ". $e->getMessage());
@@ -41,6 +42,11 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
         <p>內容</p>
         <textarea name="content" id="" cols="30" rows="10"><?php echo $row_RS_mb['content'];?></textarea>
+        <div id="createSmallImgBtn" class="createSmallImgBtn">新增小圖</div>
+        <div id="smallimglist">
+            <?php  echo $row_RS_mb['smallimg']; ?>
+        </div>
+        <input type="hidden" name="smallimg" value='' id="smallImgData">
         <input type="hidden" name="imgsrc" id="imgsrc" value="<?php echo $row_RS_mb['imgsrc'];?>">
         <input type="hidden" value="<?php echo $row_RS_mb['id']; ?>" name="id">
         <div class="btnBox">
@@ -57,6 +63,16 @@ if(isset($_GET['id']) && $_GET['id']!=""){
                 <?php } ?>
            </div>
             <a href="javascript:;" id="selectImg">選擇</a>
+        </div>
+    </div>
+
+    <div id="createSmallImgBox">
+        <div class="box">
+        <i class="fas fa-times" id="closeSmallImgBtn"></i>
+        <div id="createSmallBtnChk">新增小圖</div>
+        <?php foreach($RS_simg as $item){ ?>
+            <img src="../images/img_upload2/<?php echo $item['files_name'];?>" class="smallImg">
+        <?php } ?>
         </div>
     </div>
    </div>
