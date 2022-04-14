@@ -18,7 +18,7 @@ catch(PDOException $e){
       </div>
       <div class="post">
           <?php foreach($RS_news as $item){ ?>
-          <div class="post-item <?php if($item['isShow']==1){echo "isShow";}?>">
+          <div class="post-item <?php if($item['isShow']==1){echo "isShow";}else{echo 'onShow';}?>">
               <img src="<?php echo $item['imgsrc']; ?>" alt="">
               <div class="content">
                   <h2 class="title"><?php echo $item['title'];?></h2>

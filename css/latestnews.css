@@ -105,6 +105,15 @@
   display: flex;
 }
 
+#latestnews > .post .post-item.onShow {
+  display: none;
+  position: fixed;
+  top: -9999999999999999999px;
+  left: -99999999999999999999px;
+  z-index: -99999999999999999;
+  opacity: 0;
+}
+
 #latestnews > .post .post-item > img {
   width: 350px;
   max-width: 350px;
