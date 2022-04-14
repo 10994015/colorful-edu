@@ -9,9 +9,9 @@ if (isset($_FILES['upload_img'])) {
     $file_type = $file['type'];                //上傳檔案的類型(副檔名)
     $tmp_name  = $file['tmp_name'];            //上傳到暫存空間的路徑/檔名
     $file_size = $file['size'];                //上傳檔案的檔案大小(容量)
-    $error     = $file['error'];               //上傳工作傳回的錯誤訊息編號
+    $error     = $file['error'];   
     $imgname = $rand.$file_name;
-
+    $url = $_GET['url'];
     $sql_str = "INSERT INTO uploads (files_name) VALUES (:imgname)";
     $stmt = $conn -> prepare($sql_str);
     $stmt -> bindParam(':imgname' ,$imgname);
@@ -46,7 +46,7 @@ if (isset($_FILES['upload_img'])) {
         echo '<br>---------檔案刪除' . $result;
       }
       // header('Location:newsCreate.php');
-      echo "<script>alert('上傳成功!');window.location.href = 'newsCreate.php?upload=ok' </script>";
+      echo "<script>alert('上傳成功!');window.location.href = '".$url.".php?upload=ok' </script>";
    
     } else {
       //這裡表示上傳有錯誤, 匹配錯誤編號顯示對應的訊息

@@ -4,6 +4,7 @@ session_start();
 try{
     $sql_str = "SELECT * FROM uploads";
     $RS_img = $conn -> query($sql_str);
+    $RS_simg = $conn -> query($sql_str);
     $total_RS_img = $RS_img -> rowCount();
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
@@ -32,15 +33,32 @@ if(isset($_SESSION['username'])){
                 <input type="text" placeholder="請輸入標題..."  name="title" id="title">
                 <input type="hidden" value="" name="imgsrc" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
+                <div id="selectSmallImgBtn">選擇小圖</div>
+                <div id="beforesmallImg">
+                </div>
+                <input type="hidden" name="smallImg" value="" id="smallImgData">
                 <input type="submit" name="submit" value="新增" id="createSubmit" disabled />
             </form>
         <div id="uplaodImgBox">
             <div class="box">
                 <i class="fas fa-times" id="uploadImgClose"></i>
-                <form action="./newsUploadImg.php" enctype="multipart/form-data" method="POST">
-                        <input type="file" name="upload_img">
-                        <input type="submit" value="上傳">
+                <form action="./newsUploadImg.php?url=newsCreate" enctype="multipart/form-data" method="POST">
+                        <input type="file" name="upload_img" id="file">
+                        <input type="submit" value="上傳" id="fileSubmit">
                     </form>
+            </div>
+        </div>
+        <div id="selectSmallImgBox">
+            <div class="box">
+                <i class="fas fa-times" id="selectSmallImgClose"></i>
+                <a href="javascript:;" id="chkSelectsmallBtn" class="disabled">選擇</a>
+
+                <?php foreach($RS_simg as $i){ ?>
+                <div class="imgboxlist">
+                    <img src="../images/img_upload2/<?php echo $i['files_name']; ?>" class="smallimglist" onclick="smallImgclickFn()">
+                </div>
+                <?php } ?>
+                   
             </div>
         </div>
         <div id="selectImgBox">

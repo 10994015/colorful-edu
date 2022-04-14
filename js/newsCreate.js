@@ -16,6 +16,32 @@ const title = document.getElementById('title');
 const createSubmit = document.getElementById('createSubmit');
 const show = document.getElementById('show');
 
+const file = document.getElementById('file');
+const fileSubmit = document.getElementById('fileSubmit');
+
+const selectSmallImgBox = document.getElementById('selectSmallImgBox');
+const smallimglist = document.getElementsByClassName('smallimglist');
+const selectSmallImgClose = document.getElementById('selectSmallImgClose');
+const chkSelectsmallBtn = document.getElementById('chkSelectsmallBtn');
+let smallImgArr = [];
+const selectSmallImgBtn = document.getElementById('selectSmallImgBtn');
+const beforesmallImg = document.getElementById('beforesmallImg');
+const smallImgData = document.getElementById('smallImgData');
+selectSmallImgClose.addEventListener('click',()=>{
+    selectSmallImgBox.style.display = "none";
+})
+selectSmallImgBtn.addEventListener('click',()=>{
+    selectSmallImgBox.style.display = "flex";
+})
+fileSubmit.disabled = true;
+file.addEventListener('change',()=>{
+    if(file.value != ''){
+        fileSubmit.disabled = false;
+    }else{
+        fileSubmit.disabled = true;
+    }
+})
+
 if(show.checked){
     show.value=1;
 }else{
@@ -29,8 +55,6 @@ show.addEventListener('change',()=>{
     }else{
         show.value=0;
     }
-    console.log(show.value);
-    
 })
 
 function deleteImgFn(e){
@@ -101,3 +125,35 @@ function chageColmun(){
         createSubmit.disabled = true;
     }
 }
+
+
+const smallImgclickFn = (e)=>{
+    e.target.classList.toggle('click');
+}
+for(let i=0;i<smallimglist.length;i++){
+    smallimglist[i].addEventListener('click',smallImgclickFn);
+}
+
+chkSelectsmallBtn.addEventListener('click',()=>{
+    for(let i=0;i<smallimglist.length;i++){
+        if(smallimglist[i].classList[1] == 'click'){
+            smallImgArr.push(smallimglist[i].src)
+        }
+    }
+
+    if(smallImgArr.length == 0){
+        alert('請選擇圖片!');
+        return;
+    }
+    let smallimghtml = '';
+    for(let u=0;u<smallImgArr.length;u++){
+        smallimghtml += `<img src='${smallImgArr[u]}' class='smallImg'>`;
+    }
+    beforesmallImg.innerHTML = smallimghtml;
+    smallImgData.value=smallimghtml;
+    console.log(smallImgData.value);
+    
+
+    alert('選擇成功!');
+    selectSmallImgBox.style.display = "none";
+})

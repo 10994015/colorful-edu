@@ -23,7 +23,8 @@
       <img src="<?php echo $row_RS['imgsrc'];?>" alt="">
       <p><?php echo nl2br($row_RS['content']);?></p>
       <div class="smallImgBox">
-          <img class="smallImg" src="<?php echo $row_RS['imgsrc'];?>">
+          <!-- <img class="smallImg" src="<?php echo $row_RS['imgsrc'];?>"> -->
+          <?php echo $row_RS['smallimg'];?>
       </div>
       <!-- <div class="smallVideoBox">
           <video  width="320" height="240"  controls>

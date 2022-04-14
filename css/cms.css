@@ -148,6 +148,7 @@
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
+  z-index: 999999;
 }
 
 #header.close {
@@ -352,6 +353,25 @@
 
 #newCreate h3 {
   text-align: center;
+}
+
+#newCreate #beforesmallImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#newCreate #beforesmallImg > img {
+  width: 100px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 5px 5px;
 }
 
 #newCreate form {
@@ -588,7 +608,7 @@
      object-fit: cover;
 }
 
-#newCreate #selectImgBtn {
+#newCreate #selectImgBtn, #newCreate #selectSmallImgBtn {
   width: 110px;
   height: 35px;
   line-height: 35px;
@@ -610,6 +630,82 @@
 #newCreate #chkSelectBtn.disabled, #newCreate #chkDeleteBtn.disabled {
   background-color: #ccc;
   cursor: default;
+}
+
+#newCreate #selectSmallImgBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+#newCreate #selectSmallImgBox > .box {
+  width: 800px;
+  height: 700px;
+  background-color: #fff;
+  overflow-y: scroll;
+  display: -ms-grid;
+  display: grid;
+  padding: 50px 0;
+  -ms-grid-columns: 250px 250px 250px;
+      grid-template-columns: 250px 250px 250px;
+  -ms-grid-rows: 250px 250px 250px;
+      grid-template-rows: 250px 250px 250px;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+  position: relative;
+}
+
+#newCreate #selectSmallImgBox > .box > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+#newCreate #selectSmallImgBox > .box > .imgboxlist {
+  width: 250px;
+  height: 250px;
+}
+
+#newCreate #selectSmallImgBox > .box > .imgboxlist > .smallimglist {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+#newCreate #selectSmallImgBox > .box > .imgboxlist > .smallimglist.click {
+  border: 3px #f00 solid;
+}
+
+#newCreate #selectSmallImgBox > .box > #chkSelectsmallBtn {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 150px;
+  height: 35px;
+  background-color: #212112;
+  color: #fff;
+  text-align: center;
+  line-height: 35px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .error {
@@ -825,5 +921,65 @@
   line-height: 35px;
   margin-left: 10px;
   text-decoration: none;
+}
+
+#uploadImg {
+  background-color: #212121;
+  color: #fff;
+  padding: 30px 0;
+}
+
+#uploadImg > form {
+  width: 500px;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#uploadImg > form > input {
+  margin: 15px 0;
+}
+
+#uploadImg > form > input[type="submit"] {
+  background-color: #f1f1f1;
+}
+
+#uploadImg .photo {
+  width: 900px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 280px 280px 280px;
+      grid-template-columns: 280px 280px 280px;
+  -ms-grid-rows: 280px 280px 280px;
+      grid-template-rows: 280px 280px 280px;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+
+#uploadImg .photo .imglist {
+  width: 280px;
+  height: 280px;
+  position: relative;
+}
+
+#uploadImg .photo .imglist > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#uploadImg .photo .imglist > a {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: #f00;
 }
 /*# sourceMappingURL=cms.css.map */

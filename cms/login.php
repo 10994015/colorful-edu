@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['msg'])&& $_GET['msg'] == '1'){
-    echo "登入失敗!請重新登入!";
+    echo "<script>alert('登入失敗!請重新登入!') </script>";
 }
 ?>
 <!DOCTYPE html>

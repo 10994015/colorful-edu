@@ -93,6 +93,7 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, .5);
     transition:all .5s ease;
+    z-index: 999999;
     &.close{
         left:-350px;
     }
@@ -232,6 +233,17 @@
     align-items: center;
     h3{
         text-align: center;
+    }
+    #beforesmallImg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        >img{
+            width:100px;
+            height: 80px;
+            object-fit: cover;
+            margin:5px 5px;
+        }
     }
     form{
         display: flex;
@@ -392,7 +404,7 @@
         height: 150px;
         object-fit: cover;
     }
-    #selectImgBtn{
+    #selectImgBtn,#selectSmallImgBtn{
         width:110px;
         height: 35px;
         line-height: 35px;
@@ -410,6 +422,65 @@
     #chkSelectBtn.disabled, #chkDeleteBtn.disabled{
         background-color: #ccc;
         cursor: default;
+    }
+    #selectSmallImgBox{
+        position: fixed;
+        top: 0;
+        left:0;
+        background-color: rgba(0, 0, 0, .5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 100vh;
+        display: none;
+        >.box{
+            width:800px;
+            height: 700px;
+            background-color: #fff;
+            overflow-y: scroll;
+            display: grid;
+            padding: 50px 0;
+            grid-template-columns: 250px 250px 250px;
+            grid-template-rows: 250px 250px 250px;
+            grid-column-gap: 10px;
+            grid-row-gap: 1em;
+            position: relative;
+            > i {
+                position: absolute;
+                top: 10px;
+                right:10px;
+                font-size: 24px;
+                cursor: pointer;
+                color:#000;
+            }
+            > .imgboxlist{
+                width:250px;
+                height: 250px;
+                > .smallimglist{
+                    width:100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                    &.click{
+                        border:3px #f00 solid
+                    }
+                }
+            }
+            > #chkSelectsmallBtn{
+                position: absolute;
+                top: 5px ;
+                left:10px;
+                width:150px;
+                height: 35px;
+                background-color: #212112;
+                color:#fff;
+                text-align: center;
+                line-height: 35px;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
     }
 }
 
@@ -566,5 +637,50 @@
                 text-decoration: none;
             }
         }
+    }
+}
+
+#uploadImg{
+    background-color: #212121;
+    color:#fff;
+    padding: 30px 0;
+    >form{
+        width:500px;
+        margin:0px auto;
+        display: flex;
+        flex-direction: column;
+        > input{
+            margin:15px 0;
+        }
+        >input[type="submit"]{
+            background-color: #f1f1f1;
+        }
+    }
+    .photo{
+        width:900px;
+        margin:auto;
+        display: grid;
+        grid-template-columns: 280px 280px 280px;
+        grid-template-rows: 280px 280px 280px;
+        grid-column-gap: 10px;
+        grid-row-gap: 1em;
+        .imglist{
+            width:280px;
+            height: 280px;
+            position: relative;
+            >img{
+                width:100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            > a{
+                position: absolute;
+                top: 5px;
+                right:5px;
+                font-size: 20px;
+                color:#f00;
+            }
+        }
+        
     }
 }
