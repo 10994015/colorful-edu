@@ -1,13 +1,26 @@
+<?php
+try{
+    $sql_str = "SELECT * FROM banner ORDER BY id DESC";
+    $RS_banner = $conn -> query($sql_str);
+    $total_RS_banner = $RS_banner -> rowCount();
+}catch(PDOException $e){
+    die('Error!:'.$e->getMessage());
+}
+?>
+
 <link rel="stylesheet" type="text/css" href="./shared/slick-1.6.0/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="./shared/slick-1.6.0/slick/slick-theme.css"/>
 <link rel="stylesheet" href="./css/index_content.css">
 
 <div id="index_content">
     <div class="responsive">
-        <div><img src="./images/banner.png"></div>
+        <?php foreach($RS_banner as $item){?>
+            <div><img src="<?php echo $item['files_name'];?>"></div>
+        <?php } ?>
+        <!-- <div><img src="./images/banner.png"></div>
         <div><img src="./images/banner2.png"></div>
         <div><img src="./images/banner3.png"></div>
-        <div><img src="./images/banner4.png"></div>
+        <div><img src="./images/banner4.png"></div> -->
     </div>
     <div id="course">
         <h1>幫助您進行課程規劃</h1>
