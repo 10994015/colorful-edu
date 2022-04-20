@@ -35,15 +35,15 @@ if (isset($_FILES['upload_img'])) {
     }
       //搬移檔案
       $result = move_uploaded_file($tmp_name, $path.$file_name);
-      echo '<br>---------檔案傳送' . $result;
+      // echo '<br>---------檔案傳送' . $result;
     
       if (file_exists($path.$file_name)) {
         //拷貝檔案
         $result = copy($path.$file_name, $path2.$rand.$file_name);
-        echo '<br>---------檔案拷貝' . $result;
+        // echo '<br>---------檔案拷貝' . $result;
         //刪除檔案
         $result = unlink($path.$file_name);
-        echo '<br>---------檔案刪除' . $result;
+        // echo '<br>---------檔案刪除' . $result;
       }
       // header('Location:newsCreate.php');
       echo "<script>alert('上傳成功!');window.location.href = '".$url.".php?upload=ok' </script>";

@@ -1035,6 +1035,30 @@
   padding: 30px 0;
 }
 
+#uploadImg > #loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99999999999999999999999;
+  display: none;
+}
+
+#uploadImg > #loading > img {
+  width: 80px;
+}
+
 #uploadImg > form {
   width: 500px;
   margin: 0px auto;

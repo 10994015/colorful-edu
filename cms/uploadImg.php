@@ -37,11 +37,15 @@ if(isset($_SESSION['username'])){
                </div>
             <?php } ?>
         </div>
+
+        <div id="loading">
+                <img src="../images/loading.gif" alt="">
+        </div>
     </div>
     <script>
     const file = document.getElementById('file');
     const submit = document.getElementById('submit');
-
+    const loading = document.getElementById('loading');
     function deleteLink(id){
         chk = confirm('確定要刪除嗎?');
         if(chk){
@@ -49,7 +53,9 @@ if(isset($_SESSION['username'])){
             return;
         }
     }
-    
+    submit.addEventListener('click',()=>{
+        loading.style.display = "flex";
+    })
     file.addEventListener('change',()=>{
         if(file.value !=""){
             submit.disabled = false;
