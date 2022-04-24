@@ -43,7 +43,7 @@ try{
             }
             foreach($row_RS as $i){
             ?>
-                <img src="./images/site/<?php echo $i['name'];?>/<?php echo $i['files_name']; ?>" class='imgList imgopenclick'>
+                <img src="./images/site/<?php echo $i['name'];?>/<?php echo $i['files_name']; ?>" class='imgList imgopenclick' alt="<?php echo $item['name']; ?>">
             <?php } ?>
           </div>
             <i class="fa-solid fa-circle-chevron-left leftbtn" class="leftbtn"></i>
