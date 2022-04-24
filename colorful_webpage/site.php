@@ -1,3 +1,13 @@
+<?php 
+try{
+  $sql_str = "SELECT * FROM sitename";
+  $RS_site = $conn -> query($sql_str);
+  $total_RS_site = $RS_site -> rowCount();
+}catch ( PDOException $e ){
+  die("ERROR!!!: ". $e->getMessage());
+}
+?>
+
 <link rel="stylesheet" href="./css/site.css">
 
 <div id="site">
@@ -6,41 +16,42 @@
         <h2>想上課卻沒有場地嗎?</h2>
         <p>我們與眾多文教機構合作，並提供場地的租借使用，歡迎各大文教機構使用</p>
     </div>
-    <div class="benfen">
-    <div class="left">
-          <h2>冰芬美語</h2>
-          <p>地址：校本部 🚩 新竹市東區光復路一段271號3樓<br />
-          週二至週六 參觀日 10:00-16:30 (請先預約)<br />
-          預約電話：03-567-0018<br />
-            Email: service@ice-finland.pro </p>
-            <button id="leaseBtn" value="冰芬美語">我要租借</button>
-      </div>
-  
-    <div class="right">
-      <div class="imgbox">
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_0.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_1.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_2.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_5.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_6.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_8.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_9.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_10.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_15.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_17.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_19.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_20.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_21.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_22.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_25.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_26.jpg" class='imgList'>
-      </div>
-        <i class="fa-solid fa-circle-chevron-left leftbtn" id="leftbtn"></i>
-        <i class="fa-solid fa-circle-chevron-right rightbtn" id="rightbtn"></i>
-      <a href="./?page=photobox" class="seemore">查看更多</a>
-    </div>
-  </div>
+    <?php foreach($RS_site as $item){ ?>
+      <div class="sitebox">
+        <div class="left">
+              <h2><?php echo $item['name']; ?></h2>
+              <p>地址 : <?php echo $item['address']; ?><br />
+              <?php echo $item['day']; ?><br />
+              預約電話 : <?php echo $item['phone']; ?><br />
+                Email : <?php echo $item['email']; ?> </p>
+                <button id="leaseBtn" value="<?php echo $item['name']; ?>">我要租借</button>
+          </div>
+      
+        <div class="right">
+          <div class="imgbox">
+            <?php 
+            $sql_str = "SELECT * FROM sites WHERE name=:englishname";
+            $RS = $conn -> prepare($sql_str);
 
+            $englishname = $item['englishname'];  
+
+            $RS -> bindParam(':englishname', $englishname);
+            $RS -> execute();
+            $total = $RS -> rowCount();
+            if( $total >= 1 ){
+              $row_RS = $RS -> fetchAll(PDO::FETCH_ASSOC);
+            }
+            foreach($row_RS as $i){
+            ?>
+                <img src="./images/site/<?php echo $i['name'];?>/<?php echo $i['files_name']; ?>" class='imgList imgopenclick'>
+            <?php } ?>
+          </div>
+            <i class="fa-solid fa-circle-chevron-left leftbtn" class="leftbtn"></i>
+            <i class="fa-solid fa-circle-chevron-right rightbtn" class="rightbtn"></i>
+          <a href="./?page=photobox&site=<?php echo $item['englishname'];?>" class="seemore">查看更多</a>
+        </div>
+      </div>
+    <?php } ?>
   <div class="leaseModule" id="leaseModule">
       <div class="contentModule">
           <div class="header">我要租借 <i class="fas fa-times" id="leaseClose"></i></div>

@@ -20,8 +20,9 @@ try{
     <link rel="stylesheet" href="../css/cms.css">
 </head>
 <body>
+<?php include_once('./header.php'); ?>
     <div id="index_banner">
-        <a href="./create_index_banner.php">新增輪播圖</a>
+        <a href="./create_index_banner.php">點擊新增輪播圖</a>
         <div class="imgBox">
             <?php foreach($RS_banner as $item){ ?>
                 <div class="imgList">

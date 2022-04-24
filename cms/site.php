@@ -1,15 +1,17 @@
 <?php
 require_once('../config/conn.php');
-session_start();
 try{
-    $sql_str = "SELECT * FROM uploads";
-    $RS_img = $conn -> query($sql_str);
-    $total_RS_img = $RS_img -> rowCount();
+    $sql_str = "SELECT * FROM sitename";
+    $RS_site = $conn -> query($sql_str);
+    $RS_site2 = $conn -> query($sql_str);
+    $total_RS_site = $RS_site -> rowCount();
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
 }
+//1.判斷接收到上傳檔案 => 通過 $_FILES 檔案上傳變數接收上傳檔案信息 ======================
 if (isset($_FILES['upload_file'])) {
     $files = $_FILES['upload_file'];
+    $siteName = $_POST['siteName'];
       //   print_r($files); //這是一個二維陣列, 第一層是檔案的5個資料, 第二層分別紀錄著多個檔案
       //   echo '<hr><br><br><br>';
   
@@ -36,7 +38,7 @@ if (isset($_FILES['upload_file'])) {
           //檔案限制條件
       $max_size  = 4096*4096;                     //設定允許上傳檔案容量的最大值(1M)
       $allow_ext = array('jpeg', 'jpg', 'png');   //設定允許上傳檔案的類型
-      $path      = '../images/img_upload2/';
+      $path      = '../images/site/'.$siteName.'/';
       if (!file_exists($path)) { mkdir($path); }
       include('./fn_upload_chk.php');
       include('./fn_thumbnail.php');
@@ -49,9 +51,10 @@ if (isset($_FILES['upload_file'])) {
       $msg = upload_chk( $file,$path, $max_size, $allow_ext,  $file_name );
       if($msg==1){ 
           $msg = '檔案傳送成功！';
-          $sql_str = "INSERT INTO uploads (files_name) VALUES (:imgname)";
+          $sql_str = "INSERT INTO sites (name,files_name) VALUES (:siteName,:imgname)";
           $stmt = $conn -> prepare($sql_str);
           $stmt -> bindParam(':imgname' ,$file_name);
+          $stmt -> bindParam(':siteName' ,$siteName);
           $stmt ->execute();
        }
       $msg_result .= '第' . ($key+1) . '個上傳檔案的結果：' . $msg . '<br/>';
@@ -67,75 +70,39 @@ if (isset($_FILES['upload_file'])) {
       }
       
     //   echo $msg_result;
-      echo "<script>alert('上傳成功!');window.location.href = 'uploadImg.php?upload=ok' </script>";
+      echo "<script>alert('上傳成功!');window.location.href = 'site.php?upload=ok' </script>";
       }
-  
-if(isset($_SESSION['username'])){
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>上傳圖片</title>
+    <title>場地租借</title>
     <link rel="stylesheet" href="../css/cms.css">
 </head>
 <body>
-<?php include_once('./header.php');?>
-    <div id="uploadImg">
-       
+<?php include_once('./header.php'); ?>
+    <div id="site">
         <form name="uploadForm" enctype="multipart/form-data" method="POST" action="">
             <p> (上傳的檔案名稱請符合英數字及減號或底線，檔案類型必須是jpg、png、gif，檔案容量必須小於1M) </p>
             <input type="file" name="upload_file[]" multiple>
+            <select name="siteName" id="">
+            <?php foreach($RS_site as $item){ ?>
+                <option value="<?php echo $item['englishname']; ?>"><?php echo $item['name']; ?></option>
+            <?php } ?>
+            </select>
+            <a href="./createStie.php">新增場地</a>
             <input type="submit" value="確定上傳">
         </form>
-        <div class="photo">
-            <?php foreach($RS_img as $item){ ?>
-               <div class="imglist">
-                    <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" alt="">
-                    <a href="javascript:;" onclick="deleteLink(<?php echo $item['id']; ?>)"><i class="fas fa-times" id="deleteImg"></i></a>
-               </div>
+        <h2>查看相片</h2>
+        <div class="siteList">
+            <?php foreach($RS_site2 as $item){ ?>
+            <a href="./sitePhoto.php?site=<?php echo $item['englishname']; ?>"><?php echo $item['name']; ?></a>
             <?php } ?>
         </div>
-
-        <div id="loading">
-                <img src="../images/loading.gif" alt="">
-        </div>
     </div>
-    <script>
-    const file = document.getElementById('file');
-    const submit = document.getElementById('submit');
-    const loading = document.getElementById('loading');
-    function deleteLink(id){
-        chk = confirm('確定要刪除嗎?');
-        if(chk){
-            window.location.href = `./deleteNewsImg.php?id=${id}`;
-            return;
-        }
-    }
-    submit.addEventListener('click',()=>{
-        loading.style.display = "flex";
-    })
-    file.addEventListener('change',()=>{
-        if(file.value !=""){
-            submit.disabled = false;
-        }else{
-            submit.disabled = true;
-        }
-    });
-    </script>
 </body>
 </html>
-
-
-<?php }else{ ?>
-    <link rel="stylesheet" href="../css/cms.css">
-   <div class="error">
-    <h1>你無權限進入此網站</h1>
-        <a href="./login.php">點此登入</a>
-   </div>
-
-<?php
-}

@@ -1,25 +1,30 @@
+<?php 
+if(isset($_GET['site']) && $_GET['site']!=""){
+    try{
+        $sql_str = "SELECT * FROM sites WHERE name=:site";
+        $RS = $conn -> prepare($sql_str);
+       
+        $site = $_GET['site'];  
+        $RS -> bindParam(':site', $site);
+        $RS -> execute();
+        $total = $RS -> rowCount();
+        if( $total >= 1 ){
+          $row_RS = $RS -> fetchAll(PDO::FETCH_ASSOC);
+        }
+    }catch ( PDOException $e ){
+        die("ERROR!!!: ". $e->getMessage());
+      }
+}
+?>
 <link rel="stylesheet" href="./css/photobox.css">
 
 <div id="photobox">
     <div class="box">
-        <h2>冰芬美語</h2>
+        <h2>照片牆</h2>
         <div class="imgbox">
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_0.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_1.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_2.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_5.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_6.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_8.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_9.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_10.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_15.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_17.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_19.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_20.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_21.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_22.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_25.jpg" class='imgList'>
-                <img src="./images/colorful/LINE_ALBUM_冰芬_220222_26.jpg" class='imgList'>
+            <?php foreach($row_RS as $item){?>
+                <img src="./images/site/<?php echo $item['name']?>/<?php echo $item['files_name']?>" class='imgList'>
+            <?php } ?>
         </div>
     </div>
     <div class="lightBox" id="lightBox">
