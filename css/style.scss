@@ -163,11 +163,21 @@ footer{
         }
         .about{
             text-align: left;
-            a{
-                display: block;
-                color:#fff;
-                margin: 3px 0;
+            .aboutList{
+                display: flex;
+                flex-direction: column;
+                @media screen and (max-width:850px){
+                    display: grid;
+                    grid-template-columns: 80px 80px 80px;
+                    grid-template-rows: 30px 30px 30px;
+                }
+                a{
+                    display: block;
+                    color:#fff;
+                    margin: 3px 0;
+                }
             }
+            
         }
         .link{
             text-align: left;
