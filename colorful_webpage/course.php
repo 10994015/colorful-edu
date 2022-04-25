@@ -4,8 +4,8 @@
     <div class="banner">
         <img src="./images/class.jpg" alt="">
         <div class="text">
-            <h2>幫助您進行課程規劃</h2>
             <p>課程引入、線上課程、實體課程、遊留學</p>
+            <h2>幫助您進行課程規劃</h2>
         </div>
     </div>
     <div class="intro">
