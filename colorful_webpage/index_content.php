@@ -15,7 +15,7 @@ try{
 <div id="index_content">
     <div class="responsive">
         <?php foreach($RS_banner as $item){?>
-            <div><img src="<?php echo $item['files_name'];?>"></div>
+            <div><img src="<?php echo $item['files_name'];?>" alt="新竹市私立冰芬美語文理短期補習班"></div>
         <?php } ?>
         <!-- <div><img src="./images/banner.png"></div>
         <div><img src="./images/banner2.png"></div>
@@ -27,15 +27,15 @@ try{
         <div class="content">
             <a href="javascript:;">
                 <h2>STEAM SCHOOL</h2>
-                <img src="./images/003.png" class="courseImg">
+                <img src="./images/003.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
             </a>
             <a href="javascript:;">
                 <h2>機器人STEAM教室</h2>
-                <img src="./images/001.png" class="courseImg">
+                <img src="./images/001.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
             </a>
             <a href="javascript:;">
                 <h2>夏令營新生家長說明會</h2>
-                <img src="./images/002.png" class="courseImg">
+                <img src="./images/002.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
             </a>
         </div>
     </div>
