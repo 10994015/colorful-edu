@@ -2,7 +2,7 @@
 require_once('../config/conn.php');
 session_start();
 try{
-    $sql_str = "SELECT * FROM banner ORDER BY id DESC";
+    $sql_str = "SELECT * FROM banner ORDER BY sortnum ASC";
     $RS_banner = $conn -> query($sql_str);
     $total_RS_banner = $RS_banner -> rowCount();
 }catch(PDOException $e){
@@ -28,6 +28,11 @@ try{
             <?php foreach($RS_banner as $item){ ?>
                 <div class="imgList">
                     <img src="<?php echo $item['files_name'];?>" alt="">
+                    <p>
+                        <span>排序:<?php echo $item['sortnum']; ?></span>
+                        <a href="./updateSortBanner.php?id=<?php echo $item['id']; ?>" class="updateSort">編輯排序</a>
+                    </p>
+                   
                     <a href="javascript:;" onclick="deleteFn(<?php echo  $item['id']; ?>)">刪除</a>
                 </div>
             <?php } ?>

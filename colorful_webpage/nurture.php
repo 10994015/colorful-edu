@@ -24,65 +24,125 @@
     <div class="step">
         <div class="stepItem">
             <div>
-                <i class="fas fa-user-graduate"></i>
+                <img src="./images/1.png" alt="新竹市補習班"">
                 <p>大學以上學歷</p>
             </div>
             <i class="fas fa-long-arrow-alt-right"></i>
         </div>
         <div class="stepItem">
             <div>
-                <i class="fas fa-glasses"></i>
+                <img src="./images/2.png" alt="新竹市補習班"">
                 <p>參加培訓課程</p>
             </div>
             <i class="fas fa-long-arrow-alt-right"></i>
         </div>
         <div class="stepItem">
             <div>
-                <i class="far fa-building"></i>
+                <img src="./images/3.png" alt="新竹市補習班"">
                 <p>參加見習活動</p>
             </div>
             <i class="fas fa-long-arrow-alt-right"></i>
         </div>
         <div class="stepItem">
             <div>
-                <i class="fas fa-stamp"></i>
+                <img src="./images/4.png" alt="新竹市補習班"">
                 <p>取得證明</p>
             </div>
             <i class="fas fa-long-arrow-alt-right"></i>
         </div>
         <div class="stepItem">
             <div>
-                <i class="fas fa-chalkboard-teacher"></i>
+                <img src="./images/5.png" alt="新竹市補習班"">
                 <p>成為專業教師</p>
             </div>
            
+        </div>
+    </div>
+    <div id="teach">
+        <h1>成為專業教師後你將能夠</h1>
+        <div class="content">
+            <div class="item">
+                <h3>教授Tesol課程</h3>
+                <p>Teaching English to Speakers of Other Languages。是⼀⾨教授英語給母語非英語人士的課程，課程的重點會圍繞在學習者的文化與背景上，使用量身訂製的授課方法和理論提升學習英文的效果以及老師本身的師資水準。</p>
+            </div>
+            <div class="item">
+                <h3>獲取Tesol證照</h3>
+                <div class="box">
+                    <img src="./images/t.png" alt="新竹市補習班">
+                    <div class="text">
+                        <h4>證照的使用定義</h4>
+                        <p>是能夠「教授非英文母語者」的師資證照，且無論是在英語還是非英語系國家都通用</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/u.png" alt="新竹市補習班">
+                    <div class="text">
+                        <h4>如何考取證照</h4>
+                        <p>是能夠「教授非英文母語者」的師資證照，且無論是在英語還是非英語系國家都通用</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="./images/y.png" alt="新竹市補習班">
+                    <div class="text">
+                        <h4>補充說明</h4>
+                        <p>是能夠「教授非英文母語者」的師資證照，且無論是在英語還是非英語系國家都通用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="./?page=contact" class="signup">立即報名</a> -->
+    </div>
+    <div class="interview">
+        
+        <img src="./images/interview.jpg" alt="新竹市補習班">
+        <div class="inter">
+            <h2>面對面研習評估</h2>
+            <div class="item">
+                <h3>50分鐘 校內上課計畫準備及演練</h3>
+                <p>5分鐘 - 熱身</p>
+                <p>15分鐘 - 課程內容介紹</p>
+                <p>25分鐘 - 團隊合作/課程內容</p>
+                <p>5分鐘 - 課程收尾</p>
+            </div>
+            <div class="item">
+                <h3>90分鐘 校外展演</h3>
+                <p>90分鐘課程演示</p>
+                <p>討論/建議</p>
+                <p>結業式</p>
+            </div>
         </div>
     </div>
     <div class="class">
         <h2>開課不受限，開始傳授您擅長的技術</h2>
         <div class="classBox">
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>國中小數學</h3>
             </div>
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>高中數學</h3>
             </div>
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>國中小英文</h3>
             </div>
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>高中英文</h3>
             </div>
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>成人英文</h3>
             </div>
             <div class="box">
-                <i class="far fa-thumbs-up"></i>
+                <img src="./images/like.png" alt="新竹市補習班">
+                <!-- <i class="far fa-thumbs-up"></i> -->
                 <h3>國中小全科</h3>
             </div>
         </div>

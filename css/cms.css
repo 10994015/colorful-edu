@@ -1179,6 +1179,30 @@
   text-decoration: none;
 }
 
+#index_banner .imgBox > .imgList > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#index_banner .imgBox > .imgList > p > .updateSort {
+  display: block;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #000;
+  font-weight: 600;
+  background-color: #f1f1f1;
+  margin-right: 10px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
 #create_index_banner {
   width: 100%;
   min-height: 100vh;
@@ -1230,6 +1254,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: auto;
 }
 
 #create_index_banner form > #createImgBox > div {
@@ -1319,9 +1344,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 #create_index_banner > #selectBannerBox > .box > .btn > button {
@@ -1536,5 +1558,54 @@
 
 #createSite > form > input[type="submit"] {
   cursor: pointer;
+}
+
+#updateSortBanner {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#updateSortBanner > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#updateSortBanner > form > input {
+  margin: 10px 0;
+}
+
+#updateSortBanner > form > input[type="submit"] {
+  width: 50px;
+  height: 25px;
+  background-color: #f1f1f1;
+  color: #212121;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 /*# sourceMappingURL=cms.css.map */

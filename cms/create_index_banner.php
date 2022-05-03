@@ -27,20 +27,21 @@ if(isset($_SESSION['username'])){
 
         <form action="./uploadBannerChk.php" method="post">
              <div id="selectBannerBoxBtn">選擇banner</div>
-            <input type="hidden" name="banner" value="" id="banner">
-            <div id="createImgBox"></div>
-            <input type="submit" value="新增" class="cretatBannerBtn">
+             <input type="hidden" name="banner" value="" id="banner">
+             <div id="createImgBox"></div>
+             <input type="text" placeholder="排序(請輸入數字)" name="sort">
+             <input type="submit" value="新增" class="cretatBannerBtn">
 
         </form>
 
         <div id="selectBannerBox">
             <div class="box">
                 <i class="fas fa-times" id="closeBtn"></i>
-                <div class="btn"><button id="selectBtn">選擇</button></div>
                 <?php foreach($RS_img as $item){?>
                     <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
                 <?php } ?>
-            </div>
+                <div class="btn"><button id="selectBtn">選擇</button></div>
+                </div>
         </div>
 
    </div>
