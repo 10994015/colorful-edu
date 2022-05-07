@@ -3,6 +3,9 @@ try{
     $sql_str = "SELECT * FROM banner ORDER BY sortnum ASC";
     $RS_banner = $conn -> query($sql_str);
     $total_RS_banner = $RS_banner -> rowCount();
+
+    $sql_str_store = "SELECT * FROM store";
+    $RS_store = $conn -> query($sql_str_store);
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
 }
@@ -17,10 +20,6 @@ try{
         <?php foreach($RS_banner as $item){?>
             <div><img src="<?php echo $item['files_name'];?>" alt="新竹市私立冰芬美語文理短期補習班"></div>
         <?php } ?>
-        <!-- <div><img src="./images/banner.png"></div>
-        <div><img src="./images/banner2.png"></div>
-        <div><img src="./images/banner3.png"></div>
-        <div><img src="./images/banner4.png"></div> -->
     </div>
     <div id="course">
         <h1>幫助您進行課程規劃</h1>
@@ -125,9 +124,14 @@ try{
         </div>
         <a href="./?page=contact" class="signup">立即報名</a>
     </div>
-    <!-- <div id="store">
+    <div id="store">
         <h1>特約商店</h1>
-    </div> -->
+        <div class="content">
+            <?php foreach($RS_store as $item){ ?>
+            <div class="imgbox"><img src="./images/store/<?php echo $item['files_name']; ?>" alt="新竹市美語補習班"></div>
+            <?php } ?>
+        </div>
+    </div>
     <!-- <div id="site">
         <h1>場地租借</h1>
         <div class="content">
