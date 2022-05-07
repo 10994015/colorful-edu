@@ -7,7 +7,7 @@
         <a href="./uploadImg.php">上傳圖片</a>
         <a href="./news.php">最新消息</a>
         <a href="./index_banner.php">上傳首頁輪播圖</a>
-        <a href="./site.php">場地租借後台</a>
+        <!-- <a href="./site.php">場地租借後台</a> -->
         <a href="./logout.php">登出</a>
     </div>
 </header>

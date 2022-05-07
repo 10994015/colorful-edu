@@ -1187,6 +1187,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-right: 15px;
+}
+
+#index_banner .imgBox > .imgList > p .sortnumClassName {
+  margin-bottom: 5px;
+  width: 50px;
 }
 
 #index_banner .imgBox > .imgList > p > .updateSort {

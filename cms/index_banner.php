@@ -17,8 +17,9 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
-    <title>Document</title>
+    <title>編輯首頁輪播圖</title>
     <link rel="stylesheet" href="../css/cms.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
 </head>
 <body>
 <?php include_once('./header.php'); ?>
@@ -30,7 +31,9 @@ try{
                     <img src="<?php echo $item['files_name'];?>" alt="">
                     <p>
                         <span>排序:<?php echo $item['sortnum']; ?></span>
-                        <a href="./updateSortBanner.php?id=<?php echo $item['id']; ?>" class="updateSort">編輯排序</a>
+                        <input type="number" value="<?php echo $item['sortnum']; ?>" class="sortnumClassName">
+                        <button class="sortbtn" value="<?php echo $item['id']; ?>">更新</button>
+                        <!-- <a href="./updateSortBanner.php?id=<?php echo $item['id']; ?>" class="updateSort">編輯排序</a> -->
                     </p>
                    
                     <a href="javascript:;" onclick="deleteFn(<?php echo  $item['id']; ?>)">刪除</a>
@@ -41,12 +44,29 @@ try{
     </div>
 
 <script>
+    const sortbtn = document.getElementsByClassName('sortbtn');
+    for(let i=0;i<sortbtn.length;i++){
+        sortbtn[i].addEventListener('click',sortnumFn);
+    }
     function deleteFn(id){
         let chk = confirm('確定要刪除嗎?');
         if(chk){
             window.location.href = `./deleteBanner.php?id=${id}`;
             return;
         }
+    }
+    function sortnumFn(e){
+        console.log(e.target.value);
+        console.log(e.target.parentNode.getElementsByClassName('sortnumClassName')[0].value);
+        
+        var params = new URLSearchParams()
+        var sortnum = e.target.parentNode.getElementsByClassName('sortnumClassName')[0].value;
+        params.append('sort',sortnum )
+        params.append('id', e.target.value)
+        axios.post('./updataSortChk.php',params).then(res=>{
+            alert('更新成功!');
+            window.location.reload();
+        })
     }
 </script>
 </body>

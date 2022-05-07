@@ -825,6 +825,11 @@
             >p{
                 display: flex;
                 flex-direction: column;
+                margin-right: 15px;
+                .sortnumClassName{
+                    margin-bottom: 5px;
+                    width:50px;
+                }
                 >.updateSort{
                     display: block;
                     width:100px;
