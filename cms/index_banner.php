@@ -56,9 +56,6 @@ try{
         }
     }
     function sortnumFn(e){
-        console.log(e.target.value);
-        console.log(e.target.parentNode.getElementsByClassName('sortnumClassName')[0].value);
-        
         var params = new URLSearchParams()
         var sortnum = e.target.parentNode.getElementsByClassName('sortnumClassName')[0].value;
         params.append('sort',sortnum )

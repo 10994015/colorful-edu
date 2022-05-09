@@ -93,10 +93,12 @@ if (isset($_FILES['upload_file'])) {
             <div class="content">
                 <?php foreach($RS_store as $item){ ?>
                 <div class="imgbox">
-                    <img src="../images/store/<?php echo $item['files_name']; ?>" >
+                    <img src="../images/store/<?php echo $item['files_name']; ?>" alt="<?php echo $item['id']; ?>" class="storeimg">
                 </div>
                 <?php } ?>
             </div>
        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+       <script src="../js/cmsStore.js"></script>
 </body>
 </html>

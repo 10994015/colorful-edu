@@ -1689,5 +1689,6 @@
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  cursor: pointer;
 }
 /*# sourceMappingURL=cms.css.map */
