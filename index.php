@@ -29,7 +29,7 @@ if( isset($_GET['page']) && $_GET['page']!='' ){
             <li><a href="./?page=latestnews">最新消息</a></li>
             <li><a href="./?page=course">課程規劃</a></li>
             <li><a href="./?page=nurture">人才培育</a></li>
-            <!-- <li><a href="./?page=store">特約商店</a></li> -->
+            <li><a href="./?page=store">特約商店</a></li>
             <li><a href="./?page=contact">聯絡我們</a></li>
         </ul>
         <i class="fas fa-bars" id="menu"></i>

@@ -22,7 +22,7 @@ try{
         <?php } ?>
     </div>
     <div id="course">
-        <h1>幫助您進行課程規劃</h1>
+        <h1>最新熱門課程</h1>
         <div class="content">
             <a href="javascript:;">
                 <h2>STEAM SCHOOL</h2>
@@ -39,13 +39,13 @@ try{
         </div>
     </div>
     <div id="nurture">
-        <h1>人才培育</h1>
+        <h1>師資培育</h1>
         <div class="content">
             <div class="step">
                 <div class="stepItem">
                     <div>
                         <img src="./images/1.png" alt="新竹市補習班"">
-                        <p>大學以上學歷</p>
+                        <p>符合學歷資格</p>
                     </div>
                     <i class="fas fa-long-arrow-alt-right" v-show="item.rightopen"></i>
                 </div>
@@ -73,7 +73,7 @@ try{
                 <div class="stepItem">
                     <div>
                         <img src="./images/5.png" alt="新竹市補習班"">
-                        <p>成為專業教師</p>
+                        <p>成為專業人員</p>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,24 @@ try{
             </div> -->
         </div>
     </div>
-    <div id="teach">
+    <div class="cardbox">
+        <div class="card">
+            <i class="fas fa-paint-brush"></i>
+            <h2>TESOL課程</h2>
+            <p>不止是英語的實力，更強調的是「教學」。專業學術訓練範圍包括：語言學、語言教學法、方法學、外語教學理論與方法、教材設計、課程設計、課程管理、跨國文化的溝通與認識以及各種測驗評量、研究及教學實習。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-vote-yea"></i>
+            <h2>STEAM教育</h2>
+            <p>STEAM是指跨域整合科學、科技、工程、藝術與數學。課程結束，必須參與教學演示檢定及通過檢核。為維持師資水準，定期參與師培與回訓機制，培訓新科技素材與技術，開發新課程與相關評量機制，並期望帶給學生們更高品質跨域教育。</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-handshake"></i>
+            <h2>參加對象</h2>
+            <p>1. 職前教師<br />2. 在職教師<br />3. 想增進教學技能的各方人才</p>
+        </div>
+    </div>
+    <!-- <div id="teach">
         <h1>成為專業教師後你將能夠</h1>
         <div class="content">
             <div class="item">
@@ -123,7 +140,7 @@ try{
             </div>
         </div>
         <a href="./?page=contact" class="signup">立即報名</a>
-    </div>
+    </div> -->
     <div id="store">
         <h1>特約商店</h1>
         <div class="content">
@@ -132,6 +149,15 @@ try{
             <?php } ?>
         </div>
     </div>
+    <div class="partners">
+        <h1>企業合作</h1>
+        <div class="responsive2">
+            <div><img src="./images/chin.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
+            <div><img src="./images/evone.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
+            <div><img src="./images/esol.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
+        </div>
+    </div>
+   
     <!-- <div id="site">
         <h1>場地租借</h1>
         <div class="content">

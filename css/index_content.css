@@ -528,6 +528,102 @@
   cursor: pointer;
 }
 
+#index_content .cardbox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 4em;
+  padding-bottom: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  #index_content .cardbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#index_content .cardbox > .card {
+  width: 300px;
+  height: 420px;
+  border: 1px #ccc solid;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 20px;
+  -webkit-box-shadow: 0px 5px 10px #ccc;
+          box-shadow: 0px 5px 10px #ccc;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  margin: 20px 25px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  #index_content .cardbox > .card {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #index_content .cardbox > .card {
+    width: 350px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #index_content .cardbox > .card {
+    width: 90%;
+    height: 400px;
+  }
+}
+
+#index_content .cardbox > .card:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+#index_content .cardbox > .card > i {
+  font-size: 80px;
+  color: #1484c4;
+  margin-bottom: 30px;
+}
+
+#index_content .cardbox > .card > h2 {
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+#index_content .cardbox > .card > p {
+  color: #222;
+  line-height: 1.6;
+}
+
 #index_content #teach {
   background-color: #f1f1f1;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -754,6 +850,65 @@
 
 #index_content #store > .content > .imgbox > img {
   width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#index_content .partners {
+  padding: 80px 0 100px 0;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+#index_content .partners > h1 {
+  width: 100%;
+  text-align: center;
+  color: #1484c4;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+#index_content .partners .responsive2 {
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1200px) {
+  #index_content .partners .responsive2 {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #index_content .partners .responsive2 {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #index_content .partners .responsive2 {
+    width: 100%;
+  }
+}
+
+#index_content .partners .responsive2 > div {
+  margin: 30px 30px;
+  width: 180px;
+}
+
+#index_content .partners .responsive2 > div > img {
+  width: 180px;
   -o-object-fit: contain;
      object-fit: contain;
 }

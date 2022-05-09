@@ -17,6 +17,7 @@
                     <!-- cuclass -->
                     清大Steam Shcool
                     憶旺智慧
+                    伊索教育
                 </p>
             </div>
             <div class="about">
