@@ -51,7 +51,7 @@
           </div>
       </div>
     </div>
-    <div class="online">
+    <!-- <div class="online">
         <h1>線上課程</h1>
         <div class="content">
             <div class="live">
@@ -77,7 +77,7 @@
             </div>
             <div class="where">
             </div>
-    </div>
+    </div> -->
     <div class="entity">
       <h1>實體課程</h1>
       <!-- content 左邊放課表，右邊放教室的圖片 -->
