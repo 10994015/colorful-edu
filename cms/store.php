@@ -79,7 +79,7 @@ if (isset($_FILES['upload_file'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>特約商店</title>
+    <title>企業特約</title>
     <link rel="stylesheet" href="../css/cms.css">
 </head>
 <body>

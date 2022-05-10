@@ -150,7 +150,7 @@ try{
         </div>
     </div>
     <div class="partners">
-        <h1>企業合作</h1>
+        <h1>企業特約</h1>
         <div class="responsive2">
             <div><img src="./images/chin.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
             <div><img src="./images/evone.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
