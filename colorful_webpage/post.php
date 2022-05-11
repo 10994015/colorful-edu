@@ -20,7 +20,7 @@
 <?php if($total>=1){ ?>
     <div id="text">
       <h2><?php echo $row_RS['title'];?></h2>
-      <img src="<?php echo $row_RS['imgsrc'];?>" alt="">
+      <img src="./images/img_upload2/<?php echo $row_RS['imgsrc'];?>" alt="">
       <p><?php echo nl2br($row_RS['content']);?></p>
       <div class="smallImgBox">
           <!-- <img class="smallImg" src="<?php echo $row_RS['imgsrc'];?>"> -->

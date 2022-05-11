@@ -2,7 +2,7 @@ const uploadImgBtn = document.getElementById('uploadImgBtn');
 const uplaodImgBox = document.getElementById('uplaodImgBox');
 const uploadImgClose = document.getElementById('uploadImgClose');
 
-const selectImgBtn = document.getElementById('selectImgBtn');
+// const selectImgBtn = document.getElementById('selectImgBtn');
 const selectImgBox = document.getElementById('selectImgBox');
 const selectImgClose = document.getElementById('selectImgClose');
 
@@ -18,6 +18,8 @@ const show = document.getElementById('show');
 
 const file = document.getElementById('file');
 const fileSubmit = document.getElementById('fileSubmit');
+
+const fileimgBtn = document.getElementById('fileimgBtn');
 
 const selectSmallImgBox = document.getElementById('selectSmallImgBox');
 const smallimglist = document.getElementsByClassName('smallimglist');
@@ -41,13 +43,12 @@ file.addEventListener('change',()=>{
         fileSubmit.disabled = true;
     }
 })
-
 if(show.checked){
     show.value=1;
 }else{
     show.value=0;
 }
-console.log(show.value);
+// console.log(show.value);
 
 show.addEventListener('change',()=>{
     if(show.checked){
@@ -73,9 +74,9 @@ uploadImgClose.addEventListener('click',()=>{
     uplaodImgBox.style.display = "none";
 })
 
-selectImgBtn.addEventListener('click',()=>{
-    selectImgBox.style.display = "flex";
-})
+// selectImgBtn.addEventListener('click',()=>{
+//     selectImgBox.style.display = "flex";
+// })
 selectImgClose.addEventListener('click',()=>{
     selectImgBox.style.display = "none";
 })
@@ -95,9 +96,9 @@ const chkimg = (e)=>{
 
 }
 
-for(let i=0;i<imglist.length;i++){
-    imglist[i].addEventListener('click', chkimg);
-}
+// for(let i=0;i<imglist.length;i++){
+//     imglist[i].addEventListener('click', chkimg);
+// }
 const chkSelectFn = ()=>{
     beforeImg.src = simgsrc;
     imgsrc.value = simgsrc;
@@ -114,12 +115,14 @@ if(url.split('?')[1] != undefined){
         selectImgBox.style.display = "flex";
     }
 }
-title.addEventListener('change',chageColmun);
-content.addEventListener('change',chageColmun);
+title.addEventListener('keyup',chageColmun);
+content.addEventListener('keyup',chageColmun);
+fileimgBtn.addEventListener('change',chageColmun);
 
 
 function chageColmun(){
-    if(title.value !='' && imgsrc.value !='' && content.value !=''){
+    
+    if(fileimgBtn.value !='' && title.value!='' && content.value!=''){
         createSubmit.disabled = false;
     }else{
         createSubmit.disabled = true;
@@ -147,7 +150,8 @@ chkSelectsmallBtn.addEventListener('click',()=>{
     }
     let smallimghtml = '';
     for(let u=0;u<smallImgArr.length;u++){
-        smallimghtml += `<img src='${smallImgArr[u]}' class='smallImg'>`;
+        // smallimghtml += `<img src='${smallImgArr[u]}' class='smallImg'>`;
+        smallimghtml += "<img src='"+ smallImgArr[u] +"' class='smallImg' >";
     }
     beforesmallImg.innerHTML = smallimghtml;
     smallImgData.value=smallimghtml;

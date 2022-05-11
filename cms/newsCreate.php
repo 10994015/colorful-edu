@@ -27,12 +27,13 @@ if(isset($_SESSION['username'])){
        <?php include_once('./header.php'); ?> 
     <div class="createNews">
             <h3>新增公告</h3>
-            <form action="./newsCreateCheck.php" method="POST">
-                <div id="selectImgBtn">選擇封面照</div>
-                <img src="../images/no.png" id="beforeImg">
-                <label for="show"> <input type="checkbox" value="0" id="show" name="isShow"> <p>顯示</p></label>
+            <form action="./newsCreateCheck.php" method="POST" enctype="multipart/form-data">
+                <!-- <div id="selectImgBtn">選擇封面照</div> -->
+                <input type="file" name="imgsrc"  id="fileimgBtn">
+                <!-- <img src="../images/no.png" id="beforeImg"> -->
+                <label for="show"> <input type="checkbox" value="" id="show" name="isShow"> <p>顯示</p></label>
                 <input type="text" placeholder="請輸入標題..."  name="title" id="title">
-                <input type="hidden" value="" name="imgsrc" id="imgsrc">
+                <input type="hidden" value="" name="" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
                 <div id="selectSmallImgBtn">選擇小圖</div>
                 <div id="beforesmallImg">
@@ -67,12 +68,12 @@ if(isset($_SESSION['username'])){
             <i class="fas fa-times" id="selectImgClose"></i>
             <div id="uploadImgBtn" style="display: none;">上傳新照片</div>
             <div class="imgbox">
-                <?php foreach($RS_img as $item){ ?>
+                <!-- <?php foreach($RS_img as $item){ ?>
                 <div class="imgboxlist">
                     <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
                     <a href="javascript:;" value="" id="chkDeleteImg" onclick="deleteImgFn(<?php echo $item['id']; ?>)"><i class="fas fa-times"></i></a>
                 </div>
-                <?php } ?>
+                <?php } ?> -->
             </div>
             <div class="btnBox">
                 <a href="javascript:;" id="chkSelectBtn" class="disabled">選擇</a>

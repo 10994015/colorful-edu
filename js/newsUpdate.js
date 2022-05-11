@@ -1,5 +1,5 @@
 const newsUpdate = document.getElementById('newsUpdate');
-const updateImgBtn = document.getElementById('updateImgBtn');
+// const updateImgBtn = document.getElementById('updateImgBtn');
 const imgsrc = document.getElementById('imgsrc');
 const updateImgBox = document.getElementById('updateImgBox');
 const closeBox = document.getElementById('closeBox');
@@ -24,9 +24,9 @@ show.addEventListener('change',()=>{
         show.value=0;
     }
 })
-updateImgBtn.addEventListener('click',()=>{
-    updateImgBox.style.display = 'flex';
-})
+// updateImgBtn.addEventListener('click',()=>{
+//     updateImgBox.style.display = 'flex';
+// })
 const clearClick = ()=>{
     for(let i=0;i<imglist.length;i++){
         imglist[i].classList.remove('click');

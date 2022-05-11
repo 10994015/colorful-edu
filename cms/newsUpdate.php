@@ -35,9 +35,10 @@ if(isset($_GET['id']) && $_GET['id']!=""){
 </head>
 <body>
    <div id="newsUpdate">
-    <form action="./chkupdateNews.php" method="post">
-        <span id="updateImgBtn">編輯封面</span>
-        <img src="<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
+    <form action="./chkupdateNews.php" method="post" enctype="multipart/form-data">
+        <!-- <span id="updateImgBtn">編輯封面</span> -->
+        <input type="file" name="imgsrc">
+        <img src="../images/img_upload2/<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
         <label for="show"> <input type="checkbox" name="isShow" id="show" value="<?php echo $row_RS_mb['isShow'];?>"> <p>顯示</p></label>
         <p>標題</p>
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
@@ -47,8 +48,8 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <div id="smallimglist">
             <?php  echo $row_RS_mb['smallimg']; ?>
         </div>
-        <input type="hidden" name="smallimg" value='<?php echo $row_RS_mb['smallimg'];?>' id="smallImgData">
-        <input type="hidden" name="imgsrc" id="imgsrc" value="<?php echo $row_RS_mb['imgsrc'];?>">
+        <input type="hidden" name="smallimg" value='<?php echo $row_RS_mb["smallimg"];?>' id="smallImgData">
+
         <input type="hidden" value="<?php echo $row_RS_mb['id']; ?>" name="id">
         <div class="btnBox">
             <a href="./news.php">回前頁</a>
@@ -59,9 +60,9 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <div class="box">
             <i class="fas fa-times" id="closeBox"></i>
            <div class="imgbox">
-                <?php foreach($RS_img as $item){ ?>
+                <!-- <?php foreach($RS_img as $item){ ?>
                     <img src="../images/img_upload2/<?php echo $item['files_name'];?>" class="imglist">
-                <?php } ?>
+                <?php } ?> -->
            </div>
             <a href="javascript:;" id="selectImg">選擇</a>
         </div>
