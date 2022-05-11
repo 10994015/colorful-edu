@@ -8,8 +8,15 @@ const selectImg = document.getElementById('selectImg');
 const smallimg = document.getElementById('smallimg');
 let src = '';
 
-
-
+ if(imgsrc.value==""){
+        console.log(true);
+    }
+console.log(imgsrc.value);
+imgsrc.addEventListener('change',()=>{
+    console.log(imgsrc.value);
+   
+    
+})
 
 const show = document.getElementById('show');
 if(show.value==1){

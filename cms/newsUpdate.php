@@ -37,7 +37,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
    <div id="newsUpdate">
     <form action="./chkupdateNews.php" method="post" enctype="multipart/form-data">
         <!-- <span id="updateImgBtn">編輯封面</span> -->
-        <input type="file" name="imgsrc">
+        <input type="file" name="imgsrc" value="0" id="imgsrc">
         <img src="../images/img_upload2/<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
         <label for="show"> <input type="checkbox" name="isShow" id="show" value="<?php echo $row_RS_mb['isShow'];?>"> <p>顯示</p></label>
         <p>標題</p>
@@ -48,7 +48,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <div id="smallimglist">
             <?php  echo $row_RS_mb['smallimg']; ?>
         </div>
-        <input type="hidden" name="smallimg" value='<?php echo $row_RS_mb["smallimg"];?>' id="smallImgData">
+        <input type="hidden" name="smallimg" value="<?php echo $row_RS_mb["smallimg"];?>" id='smallImgData'>
 
         <input type="hidden" value="<?php echo $row_RS_mb['id']; ?>" name="id">
         <div class="btnBox">
