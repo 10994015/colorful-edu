@@ -142,7 +142,7 @@ try{
         <a href="./?page=contact" class="signup">立即報名</a>
     </div> -->
     <div id="store">
-        <h1>特約商店</h1>
+        <h1>企業特約</h1>
         <div class="content">
             <?php foreach($RS_store as $item){ ?>
             <div class="imgbox"><img src="./images/store/<?php echo $item['files_name']; ?>" alt="新竹市美語補習班"></div>
@@ -150,7 +150,7 @@ try{
         </div>
     </div>
     <div class="partners">
-        <h1>企業特約</h1>
+        <h1>企業合作</h1>
         <div class="responsive2">
             <div><img src="./images/chin.png" alt="新竹市私立冰芬美語文理短期補習班"></div>
             <div><img src="./images/evone.png" alt="新竹市私立冰芬美語文理短期補習班"></div>

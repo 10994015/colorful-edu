@@ -5,6 +5,8 @@ try{
     $sql_str = "SELECT * FROM banner ORDER BY sortnum ASC";
     $RS_banner = $conn -> query($sql_str);
     $total_RS_banner = $RS_banner -> rowCount();
+
+    
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
 }

@@ -5,6 +5,16 @@ try{
     $sql_str = "SELECT * FROM uploads";
     $RS_img = $conn -> query($sql_str);
     $total_RS_img = $RS_img -> rowCount();
+
+    $sql_str2 = "SELECT sortnum, MAX(sortnum) FROM banner ";
+    $RS_banner = $conn -> query($sql_str2);
+    $total_RS_banner = $RS_banner -> rowCount();
+
+    $per = -1;
+    if($total_RS_banner >=1 ){
+        $row_banner = $RS_banner->fetch(PDO::FETCH_ASSOC);
+        $pre =  $row_banner['sortnum'] + 1;
+    }
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
 }
@@ -29,7 +39,7 @@ if(isset($_SESSION['username'])){
              <div id="selectBannerBoxBtn">選擇banner</div>
              <input type="hidden" name="banner" value="" id="banner">
              <div id="createImgBox"></div>
-             <input type="text" placeholder="排序(請輸入數字)" name="sort">
+             <input type="text" placeholder="排序(請輸入數字)" name="sort" value="<?php echo $pre; ?>">
              <input type="submit" value="新增" class="cretatBannerBtn">
 
         </form>
