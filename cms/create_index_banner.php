@@ -46,11 +46,16 @@ if(isset($_SESSION['username'])){
 
         <div id="selectBannerBox">
             <div class="box">
-                <i class="fas fa-times" id="closeBtn"></i>
-                <?php foreach($RS_img as $item){?>
+               <div class="box-header">
+                    <i class="fas fa-times" id="closeBtn"></i>
+                   <button id="selectBtn">選擇</button>
+               </div>
+               <div class="box-content">
+               <?php foreach($RS_img as $item){?>
                     <img src="../images/img_upload2/<?php echo $item['files_name']; ?>" class="imglist">
                 <?php } ?>
-                <div class="btn"><button id="selectBtn">選擇</button></div>
+               </div>
+                
                 </div>
         </div>
 

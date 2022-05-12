@@ -36,6 +36,7 @@ if(isset($_SESSION['username'])){
                 <input type="hidden" value="" name="" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
                 <div id="selectSmallImgBtn">選擇小圖</div>
+                <div id="addurlbtn">添加網址</div>
                 <div id="beforesmallImg">
                 </div>
                 <input type="hidden" name="smallImg" value="" id="smallImgData">
@@ -52,14 +53,19 @@ if(isset($_SESSION['username'])){
         </div>
         <div id="selectSmallImgBox">
             <div class="box">
-                <i class="fas fa-times" id="selectSmallImgClose"></i>
-                <a href="javascript:;" id="chkSelectsmallBtn" class="disabled">選擇</a>
-
-                <?php foreach($RS_simg as $i){ ?>
-                <div class="imgboxlist">
-                    <img src="../images/img_upload2/<?php echo $i['files_name']; ?>" class="smallimglist" onclick="smallImgclickFn()">
+                <div class="box-header">
+                    <i class="fas fa-times" id="selectSmallImgClose"></i>
+                    <a href="javascript:;" id="chkSelectsmallBtn" class="disabled">選擇</a>
                 </div>
-                <?php } ?>
+                
+
+               <div class="box-content">
+                <?php foreach($RS_simg as $i){ ?>
+                    <div class="imgboxlist">
+                        <img src="../images/img_upload2/<?php echo $i['files_name']; ?>" class="smallimglist" onclick="smallImgclickFn()">
+                    </div>
+                    <?php } ?>
+               </div>
                    
             </div>
         </div>

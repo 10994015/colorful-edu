@@ -29,6 +29,9 @@ let smallImgArr = [];
 const selectSmallImgBtn = document.getElementById('selectSmallImgBtn');
 const beforesmallImg = document.getElementById('beforesmallImg');
 const smallImgData = document.getElementById('smallImgData');
+
+const addurlbtn = document.getElementById('addurlbtn');
+let addurlbtnchk = 0;
 selectSmallImgClose.addEventListener('click',()=>{
     selectSmallImgBox.style.display = "none";
 })
@@ -119,7 +122,6 @@ title.addEventListener('keyup',chageColmun);
 content.addEventListener('keyup',chageColmun);
 fileimgBtn.addEventListener('change',chageColmun);
 
-
 function chageColmun(){
     
     if(fileimgBtn.value !='' && title.value!='' && content.value!=''){
@@ -161,3 +163,61 @@ chkSelectsmallBtn.addEventListener('click',()=>{
     alert('選擇成功!');
     selectSmallImgBox.style.display = "none";
 })
+addurlbtn.addEventListener('click',()=>{
+     addurlbtnchk = 1;
+    if(addurlbtnchk === 1){
+        addurlbtn.innerHTML = "添加中...";
+        addurlbtn.style.background = "#ccc";
+        contentFn()
+    }else{
+        addurlbtn.innerHTML = "添加網址";
+        addurlbtn.style.background = "#fff";
+    }
+    
+})
+
+function contentFn(){
+    content.removeEventListener('mouseup',promptFn)
+    if(addurlbtnchk !== 1){
+        return;
+    }
+    if(content.value!=""){
+        // content.onmouseup = function(){
+        //     // document.execCommand("Copy");	
+        //     let protext = prompt('請填寫網址')
+        //     console.log(selectText());
+        //     replaceFn(selectText(), protext)
+            
+        // }
+        content.addEventListener('mouseup',promptFn)
+    }
+   
+}
+function promptFn(){
+    let protext = prompt('請填寫網址')
+    console.log(selectText());
+    replaceFn(selectText(), protext)
+    addurlbtn.style.background = "#fff";
+    addurlbtnchk = 0;
+    addurlbtn.innerHTML = "添加網址";
+    
+}
+function selectText(){
+    if(document.Selection){       
+        //ie瀏覽器
+        return document.selection.createRange().text;     	 
+    }else{    
+        //標準瀏覽器
+        return window.getSelection().toString();	 
+    }	 
+}
+function replaceFn(txt,pro){
+console.log(txt);
+
+let val = content.value;
+let newval = val.replace(txt,'<a href="'+pro+'">' + txt +'</a>');
+content.value = newval;
+// console.log(oContent.value);
+content.removeEventListener('mouseup',promptFn)
+
+}

@@ -36,7 +36,7 @@ if (isset($_FILES['upload_file'])) {
         //   echo '<hr><br><br><br>';
           //檔案限制條件
       $max_size  = 4096*4096;                     //設定允許上傳檔案容量的最大值(1M)
-      $allow_ext = array('jpeg', 'jpg', 'png');   //設定允許上傳檔案的類型
+      $allow_ext = array('jpeg', 'jpg', 'png','JPG','JPEG','PNG','GIF');   //設定允許上傳檔案的類型
       $path      = '../images/store/';
       if (!file_exists($path)) { mkdir($path); }
       include('./fn_upload_chk.php');

@@ -40,7 +40,7 @@ if($_FILES['imgsrc']['name']!=""){
             $stmt->execute();
             // $_SESSION['money'] = $money;
             // header('Location:./news.php');
-            $allow_ext = array('jpeg', 'jpg', 'png', 'gif');
+            $allow_ext = array('jpeg', 'jpg', 'png', 'gif','JPG','JPEG','PNG','GIF');
             //設定上傳位置
             $path = '../images/img_upload/';
             if (!file_exists($path)) { mkdir($path); }

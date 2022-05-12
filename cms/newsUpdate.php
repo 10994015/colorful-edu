@@ -69,12 +69,19 @@ if(isset($_GET['id']) && $_GET['id']!=""){
     </div>
 
     <div id="createSmallImgBox">
+        
         <div class="box">
-        <i class="fas fa-times" id="closeSmallImgBtn"></i>
-        <div id="createSmallBtnChk">新增小圖</div>
-        <?php foreach($RS_simg as $item){ ?>
-            <img src="../images/img_upload2/<?php echo $item['files_name'];?>" class="smallImg">
-        <?php } ?>
+            <div class="box-header">
+                <i class="fas fa-times" id="closeSmallImgBtn"></i>
+                <div id="createSmallBtnChk">新增小圖</div>
+            </div>
+            <div class="box-content">
+                <?php foreach($RS_simg as $item){ ?>
+                    <img src="../images/img_upload2/<?php echo $item['files_name'];?>" class="smallImg">
+                <?php } ?>
+
+            </div>
+        
         </div>
     </div>
    </div>

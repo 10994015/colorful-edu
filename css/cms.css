@@ -621,6 +621,23 @@
   margin-bottom: 8px;
 }
 
+#newCreate #addurlbtn {
+  width: 110px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+#newCreate #addurlbtn.chk {
+  background-color: #ccc;
+}
+
 #newCreate .btnBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,20 +672,17 @@
   width: 800px;
   height: 700px;
   background-color: #fff;
-  overflow-y: scroll;
-  display: -ms-grid;
-  display: grid;
-  padding: 50px 0;
-  -ms-grid-columns: 250px 250px 250px;
-      grid-template-columns: 250px 250px 250px;
-  -ms-grid-rows: 250px 250px 250px;
-      grid-template-rows: 250px 250px 250px;
-  grid-column-gap: 10px;
-  grid-row-gap: 1em;
   position: relative;
 }
 
-#newCreate #selectSmallImgBox > .box > i {
+#newCreate #selectSmallImgBox > .box > .box-header {
+  position: absolute;
+  width: 800px;
+  height: 50px;
+  background-color: #999;
+}
+
+#newCreate #selectSmallImgBox > .box > .box-header > i {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -677,24 +691,7 @@
   color: #000;
 }
 
-#newCreate #selectSmallImgBox > .box > .imgboxlist {
-  width: 250px;
-  height: 250px;
-}
-
-#newCreate #selectSmallImgBox > .box > .imgboxlist > .smallimglist {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-}
-
-#newCreate #selectSmallImgBox > .box > .imgboxlist > .smallimglist.click {
-  border: 3px #f00 solid;
-}
-
-#newCreate #selectSmallImgBox > .box > #chkSelectsmallBtn {
+#newCreate #selectSmallImgBox > .box > .box-header > #chkSelectsmallBtn {
   position: absolute;
   top: 5px;
   left: 10px;
@@ -706,6 +703,39 @@
   line-height: 35px;
   text-decoration: none;
   font-weight: 600;
+}
+
+#newCreate #selectSmallImgBox > .box > .box-content {
+  overflow-y: scroll;
+  width: 800px;
+  height: 700px;
+  display: -ms-grid;
+  display: grid;
+  padding-top: 60px;
+  padding-bottom: 10px;
+  -ms-grid-columns: 250px 250px 250px;
+      grid-template-columns: 250px 250px 250px;
+  -ms-grid-rows: 250px 250px 250px;
+      grid-template-rows: 250px 250px 250px;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+
+#newCreate #selectSmallImgBox > .box > .box-content > .imgboxlist {
+  width: 250px;
+  height: 250px;
+}
+
+#newCreate #selectSmallImgBox > .box > .box-content > .imgboxlist > .smallimglist {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+
+#newCreate #selectSmallImgBox > .box > .box-content > .imgboxlist > .smallimglist.click {
+  border: 3px #f00 solid;
 }
 
 .error {
@@ -982,17 +1012,16 @@
   width: 800px;
   height: 600px;
   background-color: #fff;
-  overflow-y: scroll;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 50px 0;
 }
 
-#newsUpdate > #createSmallImgBox > .box > i {
+#newsUpdate > #createSmallImgBox > .box > .box-header {
+  width: 100%;
+  height: 50px;
+  background-color: #999;
+  position: relative;
+}
+
+#newsUpdate > #createSmallImgBox > .box > .box-header > i {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1001,7 +1030,7 @@
   cursor: pointer;
 }
 
-#newsUpdate > #createSmallImgBox > .box > #createSmallBtnChk {
+#newsUpdate > #createSmallImgBox > .box > .box-header > #createSmallBtnChk {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1016,7 +1045,18 @@
   cursor: pointer;
 }
 
-#newsUpdate > #createSmallImgBox > .box > img {
+#newsUpdate > #createSmallImgBox > .box > .box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+  width: 800px;
+  height: 550px;
+}
+
+#newsUpdate > #createSmallImgBox > .box > .box-content > img {
   width: 220px;
   height: 220px;
   -o-object-fit: cover;
@@ -1025,7 +1065,7 @@
   cursor: pointer;
 }
 
-#newsUpdate > #createSmallImgBox > .box > img.click {
+#newsUpdate > #createSmallImgBox > .box > .box-content > img.click {
   border: 3px #f00 solid;
 }
 
@@ -1311,13 +1351,17 @@
 #create_index_banner > #selectBannerBox > .box {
   width: 800px;
   height: 600px;
-  overflow-y: scroll;
   background-color: #fff;
   position: relative;
-  padding: 50px 10px;
 }
 
-#create_index_banner > #selectBannerBox > .box > i {
+#create_index_banner > #selectBannerBox > .box > .box-header {
+  width: 100%;
+  height: 50px;
+  background-color: #999;
+}
+
+#create_index_banner > #selectBannerBox > .box > .box-header > i {
   position: absolute;
   top: 10px;
   color: #000;
@@ -1326,7 +1370,27 @@
   cursor: pointer;
 }
 
-#create_index_banner > #selectBannerBox > .box > img {
+#create_index_banner > #selectBannerBox > .box > .box-header > button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 120px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#create_index_banner > #selectBannerBox > .box > .box-content {
+  width: 800px;
+  height: 550px;
+  overflow-y: scroll;
+}
+
+#create_index_banner > #selectBannerBox > .box > .box-content > img {
   width: 180px;
   height: 150px;
   -o-object-fit: cover;
@@ -1334,7 +1398,7 @@
   cursor: pointer;
 }
 
-#create_index_banner > #selectBannerBox > .box > img.click {
+#create_index_banner > #selectBannerBox > .box > .box-content > img.click {
   border: 4px #f00 solid;
 }
 
