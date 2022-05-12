@@ -35,8 +35,8 @@ if(isset($_SESSION['username'])){
                 <input type="text" placeholder="請輸入標題..."  name="title" id="title">
                 <input type="hidden" value="" name="" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
-                <div id="selectSmallImgBtn">選擇小圖</div>
                 <div id="addurlbtn">添加網址</div>
+                <div id="selectSmallImgBtn">選擇小圖</div>
                 <div id="beforesmallImg">
                 </div>
                 <input type="hidden" name="smallImg" value="" id="smallImgData">

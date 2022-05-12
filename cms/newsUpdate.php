@@ -43,7 +43,8 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <p>標題</p>
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
         <p>內容</p>
-        <textarea name="content" id="" cols="30" rows="10"><?php echo $row_RS_mb['content'];?></textarea>
+        <textarea name="content"  cols="30" rows="10" id="contenttext"><?php echo $row_RS_mb['content'];?></textarea>
+        <div id="addurlbtn">添加網址</div>
         <div id="createSmallImgBtn" class="createSmallImgBtn">新增小圖</div>
         <div id="smallimglist">
             <?php  echo $row_RS_mb['smallimg']; ?>

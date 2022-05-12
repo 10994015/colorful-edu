@@ -877,6 +877,19 @@
   cursor: pointer;
 }
 
+#newsUpdate > form > #addurlbtn {
+  width: 150px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  background-color: #f1f1f1;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
 #newsUpdate > form > .btnBox {
   display: -webkit-box;
   display: -ms-flexbox;

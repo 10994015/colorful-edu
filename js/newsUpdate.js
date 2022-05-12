@@ -8,10 +8,7 @@ const selectImg = document.getElementById('selectImg');
 const smallimg = document.getElementById('smallimg');
 let src = '';
 
- if(imgsrc.value==""){
-        console.log(true);
-    }
-console.log(imgsrc.value);
+
 imgsrc.addEventListener('change',()=>{
     console.log(imgsrc.value);
    
@@ -165,4 +162,58 @@ selectImg.addEventListener('click',()=>{
         }
     }
 // }
+const content = document.getElementById('contenttext')
+let addurlbtnchk = 0;
+    const addurlbtn = document.getElementById('addurlbtn');
+    addurlbtnchk = 0;
+    addurlbtn.addEventListener('click',()=>{
+        addurlbtnchk = 1;
+       if(addurlbtnchk === 1){
+           addurlbtn.innerHTML = "添加中...";
+           addurlbtn.style.background = "#ccc";
+           contentFn()
+       }else{
+           addurlbtn.innerHTML = "添加網址";
+           addurlbtn.style.background = "#fff";
+       }
+       
+    })
 
+
+function contentFn(){
+    content.removeEventListener('mouseup',promptFn)
+    if(addurlbtnchk !== 1){
+        return;
+    }
+    if(content.value!=""){
+        content.addEventListener('mouseup',promptFn)
+    }
+   
+}
+function promptFn(){
+    let protext = prompt('請填寫網址')
+    console.log(selectText());
+    replaceFn(selectText(), protext)
+    addurlbtn.style.background = "#fff";
+    addurlbtnchk = 0;
+    addurlbtn.innerHTML = "添加網址";
+    
+}
+function selectText(){
+    if(document.Selection){       
+        //ie瀏覽器
+        return document.selection.createRange().text;     	 
+    }else{    
+        //標準瀏覽器
+        return window.getSelection().toString();	 
+    }	 
+}
+function replaceFn(txt,pro){
+
+let val = content.value;
+let newval = val.replace(txt,'<a href="'+pro+'">' + txt +'</a>');
+content.value = newval;
+// console.log(oContent.value);
+content.removeEventListener('mouseup',promptFn)
+
+}
