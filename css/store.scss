@@ -41,4 +41,47 @@
             }
         }
     }
+    >.searchDiv{
+        width:800px;
+        margin:0 auto;
+        margin-top: 50px;
+        padding:10px 0;
+        @media screen and (max-width:800px){
+            width:95%;
+        }
+        >input{
+            width:200px;
+            height: 35px;
+            padding:0 5px ;
+        }
+        >button{
+            width:50px;
+            height: 35px;
+            cursor: pointer;
+        }
+    }
+    >.textBox{
+        width:800px;
+        height: 350px;
+        margin:0 auto;
+        border:1px #ccc solid;
+        overflow-y:scroll ;
+        @media screen and (max-width:800px){
+            width:95%;
+        }
+        >.textHeader{
+            width:100%;
+            height:40px;
+            line-height: 40px;
+            padding:0 15px;
+            color:#000;
+            font-weight: 600;
+            background-color: #ccc;
+        }
+        >.textList{
+            padding:10px 15px;
+            border-bottom: 1px #ccc solid;
+
+        }
+    }
 }

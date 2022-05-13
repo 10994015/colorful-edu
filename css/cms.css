@@ -1768,4 +1768,120 @@
      object-fit: contain;
   cursor: pointer;
 }
+
+#storeText {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#storeText > h2 {
+  color: #fff;
+}
+
+#storeText > #textBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#storeText > #textBox > .name {
+  margin: 5px 0;
+  width: 300px;
+  height: 35px;
+}
+
+#storeText > button {
+  margin: 10px 0;
+  width: 100px;
+  height: 30px;
+}
+
+#storeText > .storeList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#storeText > .storeList > .storeListItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px #fff solid;
+  padding: 10px 0;
+}
+
+#storeText > .storeList > .storeListItem > p {
+  width: 500px;
+}
+
+#storeText > .storeList > .storeListItem > a {
+  color: #f00;
+}
+
+#company {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#company > a {
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-weight: 600;
+  color: #222;
+  margin: 15px 0;
+  text-decoration: none;
+}
 /*# sourceMappingURL=cms.css.map */
