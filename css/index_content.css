@@ -73,6 +73,10 @@
   color: #fff;
   margin-bottom: 10px;
   position: relative;
+  overflow: hidden;
+  width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 #index_content #course .content h2::before {
@@ -90,7 +94,7 @@
 #index_content #course .content img {
   margin: 10px 50px 50px 50px;
   width: 250px;
-  height: 300px;
+  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
 }
