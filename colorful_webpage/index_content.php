@@ -7,7 +7,7 @@ try{
     $sql_str_store = "SELECT * FROM store";
     $RS_store = $conn -> query($sql_str_store);
 
-    $sql_str_news = "SELECT * FROM news WHERE focus=1";
+    $sql_str_news = "SELECT * FROM news  WHERE focus=1 ORDER BY id DESC";
     $RS_news = $conn -> query($sql_str_news);
     $total_RS_news = $RS_news -> rowCount();
 
