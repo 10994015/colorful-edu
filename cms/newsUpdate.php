@@ -40,6 +40,17 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <input type="file" name="imgsrc" value="0" id="imgsrc">
         <img src="../images/img_upload2/<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
         <label for="show"> <input type="checkbox" name="isShow" id="show" value="<?php echo $row_RS_mb['isShow'];?>"> <p>顯示</p></label>
+        <?php if($row_RS_mb['focus']==1){?>
+            <div class="focus"> 
+                <label for="focus"><input type="radio" value="1" name="focus" id="focus" checked>焦點</label>
+                <label for="onfocus"><input type="radio" value="0" name="focus" id="onfocus" >非焦點</label>
+            </div>
+        <?php }else{ ?>
+            <div class="focus"> 
+                <label for="focus"><input type="radio" value="1" name="focus" id="focus">焦點</label>
+                <label for="onfocus"><input type="radio" value="0" name="focus" id="onfocus" checked>非焦點</label>
+            </div>
+        <?php } ?>
         <p>標題</p>
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
         <p>內容</p>

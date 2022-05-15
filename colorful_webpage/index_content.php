@@ -6,6 +6,10 @@ try{
 
     $sql_str_store = "SELECT * FROM store";
     $RS_store = $conn -> query($sql_str_store);
+
+    $sql_str_news = "SELECT * FROM news WHERE focus=1";
+    $RS_news = $conn -> query($sql_str_news);
+
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
 }
@@ -24,18 +28,12 @@ try{
     <div id="course">
         <h1>最新熱門課程</h1>
         <div class="content">
-            <a href="javascript:;">
-                <h2>STEAM SCHOOL</h2>
-                <img src="./images/003.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
+            <?php foreach($RS_news as $item){ ?>
+            <a href="./?page=post&id=<?php echo $item['id']; ?>">
+                <h2><?php echo $item['title']; ?></h2>
+                <img src="./images/img_upload2/<?php echo $item['imgsrc']; ?>" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
             </a>
-            <a href="javascript:;">
-                <h2>機器人STEAM教室</h2>
-                <img src="./images/001.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
-            </a>
-            <a href="javascript:;">
-                <h2>夏令營新生家長說明會</h2>
-                <img src="./images/002.png" class="courseImg" alt="新竹市私立冰芬美語文理短期補習班">
-            </a>
+            <?php } ?>
         </div>
     </div>
     <div id="nurture">
@@ -181,4 +179,4 @@ try{
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./shared/slick-1.6.0/slick/slick.min.js"></script>
 <script src="./js/slick.js"></script>
-<script src="./js/index_content.js"></script>
+<!-- <script src="./js/index_content.js"></script> -->

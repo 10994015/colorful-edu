@@ -6,7 +6,7 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
     $title = $_POST['title'];
     $content = $_POST['content'];
     $smallImg = $_POST['smallImg'];
-
+    $focus = $_POST['focus'];
     if( $_POST['isShow'] == ""){
         $isShow = 0;
     }else{
@@ -22,7 +22,7 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
     $imgsrc = $rand.$file_name;
 
    
-    $sql_str = "INSERT INTO news (title,content,imgsrc,isShow,smallimg) VALUES (:title,:content,:imgsrc,:isShow,:smallImg)";
+    $sql_str = "INSERT INTO news (title,content,imgsrc,isShow,smallimg,focus) VALUES (:title,:content,:imgsrc,:isShow,:smallImg,:focus)";
     $stmt = $conn -> prepare($sql_str);
     
     $stmt -> bindParam(':title' ,$title);
@@ -30,6 +30,7 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
     $stmt -> bindParam(':imgsrc' ,$imgsrc);
     $stmt -> bindParam(':isShow' ,$isShow);
     $stmt -> bindParam(':smallImg' ,$smallImg);
+    $stmt -> bindParam(':focus' ,$focus);
     $stmt ->execute();
 
 

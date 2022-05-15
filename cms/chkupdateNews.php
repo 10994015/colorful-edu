@@ -4,7 +4,7 @@ if($_FILES['imgsrc']['name']!=""){
     if(isset($_POST['id'])){
         try{
             $rand = strval(rand(1000,1000000));
-            $sql_str = "UPDATE news SET title = :title,content=:content,imgsrc=:imgsrc,isShow=:isShow,smallimg=:smallimg WHERE id  = :id";
+            $sql_str = "UPDATE news SET title = :title,content=:content,imgsrc=:imgsrc,isShow=:isShow,smallimg=:smallimg,focus=:focus WHERE id  = :id";
             //執行$conn物件中的prepare()預處理器
             $stmt = $conn->prepare($sql_str);
         
@@ -12,6 +12,7 @@ if($_FILES['imgsrc']['name']!=""){
             $title    = $_POST['title'];
             $content      = $_POST['content'];
             $id      = $_POST['id'];
+            $focus      = $_POST['focus'];
 
             $file      = $_FILES['imgsrc'];             //上傳檔案信息
             $file_name = $file['name'];                //上傳檔案的原來檔案名稱
@@ -35,6 +36,7 @@ if($_FILES['imgsrc']['name']!=""){
             $stmt->bindParam(':imgsrc' ,$imgname);
             $stmt->bindParam(':isShow' ,$isShow);
             $stmt->bindParam(':smallimg' ,$smallimg);
+            $stmt->bindParam(':focus' ,$focus);
         
             //執行準備好的$stmt物件工作
             $stmt->execute();
@@ -96,7 +98,7 @@ if($_FILES['imgsrc']['name']!=""){
 }else{
     if(isset($_POST['id'])){
         try{
-            $sql_str = "UPDATE news SET title = :title,content=:content,isShow=:isShow,smallimg=:smallimg WHERE id  = :id";
+            $sql_str = "UPDATE news SET title = :title,content=:content,isShow=:isShow,smallimg=:smallimg,focus=:focus WHERE id  = :id";
             //執行$conn物件中的prepare()預處理器
             $stmt = $conn->prepare($sql_str);
         
@@ -104,6 +106,7 @@ if($_FILES['imgsrc']['name']!=""){
             $title    = $_POST['title'];
             $content      = $_POST['content'];
             $id      = $_POST['id'];
+            $focus      = $_POST['focus'];
 
             $file      = $_FILES['imgsrc'];             //上傳檔案信息
            
@@ -121,6 +124,7 @@ if($_FILES['imgsrc']['name']!=""){
             $stmt->bindParam(':id' ,$id);
             $stmt->bindParam(':isShow' ,$isShow);
             $stmt->bindParam(':smallimg' ,$smallimg);
+            $stmt->bindParam(':focus' ,$focus);
         
             //執行準備好的$stmt物件工作
             $stmt->execute();

@@ -392,6 +392,14 @@
   margin: auto;
 }
 
+#newCreate form > .focus {
+  margin-top: 10px;
+}
+
+#newCreate form > .focus > label {
+  margin: 0 10px;
+}
+
 #newCreate form > input, #newCreate form textarea {
   width: 100%;
   margin: 10px 0;
@@ -794,6 +802,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#newsUpdate > form > .focus {
+  margin-top: 10px;
+}
+
+#newsUpdate > form > .focus > label {
+  margin: 0 10px;
 }
 
 #newsUpdate > form > span {

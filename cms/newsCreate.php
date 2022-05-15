@@ -32,6 +32,10 @@ if(isset($_SESSION['username'])){
                 <input type="file" name="imgsrc"  id="fileimgBtn">
                 <!-- <img src="../images/no.png" id="beforeImg"> -->
                 <label for="show"> <input type="checkbox" value="" id="show" name="isShow"> <p>顯示</p></label>
+                <div class="focus"> 
+                    <label for="focus"><input type="radio" value="1" name="focus" id="focus">焦點</label>
+                    <label for="onfocus"><input type="radio" value="0" name="focus" id="onfocus" checked>非焦點</label>
+                </div>
                 <input type="text" placeholder="請輸入標題..."  name="title" id="title">
                 <input type="hidden" value="" name="" id="imgsrc">
                 <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
