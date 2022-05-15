@@ -9,6 +9,7 @@ try{
 
     $sql_str_news = "SELECT * FROM news WHERE focus=1";
     $RS_news = $conn -> query($sql_str_news);
+    $total_RS_news = $RS_news -> rowCount();
 
 }catch(PDOException $e){
     die('Error!:'.$e->getMessage());
@@ -25,6 +26,7 @@ try{
             <div><img src="<?php echo $item['files_name'];?>" alt="新竹市私立冰芬美語文理短期補習班"></div>
         <?php } ?>
     </div>
+    <?php if($total_RS_news >0){ ?>
     <div id="course">
         <h1>最新熱門課程</h1>
         <div class="content">
@@ -36,6 +38,7 @@ try{
             <?php } ?>
         </div>
     </div>
+    <?php }?>
     <div id="nurture">
         <h1>師資培育</h1>
         <div class="content">
