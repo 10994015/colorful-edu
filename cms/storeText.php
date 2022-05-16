@@ -8,10 +8,12 @@ if(isset($_POST['name'])){
     $name = $_POST['name'];
     $name = explode(',',$name);  
     foreach($name as $item){
-        $sql_str = "INSERT INTO storetext (name) VALUES (:item)";
-        $stmt = $conn -> prepare($sql_str);
-        $stmt -> bindParam(':item' ,$item);
-        $stmt ->execute();
+        if($item!=""){
+            $sql_str = "INSERT INTO storetext (name) VALUES (:item)";
+            $stmt = $conn -> prepare($sql_str);
+            $stmt -> bindParam(':item' ,$item);
+            $stmt ->execute();
+        }
     }
    
 }
@@ -32,7 +34,7 @@ if(isset($_POST['name'])){
     <div id="storeText">
         <h2>新增企業名稱</h2>
         <div id="textBox">
-                <input type="text" class="name" placeholder="企業名稱..." >
+                <input type="text" class="name" placeholder="企業名稱..." > 
         </div>
         <button id="addBtn">增加</button>
         <button id="btn">送出</button>
@@ -42,7 +44,7 @@ if(isset($_POST['name'])){
             <?php foreach($RS_store_text as $item){ ?>
                <div class="storeListItem">
                 <p><?php echo $item['name']; ?></p> 
-                <a href="./deleteStoreText.php?id=<?php echo $item['id']; ?>">刪除</a>
+                <a href="javascript:;" onclick="deleteFn(<?php echo $item['id']; ?>)">刪除</a>
                </div>
             <?php } ?>
         </div>
@@ -54,6 +56,7 @@ if(isset($_POST['name'])){
         const btn = document.getElementById('btn');
         const addBtn = document.getElementById('addBtn');
         let nameArr = [];
+        
         btn.addEventListener('click',()=>{
             for(let i=0;i<name.length;i++){
                 nameArr.push(name[i].value);
@@ -62,6 +65,7 @@ if(isset($_POST['name'])){
             axionFn(nameArr);
         })
 
+        
         function axionFn(nameArr){
             var params = new URLSearchParams()
             params.append('name',nameArr );
@@ -80,7 +84,12 @@ if(isset($_POST['name'])){
             document.querySelector('#textBox').appendChild(str);
         })
        
-        
+        function deleteFn(id){
+            let chk = confirm('確定要刪除嗎?');
+            if(chk){
+                window.location.href = `./deleteStoreText.php?id=${id}`;
+            }
+        }
         
         
     

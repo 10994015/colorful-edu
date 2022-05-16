@@ -1,0 +1,39 @@
+#camp{
+    padding:150px 0  100px;
+    > .campBox{
+        width:900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:0 auto;
+        >.campItem{
+            width:400px;
+            height: 400px;
+            border:1px #ccc solid;
+            border-radius: 8px;
+            box-shadow: 0 5px 10px #555;
+            cursor: pointer;
+            margin:30px 0;
+            &:hover{
+                transform: translateY(-10px);
+                transition: .5s;
+            }
+            >img{
+                width:100%;
+            }
+            >.campText{
+                width:100%;
+                padding: 10px;
+                >h2{
+                    text-align: center;
+                    color:#222;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 19px;
+                }
+            }
+           
+        }
+    }
+}
