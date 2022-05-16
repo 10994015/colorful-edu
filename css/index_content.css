@@ -928,7 +928,11 @@
   width: 180px;
 }
 
-#index_content .partners .responsive2 > div > img {
+#index_content .partners .responsive2 > div a {
+  width: 180px;
+}
+
+#index_content .partners .responsive2 > div a > img {
   width: 180px;
   -o-object-fit: contain;
      object-fit: contain;

@@ -596,9 +596,12 @@
             >div{
                 margin:30px 30px;
                 width:180px;
-                >img{
+                a{
                     width:180px;
-                    object-fit: contain;
+                    >img{
+                        width:180px;
+                        object-fit: contain;
+                    }
                 }
             }
             
