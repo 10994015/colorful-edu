@@ -45,24 +45,7 @@
             @media screen and (max-width:960px){
                 flex-direction: column;
             }
-            h2{
-                text-align: center;
-                color:#fff;
-                margin-bottom: 10px;
-                position: relative;
-                
-
-                &::before{
-                    content:'';
-                    position: absolute;
-                    bottom: -8px;
-                    left:50%;
-                    transform: translateX(-50%);
-                    width:50px;
-                    height: 3px;
-                    background-color: #fff;
-                }
-            }
+           
              img{
                 margin: 10px 50px 50px 50px;
                 width:250px;
@@ -80,11 +63,24 @@
                 text-align: center;
                 color:#EEC71C;
                 font-size: 30px;
-                margin-bottom: 30px;
-                overflow:hidden;
+                margin-bottom: 5px;
+                font-size: 16px;
                 width:250px;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                height: 40px;
+                 // &::before{
+                //     content:'';
+                //     position: absolute;
+                //     bottom: -8px;
+                //     left:50%;
+                //     transform: translateX(-50%);
+                //     width:50px;
+                //     height: 3px;
+                //     background-color: #fff;
+                // }
             }
             .contentText{
                 font-family: '微軟正黑體';

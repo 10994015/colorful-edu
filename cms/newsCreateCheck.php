@@ -5,6 +5,15 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
 
     $title = $_POST['title'];
     $content = $_POST['content'];
+
+    function parse_links($str){
+        $str = str_replace('www.', 'http://www.', $str);
+        $str = preg_replace('|http://([a-zA-Z0-9-./]+)|', '&lt;a href=&quot;http://$1&quot;&gt;$1&lt;/a&gt;', $str);
+        $str = preg_replace('/(([a-z0-9+_-]+)(.[a-z0-9+_-]+)*@([a-z0-9-]+.)+[a-z]{2,6})/', '&lt;a href=&quot;mailto:$1&quot;&gt;$1&lt;/a&gt;', $str);
+        return $str;
+    }
+    parse_links($content);
+    
     $smallImg = $_POST['smallImg'];
     $focus = $_POST['focus'];
     if( $_POST['isShow'] == ""){
