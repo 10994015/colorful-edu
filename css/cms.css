@@ -1900,4 +1900,192 @@
   margin: 15px 0;
   text-decoration: none;
 }
+
+#create_course {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#create_course > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+#create_course > form > input {
+  width: 100%;
+  height: 35px;
+  margin: 5px 0;
+}
+
+#create_course > form > a {
+  display: block;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#create_course > form > select {
+  width: 100%;
+  height: 30px;
+}
+
+#create_course > form > .createTypeBtn {
+  width: 150px;
+  margin: 5px 0;
+}
+
+#create_course > form > #listnameBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#create_course > form > #listnameBox > input {
+  width: 100%;
+  height: 30px;
+  margin: 3px 0;
+}
+
+#course {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#course > a {
+  display: block;
+  background-color: #f1f1f1;
+  color: #212121;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#createCourseType {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#createCourseType > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+#createCourseType > form > h2 {
+  text-align: center;
+  color: #fff;
+}
+
+#createCourseType > form > input[type="text"] {
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+  padding: 0 3px;
+}
+
+#createCourseType > form > input[type="submit"] {
+  width: 100%;
+  height: 35px;
+  margin: 5px 0;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#createCourseType > ul {
+  list-style: none;
+}
+
+#createCourseType > ul > li {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+#createCourseType > ul > li > span {
+  min-width: 250px;
+}
+
+#createCourseType > ul > li > a {
+  color: #f00;
+  text-decoration: none;
+}
+
+#createCourseType > ul > li > a:hover {
+  border-bottom: 1px #f00 solid;
+}
 /*# sourceMappingURL=cms.css.map */

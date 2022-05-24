@@ -1,40 +1,37 @@
-<?php 
+<?php
 require_once('../config/conn.php');
-if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
+if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
     $rand = strval(rand(1000,1000000));
+    $name = $_POST['name'];
+    $listname = $_POST['listname'];
+    $coursetype = $_POST['coursetype'];
+    $listname = explode(',',$listname); 
 
-    $title = $_POST['title'];
-    $content = $_POST['content'];
-
-  
-    
-    $smallImg = $_POST['smallImg'];
-    $focus = $_POST['focus'];
-    if( $_POST['isShow'] == ""){
-        $isShow = 0;
-    }else{
-        $isShow = $_POST['isShow'];
-    }
-    
-    $file      = $_FILES['imgsrc'];       //上傳檔案信息
+    $file      = $_FILES['files_name'];       //上傳檔案信息
     $file_name = $file['name'];                //上傳檔案的原來檔案名稱
     $file_type = $file['type'];                //上傳檔案的類型(副檔名)
     $tmp_name  = $file['tmp_name'];            //上傳到暫存空間的路徑/檔名
     $file_size = $file['size'];                //上傳檔案的檔案大小(容量)
     $error     = $file['error'];   
-    $imgsrc = $rand.$file_name;
+    $files_name = $rand.$file_name;
+    foreach($listname as $item){
+        if($item!=""){
+            $sql_str = "INSERT INTO courselist (listname,coursename) VALUES (:item,:name)";
+            $stmt = $conn -> prepare($sql_str);
+            $stmt -> bindParam(':item' ,$item);
+            $stmt -> bindParam(':name' ,$name);
+            $stmt ->execute();
+        }
+    }
 
-   
-    $sql_str = "INSERT INTO news (title,content,imgsrc,isShow,smallimg,focus) VALUES (:title,:content,:imgsrc,:isShow,:smallImg,:focus)";
-    $stmt = $conn -> prepare($sql_str);
+    $sql = "INSERT INTO course (coursename,files_name,coursetype) VALUES (:coursename,:files_name,:coursetype)";
+    $stmt = $conn -> prepare($sql);
     
-    $stmt -> bindParam(':title' ,$title);
-    $stmt -> bindParam(':content' ,$content);
-    $stmt -> bindParam(':imgsrc' ,$imgsrc);
-    $stmt -> bindParam(':isShow' ,$isShow);
-    $stmt -> bindParam(':smallImg' ,$smallImg);
-    $stmt -> bindParam(':focus' ,$focus);
+    $stmt -> bindParam(':coursename' ,$name);
+    $stmt -> bindParam(':files_name' ,$files_name);
+    $stmt -> bindParam(':coursetype' ,$coursetype);
     $stmt ->execute();
+
 
 
     $allow_ext = array('jpeg', 'jpg', 'png', 'gif','JPG','JPEG','PNG','GIF');
@@ -64,7 +61,7 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
         // echo '<br>---------檔案刪除' . $result;
       }
       // header('Location:newsCreate.php');
-      echo "<script>alert('上傳成功!');window.location.href = news.php?upload=ok' </script>";
+      echo "<script>alert('上傳成功!');window.location.href = course.php?upload=ok' </script>";
    
     } else {
       //這裡表示上傳有錯誤, 匹配錯誤編號顯示對應的訊息
@@ -79,5 +76,5 @@ if(isset($_FILES['imgsrc']) && $_FILES['imgsrc']!=""){
       }
     }
     
-    echo "<script>alert('新增成功!');window.location.href = 'news.php' </script>";
+    echo "<script>alert('新增成功!');window.location.href = 'course.php' </script>";
 }

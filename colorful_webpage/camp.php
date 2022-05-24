@@ -1,3 +1,13 @@
+<?php
+require_once('./config/conn.php');
+
+$sql_str= "SELECT * FROM course";
+$RS_course = $conn -> query($sql_str);
+
+$sql= "SELECT * FROM coursetype";
+$RS_course_type = $conn -> query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
@@ -9,59 +19,20 @@
 </head>
 <body>
     <div id="camp">
+        <?php foreach($RS_course_type as $type){ ?>
         <div class="campBox">
-            <div class="campItem">
-                <img src="./images/camp1.jpg" alt="">
-                <div class="campText">
-                    <h2>歡樂時光夏令營</h2>
-                    <p>
-                        日期:<br>
-                        2022/07/18 - 2022/07/22
-                    </p>
-                </div>
-            </div>
-            <div class="campItem">
-                <img src="./images/camp1.jpg" alt="">
-                <div class="campText">
-                    <h2>歡樂時光夏令營</h2>
-                    <p>
-                        日期:<br>
-                        2022/07/18 - 2022/07/22
-                    </p>
-                </div>
-            </div>
-            <div class="campItem">
-                <img src="./images/camp1.jpg" alt="">
-                <div class="campText">
-                    <h2>歡樂時光夏令營</h2>
-                    <p>
-                        日期:<br>
-                        2022/07/18 - 2022/07/22
-                    </p>
-                </div>
-            </div>
-            <div class="campItem">
-                <img src="./images/camp1.jpg" alt="">
-                <div class="campText">
-                    <h2>歡樂時光夏令營</h2>
-                    <p>
-                        日期:<br>
-                        2022/07/18 - 2022/07/22
-                    </p>
-                </div>
-            </div>
-            <div class="campItem">
-                <img src="./images/camp1.jpg" alt="">
-                <div class="campText">
-                    <h2>歡樂時光夏令營</h2>
-                    <p>
-                        日期:<br>
-                        2022/07/18 - 2022/07/22
-                    </p>
-                </div>
-            </div>
+            <h2><?php echo $type['type']; ?></h2>
+            <ul class="campItem">
+                <?php
+                    foreach($RS_course as $item){
+                    if($type['type'] == $item['coursetype']){
+                ?>
+                    <a href="?page=coursecontent&id=<?php echo $item['id']; ?>" class="campText"><?php echo $item['coursename']; ?></a>
+                <?php } }$RS_course = $conn -> query($sql_str); ?>
+            </ul>
         </div>
-        <div></div>
+        
+         <?php } ?>
     </div>
 </body>
 </html>

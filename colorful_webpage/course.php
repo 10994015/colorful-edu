@@ -13,7 +13,7 @@
         <div class="content">
             <div class="grid">
                 <div class="item">
-                    <a href="##">
+                    <a href="?page=camp">
                         <img src="./images/0307.jpg" alt="">
                         <h2>冬令營/夏令營</h2>
                     </a>
