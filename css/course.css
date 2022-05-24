@@ -124,6 +124,13 @@
      object-fit: cover;
 }
 
+#course .intro > .content > .grid > .item > p {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 #course .enter {
   width: 100%;
   height: auto;

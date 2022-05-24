@@ -1,3 +1,11 @@
+<?php 
+$sql_str = "SELECT * FROM course WHERE coursetype='夏令營'";
+$RS_course = $conn -> query($sql_str);
+
+$sql_str = "SELECT * FROM course WHERE coursetype='實體課程'";
+$RS_course2 = $conn -> query($sql_str);
+?>
+
 <link rel="stylesheet" href="./css/course.css">
 
 <div id="course">
@@ -17,7 +25,11 @@
                         <img src="./images/0307.jpg" alt="">
                         <h2>冬令營/夏令營</h2>
                     </a>
-                    <p>將於近期更新，請敬請期待。</p>
+                    <p>
+                        <?php foreach($RS_course as $item){ 
+                            echo $item['coursename']."\n"; 
+                         } ?>
+                    </p>
                 </div>
             </div>
             <div class="grid">
@@ -35,7 +47,11 @@
                         <img src="./images/0309.jpg" alt="">
                         <h2>實體課/線上課</h2>
                     </a>
-                    <p>將於近期更新，請敬請期待。</p>
+                    <p>
+                        <?php foreach($RS_course2 as $item){ 
+                            echo $item['coursename']."\n"; 
+                         } ?>
+                    </p>
                 </div>
             </div>
         </div>
