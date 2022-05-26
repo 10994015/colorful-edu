@@ -1,5 +1,5 @@
 <?php 
-$max_rows = 5;
+$max_rows = 10;
 $total_rows = 0;
 $total_pages = 0;
 $curr_page = 0;
