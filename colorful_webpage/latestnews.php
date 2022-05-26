@@ -1,9 +1,22 @@
 <?php 
+$max_rows = 5;
+$total_rows = 0;
+$total_pages = 0;
+$curr_page = 0;
+if(isset($_GET['curr_page'])){
+    $curr_page = $_GET['curr_page'];
+}
+$first_row = $curr_page * $max_rows;
+$last_row = $first_row + $max_rows - 1;
 try{
-    $sql_str = "SELECT * FROM news ORDER BY id ASC";
+    $sql_str = "SELECT * FROM news WHERE isShow=1 ORDER BY id ASC";
+    $RS_news_all = $conn -> query($sql_str);
+    $total_rows = $RS_news_all -> rowCount();
+    $total_pages = ceil($total_rows / $max_rows);
+
+    $sql_str = "SELECT * FROM news WHERE isShow=1 ORDER BY id DESC LIMIT $first_row,$max_rows";
     $RS_news = $conn -> query($sql_str);
-    $total_RS_news = $RS_news -> rowCount();
-    
+  
 }
 catch(PDOException $e){
     die('Error!:'.$e->getMessage());
@@ -28,6 +41,7 @@ catch(PDOException $e){
           </div>
           <?php } ?>
       </div>
+      <?php include_once('./shared/pager.php'); ?>
 </div>
 
 <script src='./js/latestnews.js'></script>

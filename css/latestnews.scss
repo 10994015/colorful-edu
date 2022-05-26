@@ -43,7 +43,7 @@
         width:60%;
         margin: auto;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         @media screen and (max-width:1024px){
             width:80%;
         }
@@ -137,6 +137,45 @@
             overflow : hidden;
             text-overflow : ellipsis;
             white-space : nowrap;
+        }
+    }
+    > .page{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:60%;
+        margin: 50px auto;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        >.center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            >a{
+                cursor: pointer;
+                color:#111;
+                width:35px;
+                height: 35px;
+                text-align: center;
+                line-height: 35px;
+                &:hover{
+                    background-color: #666;
+                    color:#fff;
+                }
+                &.focus{
+                    font-size: 18px;
+                    font-weight: 600;
+                    color:#1484c4;
+                }
+                >i{
+                    cursor: pointer;
+                }
+                >li{
+                    cursor: pointer;
+                   
+                }
+            }
+           
         }
     }
 }
