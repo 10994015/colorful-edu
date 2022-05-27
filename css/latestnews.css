@@ -240,15 +240,15 @@
   line-height: 35px;
 }
 
-#latestnews > .page > .center > a:hover {
-  background-color: #666;
-  color: #fff;
-}
-
 #latestnews > .page > .center > a.focus {
   font-size: 18px;
   font-weight: 600;
   color: #1484c4;
+}
+
+#latestnews > .page > .center > a:hover {
+  background-color: #666;
+  color: #fff;
 }
 
 #latestnews > .page > .center > a > i {
