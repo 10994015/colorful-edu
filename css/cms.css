@@ -1954,14 +1954,26 @@
   font-weight: 600;
 }
 
+#create_course > form > #addBtn {
+  margin-bottom: 5px;
+}
+
 #create_course > form > select {
   width: 100%;
   height: 30px;
 }
 
+#create_course > form > .urlbox {
+  margin-bottom: 15px;
+}
+
 #create_course > form > .createTypeBtn {
   width: 150px;
   margin: 5px 0;
+}
+
+#create_course > form > label {
+  margin: 3px 0;
 }
 
 #create_course > form > #listnameBox {

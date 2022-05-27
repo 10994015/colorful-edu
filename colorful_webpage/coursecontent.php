@@ -52,26 +52,11 @@ if(isset($_GET['id'])&&$_GET['id']!=""){
                 <?php foreach($row_courselist as $item){ ?>
                     <li><?php echo $item['listname']; ?></li>
                 <?php } ?>
-                <!-- <li>英文自我介紹認識活動</li>
-                <li>認識福爾摩沙</li>
-                <li>世界各國首都介紹</li>
-                <li>旅遊英文</li>
-                <li>旅遊對話活動</li>
-                <li>藝術介紹</li>
-                <li>國際管理能力訓練</li>
-                <li>團隊合作能力訓練</li>
-                <li>世界各國文化介紹</li>
-                <li>俚語Slang</li>
-                <li>俚語小組活動</li>
-                <li>特殊風俗民情</li>
-                <li>國際領導能力訓練</li>
-                <li>批判思考能力訓練</li>
-                <li>小小模擬聯合國活動</li>
-                <li>國際事件探討</li>
-                <li>介紹課程與TarkusVP介面(中文) Discover TarkusVPinterface through Computational Thinking</li>
-                <li>英文文學短文賞析(英文) Pseudo-code and Algorithm Writing</li>
-                <li>根據故事描述解決數學問題(中文) Problem solving with TarkusVP</li> -->
             </ul>
+            <?php if( $row_course['url']!=""){?>
+            <p>報名連結:</p>
+            <a href="<?php echo $row_course['url']; ?>" target="_blank"><?php echo $row_course['url']; ?></a>
+            <?php } ?>
        </div>
        <div>
            <img src="./images/img_upload2/<?php echo $row_course['files_name']; ?>" alt="">

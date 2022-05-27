@@ -21,7 +21,7 @@ $RS_course2 = $conn -> query($sql_str);
         <div class="content">
             <div class="grid">
                 <div class="item">
-                    <a href="?page=camp">
+                    <a href="?page=camp&type=1">
                         <img src="./images/0307.jpg" alt="">
                         <h2>冬令營/夏令營</h2>
                     </a>
@@ -34,7 +34,7 @@ $RS_course2 = $conn -> query($sql_str);
             </div>
             <div class="grid">
                 <div class="item">
-                    <a href="##">
+                    <a href="?page=camp&type=2">
                         <img src="./images/0308.jpg" alt="">
                         <h2>平日營/假日營</h2>
                     </a>
@@ -43,7 +43,7 @@ $RS_course2 = $conn -> query($sql_str);
             </div>
             <div class="grid">
                 <div class="item">
-                    <a href="##">
+                    <a href="?page=camp&type=3">
                         <img src="./images/0309.jpg" alt="">
                         <h2>實體課/線上課</h2>
                     </a>

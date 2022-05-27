@@ -32,6 +32,16 @@ $RS_course_type = $conn -> query($sql_str);
                 <input type="text"  class="listnameClass" placeholder="課程列表...">
             </div>
             <a href="javascript:;" id="addBtn">+</a>
+            報名網址:<input type="text" name="url" placeholder="請輸入網址..." class="urlbox">
+            <label for="bigtype1">
+                <input type="radio" name="bigtype" value="1" id="bigtype1" checked>夏令營/冬令營
+            </label>
+            <label for="bigtype2">
+                <input type="radio" name="bigtype" value="2" id="bigtype2">平日營/假日營
+            </label>
+            <label for="bigtype3">
+                <input type="radio" name="bigtype" value="3" id="bigtype3">實體課/線上課
+            </label>
             <input type="hidden" name="listname" id="listname">
             <input type="submit" value="送出" id="submit">
         </form>

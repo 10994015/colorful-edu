@@ -5,6 +5,8 @@ if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
     $name = $_POST['name'];
     $listname = $_POST['listname'];
     $coursetype = $_POST['coursetype'];
+    $bigtype = $_POST['bigtype'];
+    $url = $_POST['url'];
     $listname = explode(',',$listname); 
 
     $file      = $_FILES['files_name'];       //上傳檔案信息
@@ -24,12 +26,14 @@ if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
         }
     }
 
-    $sql = "INSERT INTO course (coursename,files_name,coursetype) VALUES (:coursename,:files_name,:coursetype)";
+    $sql = "INSERT INTO course (coursename,files_name,coursetype,bigtype,url) VALUES (:coursename,:files_name,:coursetype,:bigtype,:url)";
     $stmt = $conn -> prepare($sql);
     
     $stmt -> bindParam(':coursename' ,$name);
     $stmt -> bindParam(':files_name' ,$files_name);
     $stmt -> bindParam(':coursetype' ,$coursetype);
+    $stmt -> bindParam(':bigtype' ,$bigtype);
+    $stmt -> bindParam(':url' ,$url);
     $stmt ->execute();
 
 
