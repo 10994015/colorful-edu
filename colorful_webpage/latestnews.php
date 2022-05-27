@@ -13,9 +13,17 @@ try{
     $RS_news_all = $conn -> query($sql_str);
     $total_rows = $RS_news_all -> rowCount();
     $total_pages = ceil($total_rows / $max_rows);
-
-    $sql_str = "SELECT * FROM news WHERE isShow=1 ORDER BY id DESC LIMIT $first_row,$max_rows";
-    $RS_news = $conn -> query($sql_str);
+    if(isset($_GET['search']) && $_GET['search']!=""){
+        $keyword = $_GET['search'];
+        $sql_str = "SELECT * FROM news WHERE isShow=1 AND title LIKE '%$keyword%'";
+        $RS_news = $conn -> query($sql_str);
+        $total_rows = $RS_news -> rowCount();
+        $total_pages = ceil($total_rows / $max_rows);
+    }else{
+        $sql_str = "SELECT * FROM news WHERE isShow=1 ORDER BY id DESC LIMIT $first_row,$max_rows";
+        $RS_news = $conn -> query($sql_str);
+    }
+   
   
 }
 catch(PDOException $e){
