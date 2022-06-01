@@ -23,12 +23,12 @@
             <div class="about">
                 <h2>關於冰芬</h2>
                 <div class="aboutList">
-                    <a href="./?page=course">關於我們</a>
+                    <a href="./?page=about">關於我們</a>
                     <a href="./?page=contact">聯絡我們</a>
-                    <a href="javascript:;">常見問題</a>
-                    <a href="javascript:;">加入會員</a>
-                    <a href="javascript:;">隱私政策</a>
-                    <a href="javascript:;">服務條款</a>
+                    <a href="./?page=faq&innerpage=signup">常見問題</a>
+                    <!-- <a href="javascript:;">加入會員</a> -->
+                    <a href="./?page=faq&innerpage=privacy">隱私政策</a>
+                    <a href="./?page=faq&innerpage=serve">服務條款</a>
                 </div>
             </div>
             <div class="link">
