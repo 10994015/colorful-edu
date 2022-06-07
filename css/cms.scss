@@ -86,7 +86,7 @@
     position: fixed;
     top: 0;
     left:0;
-    width:350px;
+    width:280px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -95,14 +95,14 @@
     transition:all .5s ease;
     z-index: 999999;
     &.close{
-        left:-350px;
+        left:-280px;
     }
     >#menu{
         position: absolute;
         top: 0px;
-        right:-60px;
-        width:60px;
-        height: 60px;
+        right:-45px;
+        width:45px;
+        height: 45px;
         background-color: #B80816;
         display: flex;
         justify-content: center;
@@ -110,7 +110,7 @@
         cursor: pointer;
         > i{
             color:#fff;
-            font-size: 36px;
+            font-size: 26px;
         }
     }
     >img{
@@ -122,6 +122,7 @@
     >h2{
         color:#fff;
         text-align: center;
+        font-size: 20px;
     }
     > .link{
         display: flex;
@@ -1391,7 +1392,6 @@
     width:100%;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #212121;
@@ -1407,6 +1407,46 @@
         line-height: 40px;
         font-weight: 600;
         text-decoration: none;
+        margin-bottom: 30px;
+    }
+    >.courseList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:800px;
+        margin: 0 auto;
+        background-color: #f1f1f1;
+        >.item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width:100%;
+            color:#212121;
+            padding:15px 0px;
+            border-bottom: 1px #ccc solid;
+            >p{
+                width:40%;
+                padding: 0 12px;
+            }
+            >span{
+                width:40%;
+                padding: 0 12px;
+            }
+            >.btn{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width:20%;
+                >a{
+                    text-decoration: none;
+                    color:#1484c4;
+                    font-weight: 600;
+                    &#delectbtn{
+                        color:#f00;
+                    }
+                }
+            }
+        }
     }
 }
 
