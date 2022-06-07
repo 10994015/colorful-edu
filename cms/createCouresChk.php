@@ -7,6 +7,7 @@ if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
     $coursetype = $_POST['coursetype'];
     $bigtype = $_POST['bigtype'];
     $url = $_POST['url'];
+    $content = $_POST['content'];
     $listname = explode(',',$listname); 
 
     $file      = $_FILES['files_name'];       //上傳檔案信息
@@ -18,15 +19,15 @@ if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
     $files_name = $rand.$file_name;
     foreach($listname as $item){
         if($item!=""){
-            $sql_str = "INSERT INTO courselist (listname,coursename) VALUES (:item,:name)";
+            $sql_str = "INSERT INTO courselist (listname,coursename) VALUES (:item,:rand)";
             $stmt = $conn -> prepare($sql_str);
             $stmt -> bindParam(':item' ,$item);
-            $stmt -> bindParam(':name' ,$name);
+            $stmt -> bindParam(':rand' ,$rand);
             $stmt ->execute();
         }
     }
 
-    $sql = "INSERT INTO course (coursename,files_name,coursetype,bigtype,url) VALUES (:coursename,:files_name,:coursetype,:bigtype,:url)";
+    $sql = "INSERT INTO course (coursename,files_name,coursetype,bigtype,url,content) VALUES (:coursename,:files_name,:coursetype,:bigtype,:url,:content)";
     $stmt = $conn -> prepare($sql);
     
     $stmt -> bindParam(':coursename' ,$name);
@@ -34,6 +35,7 @@ if(isset($_FILES['files_name']) && $_FILES['files_name']!=""){
     $stmt -> bindParam(':coursetype' ,$coursetype);
     $stmt -> bindParam(':bigtype' ,$bigtype);
     $stmt -> bindParam(':url' ,$url);
+    $stmt -> bindParam(':content' ,$content);
     $stmt ->execute();
 
 

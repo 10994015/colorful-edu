@@ -1375,6 +1375,11 @@
         >label{
             margin:3px 0;
         }
+        >textarea{
+            width:100%;
+            resize:vertical;
+            margin:3px 0;
+        }
         >#listnameBox{
             width: 100%;
             display: flex;
@@ -1497,6 +1502,96 @@
                 &:hover{
                     border-bottom: 1px #f00 solid;
                 }
+            }
+        }
+    }
+}
+
+#courseupdate{
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212121;
+    color:#fff;
+    padding: 50px 0;
+    >form{
+        display: flex;
+        flex-direction: column;
+        width:400px;
+        >input{
+            width:100%;
+            height: 35px;
+            margin:5px 0;
+        }
+        >a{
+            display: block;
+            background-color: #f1f1f1;
+            text-align: center;
+            line-height: 30px;
+            width:30px;
+            height: 30px;
+            align-self:center;
+            color:#000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        >#addBtn{
+            margin-bottom: 5px;
+        }
+        >select {
+            width:100%;
+            height: 30px;
+        }
+        >.urlbox{
+            margin-bottom: 15px;
+        }
+        >.createTypeBtn{
+            width:150px;
+            margin:5px 0;
+        }
+        >label{
+            margin:3px 0;
+        }
+        >textarea{
+            width:100%;
+            resize:vertical ;
+            margin:3px 0;
+        }
+        >#listnameBox{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            >input{
+                width:100%;
+                height: 30px;
+                margin:3px 0;
+            }
+        }
+        >#changeimg{
+            width:200px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgba(255, 0, 0, 0.623);
+            color:#fff;
+            font-weight: 600;
+            margin:6px 0;
+        }
+        >.courselistBox{
+            display: flex;
+            align-items: center;
+            border-bottom: #ccc solid 1px;
+            padding: 3px 0;
+            >small{
+                width:90%;
+            }
+            >a{
+                color:#f00;
+                text-decoration: none;
             }
         }
     }

@@ -1977,6 +1977,12 @@
   margin: 3px 0;
 }
 
+#create_course > form > textarea {
+  width: 100%;
+  resize: vertical;
+  margin: 3px 0;
+}
+
 #create_course > form > #listnameBox {
   width: 100%;
   display: -webkit-box;
@@ -2162,5 +2168,135 @@
 
 #createCourseType > ul > li > a:hover {
   border-bottom: 1px #f00 solid;
+}
+
+#courseupdate {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #212121;
+  color: #fff;
+  padding: 50px 0;
+}
+
+#courseupdate > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 400px;
+}
+
+#courseupdate > form > input {
+  width: 100%;
+  height: 35px;
+  margin: 5px 0;
+}
+
+#courseupdate > form > a {
+  display: block;
+  background-color: #f1f1f1;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#courseupdate > form > #addBtn {
+  margin-bottom: 5px;
+}
+
+#courseupdate > form > select {
+  width: 100%;
+  height: 30px;
+}
+
+#courseupdate > form > .urlbox {
+  margin-bottom: 15px;
+}
+
+#courseupdate > form > .createTypeBtn {
+  width: 150px;
+  margin: 5px 0;
+}
+
+#courseupdate > form > label {
+  margin: 3px 0;
+}
+
+#courseupdate > form > textarea {
+  width: 100%;
+  resize: vertical;
+  margin: 3px 0;
+}
+
+#courseupdate > form > #listnameBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#courseupdate > form > #listnameBox > input {
+  width: 100%;
+  height: 30px;
+  margin: 3px 0;
+}
+
+#courseupdate > form > #changeimg {
+  width: 200px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.623);
+  color: #fff;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+#courseupdate > form > .courselistBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: #ccc solid 1px;
+  padding: 3px 0;
+}
+
+#courseupdate > form > .courselistBox > small {
+  width: 90%;
+}
+
+#courseupdate > form > .courselistBox > a {
+  color: #f00;
+  text-decoration: none;
 }
 /*# sourceMappingURL=cms.css.map */
