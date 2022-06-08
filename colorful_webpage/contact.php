@@ -4,7 +4,6 @@ if(isset($_GET['send']) && $_GET['send']=='ok'){
 }
 ?>
 
-<link rel="stylesheet" href="./css/contact.css">
 
 <div id="contact">
     <div class="banner">

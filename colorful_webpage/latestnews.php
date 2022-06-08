@@ -31,7 +31,6 @@ catch(PDOException $e){
   }
 ?>
 
-<link rel="stylesheet" href="./css/latestnews.css">
 <div id="latestnews">
       <div class="search">
           <input type="text" placeholder="搜尋文章..." id="searchBox">

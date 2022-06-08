@@ -4,7 +4,6 @@ if(isset($_GET['innerpage'])&&$_GET['innerpage']!=""){
     $innerpage = $_GET['innerpage'];
 }
 ?>
-<link rel="stylesheet" href="./css/about.css">
 
 <div id="faq">
     <div id="leftSidebar">

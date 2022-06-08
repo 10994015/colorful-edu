@@ -33,7 +33,6 @@ if(isset($_GET['id'])&&$_GET['id']!=""){
     }
 }
 ?>
-<link rel="stylesheet" href="./css/camp.css">
 <div id="courseContent">
     <div>
         <h1><?php echo $coursename; ?></h1>

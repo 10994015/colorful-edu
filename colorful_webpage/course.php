@@ -6,7 +6,6 @@ $sql_str = "SELECT * FROM course WHERE coursetype='實體課程'";
 $RS_course2 = $conn -> query($sql_str);
 ?>
 
-<link rel="stylesheet" href="./css/course.css">
 
 <div id="course">
     <div class="banner">

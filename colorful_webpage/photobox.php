@@ -16,7 +16,6 @@ if(isset($_GET['site']) && $_GET['site']!=""){
       }
 }
 ?>
-<link rel="stylesheet" href="./css/photobox.css">
 
 <div id="photobox">
     <div class="box">

@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./css/about.css">
 <div id="about">
     <h2 class="title"><i class="fab fa-servicestack"></i>關於冰芬</h2>
     <div class="content">

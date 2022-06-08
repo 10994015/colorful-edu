@@ -17,3 +17,4 @@ for(let i=0;i<courseImg.length;i++){
 }
 moduleClose.addEventListener('click',closeModule);
 moduleBack.addEventListener('click',closeModule);
+

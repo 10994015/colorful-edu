@@ -35,13 +35,15 @@ if( isset($_GET['page']) && $_GET['page']!='' ){
         <i class="fas fa-bars" id="menu"></i>
     </header>
     
-    <?php
-      if($page==''){
-        include('./colorful_webpage/index_content.php');
-      }else{
-        include('./colorful_webpage/'.$page.'.php');
-      }
+    <main>
+      <?php
+        if($page==''){
+          include('./colorful_webpage/index_content.php');
+        }else{
+          include('./colorful_webpage/'.$page.'.php');
+        }
       ?>
+    </main>
 
     <?php include_once('./shared/footer.php'); ?>
     

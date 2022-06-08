@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./css/post.css"> 
 <?php if(isset($_GET['id']) && $_GET['id'] != ""){ 
     try{
         $sql_str = "SELECT * FROM news WHERE id = :id";

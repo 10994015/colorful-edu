@@ -8,7 +8,6 @@ try{
 }
 ?>
 
-<link rel="stylesheet" href="./css/site.css">
 
 <div id="site">
     <div class="banner">

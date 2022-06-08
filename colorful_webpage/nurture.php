@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./css/nurture.css">
 <div id="nurture">
     <div class="bigtitle">
         <h4>人才培育</h4>

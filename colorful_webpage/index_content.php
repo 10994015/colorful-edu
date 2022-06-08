@@ -18,7 +18,6 @@ try{
 
 <link rel="stylesheet" type="text/css" href="./shared/slick-1.6.0/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="./shared/slick-1.6.0/slick/slick-theme.css"/>
-<link rel="stylesheet" href="./css/index_content.css">
 
 <div id="index_content">
     <div class="responsive">
@@ -183,4 +182,5 @@ try{
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="./shared/slick-1.6.0/slick/slick.min.js"></script>
 <script src="./js/slick.js"></script>
+<script src="./js/scroll.js"></script>
 <!-- <script src="./js/index_content.js"></script> -->
