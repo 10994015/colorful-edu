@@ -35,16 +35,18 @@ if(isset($_SESSION['username'])){
    <div id="create_index_banner">
        <?php include_once('./header.php'); ?>
 
-        <form action="./uploadBannerChk.php" method="post">
+        <form action="./uploadBannerChk.php" method="post" enctype="multipart/form-data">
              <div id="selectBannerBoxBtn">選擇banner</div>
-             <input type="hidden" name="banner" value="" id="banner">
+             <!-- <input type="hidden" name="banner" value="" id="banner"> -->
+             <input type="file" name="banner">
              <div id="createImgBox"></div>
+             <input type="text" name="url" placeholder="請輸入連結...">
              <input type="text" placeholder="排序(請輸入數字)" name="sort" value="<?php echo $pre; ?>">
              <input type="submit" value="新增" class="cretatBannerBtn">
 
         </form>
 
-        <div id="selectBannerBox">
+        <!-- <div id="selectBannerBox">
             <div class="box">
                <div class="box-header">
                     <i class="fas fa-times" id="closeBtn"></i>
@@ -57,7 +59,7 @@ if(isset($_SESSION['username'])){
                </div>
                 
                 </div>
-        </div>
+        </div> -->
 
    </div>
 

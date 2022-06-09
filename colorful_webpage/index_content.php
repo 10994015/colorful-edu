@@ -22,7 +22,7 @@ try{
 <div id="index_content">
     <div class="responsive">
         <?php foreach($RS_banner as $item){?>
-            <div><img src="<?php echo $item['files_name'];?>" alt="新竹市私立冰芬美語文理短期補習班"></div>
+            <div><a href="<?php echo $item['url']; ?>"><img src="<?php echo $item['files_name'];?>" alt="新竹市私立冰芬美語文理短期補習班"></a></div>
         <?php } ?>
     </div>
     <?php if($total_RS_news >0){ ?>

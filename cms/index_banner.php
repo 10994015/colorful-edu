@@ -34,6 +34,7 @@ try{
                     <p>
                         <span>排序:<?php echo $item['sortnum']; ?></span>
                         <input type="number" value="<?php echo $item['sortnum']; ?>" class="sortnumClassName">
+                        <input type="text" class="link" value="<?php if($item['url']=='javascript:;'){echo '無連結';}else{echo $item['url']; }?>">
                         <button class="sortbtn" value="<?php echo $item['id']; ?>">更新</button>
                         <!-- <a href="./updateSortBanner.php?id=<?php echo $item['id']; ?>" class="updateSort">編輯排序</a> -->
                     </p>
@@ -60,7 +61,9 @@ try{
     function sortnumFn(e){
         var params = new URLSearchParams()
         var sortnum = e.target.parentNode.getElementsByClassName('sortnumClassName')[0].value;
+        var url = e.target.parentNode.getElementsByClassName('link')[0].value;
         params.append('sort',sortnum )
+        params.append('url',url )
         params.append('id', e.target.value)
         axios.post('./updataSortChk.php',params).then(res=>{
             alert('更新成功!');

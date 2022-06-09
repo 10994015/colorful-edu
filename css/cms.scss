@@ -894,6 +894,11 @@
                     margin-bottom: 5px;
                     width:50px;
                 }
+                .link{
+                    width:100%;
+                    height: 25px;
+                    margin-bottom: 5px;
+                }
                 >.updateSort{
                     display: block;
                     width:100px;
@@ -936,6 +941,10 @@
             cursor: pointer;
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
             align-self:center;
+        }
+        >input{
+            margin: 5px 0;
+            height: 30px;
         }
         >#createImgBox{
             display: flex;
