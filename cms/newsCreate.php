@@ -29,6 +29,7 @@ if(isset($_SESSION['username'])){
             <h3>新增公告</h3>
             <form action="./newsCreateCheck.php" method="POST" enctype="multipart/form-data">
                 <!-- <div id="selectImgBtn">選擇封面照</div> -->
+                <p>上傳封面照</p>
                 <input type="file" name="imgsrc"  id="fileimgBtn">
                 <!-- <img src="../images/no.png" id="beforeImg"> -->
                 <label for="show"> <input type="checkbox" value="" id="show" name="isShow"> <p>顯示</p></label>
@@ -36,15 +37,15 @@ if(isset($_SESSION['username'])){
                     <label for="focus"><input type="radio" value="1" name="focus" id="focus">焦點</label>
                     <label for="onfocus"><input type="radio" value="0" name="focus" id="onfocus" checked>非焦點</label>
                 </div>
-                <input type="text" placeholder="請輸入標題..."  name="title" id="title">
+                <input type="text" placeholder="請輸入標題..."  name="title" id="title" required="required">
                 <input type="hidden" value="" name="" id="imgsrc">
-                <textarea  name="content" placeholder="請輸入內文..." id="content"></textarea>
-                <div id="addurlbtn">添加網址</div>
-                <div id="selectSmallImgBtn">選擇小圖</div>
+                <textarea  name="content" placeholder="請輸入內文..." id="content" required="required"></textarea>
+                <!-- <div id="addurlbtn">添加網址</div> -->
+                <!-- <div id="selectSmallImgBtn">選擇小圖</div> -->
                 <div id="beforesmallImg">
                 </div>
                 <input type="hidden" name="smallImg" value="" id="smallImgData">
-                <input type="submit" name="submit" value="新增" id="createSubmit" disabled />
+                <input type="submit" name="submit" value="新增" id="createSubmit"  />
             </form>
         <div id="uplaodImgBox">
             <div class="box">
@@ -92,7 +93,18 @@ if(isset($_SESSION['username'])){
         </div>
         </div>
    </div>
-    <script src="../js/newsCreate.js"></script>
+<script src="../shared/ckeditor4/ckeditor.js"></script>
+<script src="../js/newsCreate.js"></script>
+<script src="https://ckeditor.com/apps/ckfinder/3.5.0/ckfinder.js"></script>
+
+<script>
+    CKEDITOR.replace('content',{
+        extraplugins:'filebrowser',
+        height:300,
+        filebrowserUploadMethod:"form",
+        filebrowserUploadUrl:"./ckeditor_upload.php"
+    });
+</script>
 </body>
 </html>
 

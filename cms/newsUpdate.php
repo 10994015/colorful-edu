@@ -55,8 +55,8 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <input type="text" name="title" value="<?php echo $row_RS_mb['title'];?>">
         <p>內容</p>
         <textarea name="content"  cols="30" rows="10" id="contenttext"><?php echo $row_RS_mb['content'];?></textarea>
-        <div id="addurlbtn">添加網址</div>
-        <div id="createSmallImgBtn" class="createSmallImgBtn">新增小圖</div>
+        <!-- <div id="addurlbtn">添加網址</div> -->
+        <!-- <div id="createSmallImgBtn" class="createSmallImgBtn">新增小圖</div> -->
         <div id="smallimglist">
             <?php  echo $row_RS_mb['smallimg']; ?>
         </div>
@@ -80,7 +80,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         </div>
     </div>
 
-    <div id="createSmallImgBox">
+    <!-- <div id="createSmallImgBox">
         
         <div class="box">
             <div class="box-header">
@@ -95,9 +95,18 @@ if(isset($_GET['id']) && $_GET['id']!=""){
             </div>
         
         </div>
-    </div>
+    </div> -->
    </div>
-
+   <script src="../shared/ckeditor4/ckeditor.js"></script>
    <script src="../js/newsUpdate.js"></script>
+
+   <script>
+     CKEDITOR.replace('content',{
+        extraplugins:'filebrowser',
+        height:300,
+        filebrowserUploadMethod:"form",
+        filebrowserUploadUrl:"ckeditor_upload.php"
+    });
+    </script>
 </body>
 </html>

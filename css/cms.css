@@ -246,7 +246,7 @@
 
 #news .news > a {
   text-align: center;
-  background-color: #14844c;
+  background-color: #1484c4;
   font-weight: 600;
   text-decoration: none;
   width: 150px;
@@ -326,7 +326,7 @@
   display: block;
   border: none;
   outline: none;
-  background-color: #14844c;
+  font-weight: 600;
   text-align: center;
   line-height: 35px;
   color: #fff;
@@ -336,9 +336,16 @@
   font-size: 16px;
 }
 
+#news .btnbox > .updatebtn {
+  background-color: #1484c4;
+}
+
+#news .btnbox > .deletebtn {
+  background-color: #f00;
+}
+
 #newCreate {
   background-color: #212121;
-  color: #fff;
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -353,6 +360,7 @@
 }
 
 #newCreate h3 {
+  color: #fff;
   text-align: center;
 }
 
@@ -393,15 +401,24 @@
   margin: auto;
 }
 
+#newCreate form #fileimgBtn {
+  color: #fff;
+}
+
+#newCreate form > label {
+  color: #fff;
+}
+
 #newCreate form > .focus {
   margin-top: 10px;
+  color: #fff;
 }
 
 #newCreate form > .focus > label {
   margin: 0 10px;
 }
 
-#newCreate form > input, #newCreate form textarea {
+#newCreate form > input {
   width: 100%;
   margin: 10px 0;
   height: 30px;
@@ -417,11 +434,18 @@
 }
 
 #newCreate form textarea {
-  height: 200px;
-  resize: none;
+  width: 100%;
+  margin: 10px 0;
+  color: #000;
 }
 
-#newCreate form > div {
+#newCreate form > p {
+  color: #fff;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+#newCreate form > .focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -431,6 +455,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#newCreate form > #createSubmit {
+  width: 150px;
+  height: 45px;
+  background-color: #1484c4;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 #newCreate #uplaodImgBox {
@@ -628,6 +662,7 @@
   display: block;
   cursor: pointer;
   margin-bottom: 8px;
+  margin-top: 15px;
 }
 
 #newCreate #addurlbtn {
@@ -787,7 +822,6 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: #212121;
-  color: #fff;
   padding: 50px 0;
 }
 
@@ -807,6 +841,7 @@
 
 #newsUpdate > form > .focus {
   margin-top: 10px;
+  color: #fff;
 }
 
 #newsUpdate > form > .focus > label {
@@ -823,6 +858,7 @@
   text-align: center;
   line-height: 35px;
   cursor: pointer;
+  color: #fff;
 }
 
 #newsUpdate > form > label {
@@ -832,6 +868,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #fff;
 }
 
 #newsUpdate > form > img {
@@ -845,12 +882,18 @@
 #newsUpdate > form > p {
   font-weight: 600;
   margin-top: 10px;
+  color: #fff;
 }
 
 #newsUpdate > form > input {
   width: 100%;
   margin: 10px 0;
   height: 30px;
+  color: #000;
+}
+
+#newsUpdate > form > input[type='file'] {
+  color: #fff;
 }
 
 #newsUpdate > form > textarea {
@@ -892,6 +935,7 @@
   font-weight: 600;
   margin-bottom: 15px;
   cursor: pointer;
+  margin-top: 15px;
 }
 
 #newsUpdate > form > #addurlbtn {
@@ -903,6 +947,7 @@
   background-color: #f1f1f1;
   color: #222;
   font-weight: 600;
+  margin-top: 15px;
   margin-bottom: 15px;
   cursor: pointer;
 }
@@ -914,6 +959,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 15px;
 }
 
 #newsUpdate > form > .btnBox > input[type='submit'] {
@@ -1283,6 +1329,17 @@
   margin-right: 10px;
   text-decoration: none;
   margin-top: 8px;
+}
+
+#index_banner .imgBox > .imgList > p > .sortbtn {
+  width: 80px;
+  height: 30px;
+  background-color: #14844C;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  outline: none;
 }
 
 #create_index_banner {

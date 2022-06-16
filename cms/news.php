@@ -28,16 +28,16 @@ if(isset($_SESSION['username'])){
         <a href="./newsCreate.php">新增公告</a>
         <?php foreach($RS_mb as $item){ ?>
         <div class="list">
-            <img src="../images/img_upload2/<?php echo $item['imgsrc']; ?>" alt="">
+            <img src="../images/img_upload2/<?php echo $item['imgsrc']; ?>" >
             <div class="content">
                 <h4><?php echo $item['title']; ?></h4>
-                <p class="contentText"><?php echo $item['content']; ?></p>
+                <!-- <p class="contentText"><?php echo $item['content']; ?></p> -->
                 <span><?php if($item['isShow']==1){echo "(顯示)";}else{echo "(不顯示)";} ?></span>
                 <span><?php if($item['focus']==1){echo "(焦點)"; }else{echo "(非焦點)"; } ?></span>
             </div>
             <div class="btnbox">
-                <a href="./newsUpdate.php?id=<?php echo $item['id'];?>">編輯</a>
-                <a href="javascript:;" onclick="deleteNewFn(<?php echo $item['id'];?>)">刪除</a>
+                <a href="./newsUpdate.php?id=<?php echo $item['id'];?>" class="updatebtn">編輯</a>
+                <a href="javascript:;" onclick="deleteNewFn(<?php echo $item['id'];?>)" class="deletebtn">刪除</a>
             </div>
         </div>
         <?php } ?>

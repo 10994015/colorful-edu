@@ -159,7 +159,7 @@
     }
     .news > a{
         text-align: center;
-        background-color: #14844c;
+        background-color: #1484c4;
         font-weight: 600;
         text-decoration: none;
         width:150px;
@@ -213,7 +213,7 @@
         display: block;
         border:none;
         outline: none;
-        background-color: #14844c;
+        font-weight: 600;
         text-align: center;
         line-height: 35px;
         color:#fff;
@@ -222,17 +222,23 @@
         cursor: pointer;
         font-size: 16px;
     }
+    .btnbox > .updatebtn{
+        background-color: #1484c4;
+    }
+    .btnbox > .deletebtn{
+        background-color: #f00;
+    }
 }
 
 #newCreate{
     background-color: #212121;
-    color:#fff;
     width:100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     h3{
+        color:#fff;
         text-align: center;
     }
     #beforesmallImg{
@@ -253,14 +259,21 @@
         align-items: center;
         width:500px;
         margin:auto;
+        #fileimgBtn{
+            color:#fff;
+        }
+        > label{
+            color:#fff;
+        }
         >.focus{
             margin-top: 10px;
+            color:#fff;
             >label{
                 margin:0 10px;
             }
         }
     }
-    form >input , form textarea{
+    form >input {
         width:100%;
         margin:10px 0;
         height: 30px;
@@ -270,13 +283,29 @@
         align-items: center;
     }
     form textarea{
-        height: 200px;
-        resize: none;
+        // height: 200px;
+        // resize: none;
+        width:100%;
+        margin:10px 0;
+        color:#000;
     }
-    form >div{
+    form> p {
+        color:#fff;
+        align-self:flex-start;
+    }
+    form >.focus{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    form > #createSubmit{
+        width:150px;
+        height: 45px;
+        background-color: #1484c4;
+        color:#fff;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
     }
     #uplaodImgBox{
         width:100%;
@@ -422,6 +451,7 @@
         display: block;
         cursor: pointer;
         margin-bottom: 8px;
+        margin-top: 15px;
     }
     #addurlbtn{
         width:110px;
@@ -545,7 +575,6 @@
     justify-content: center;
     align-items: center;
     background-color: #212121;
-    color:#fff;
     padding: 50px 0;
     > form{
         width:600px;
@@ -554,6 +583,8 @@
         align-items: center;
         >.focus{
             margin-top: 10px;
+            color:#fff;
+
             >label{
                 margin:0 10px;
             }
@@ -568,10 +599,14 @@
             text-align: center;
             line-height: 35px;
             cursor:pointer;
+            color:#fff;
+
         }
         >label{
             display: flex;
             align-items: center;
+            color:#fff;
+
         }
         >img{
             width:250px;
@@ -582,11 +617,17 @@
         >p{
             font-weight: 600;
             margin-top: 10px;
+            color:#fff;
         }
         >input{
             width:100%;
             margin:10px 0;
             height: 30px;
+            color:#000;
+
+        }
+        >input[type='file']{
+            color:#fff;
         }
         >textarea{
             width:100%;
@@ -618,6 +659,7 @@
             font-weight: 600;
             margin-bottom: 15px;
             cursor: pointer;
+            margin-top: 15px;
         }
         > #addurlbtn{
             width:150px;
@@ -628,12 +670,14 @@
             background-color: #f1f1f1;
             color:#222;
             font-weight: 600;
+            margin-top: 15px;
             margin-bottom: 15px;
             cursor: pointer;
         }
         >.btnBox {
             display: flex;
             justify-content: center;
+            margin-top: 15px;
             > input[type='submit']{
                 width:150px;
                 height: 40px;
@@ -911,6 +955,16 @@
                     margin-right: 10px;
                     text-decoration: none;
                     margin-top: 8px;
+                }
+                >.sortbtn{
+                    width:80px;
+                    height: 30px;
+                    background-color: #14844C;
+                    color:#fff;
+                    cursor: pointer;
+                    font-weight: 600;
+                    border:none;
+                    outline: none;
                 }
             }
             
