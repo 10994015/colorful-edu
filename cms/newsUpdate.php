@@ -65,7 +65,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
         <input type="hidden" value="<?php echo $row_RS_mb['id']; ?>" name="id">
         <div class="btnBox">
             <a href="./news.php">回前頁</a>
-            <input type="submit" value="編輯">
+            <input type="submit" value="儲存">
         </div>
     </form>
     <div id="updateImgBox">
@@ -104,6 +104,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
      CKEDITOR.replace('content',{
         extraplugins:'filebrowser',
         height:300,
+        width:700,
         filebrowserUploadMethod:"form",
         filebrowserUploadUrl:"ckeditor_upload.php"
     });

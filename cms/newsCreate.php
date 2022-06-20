@@ -101,6 +101,7 @@ if(isset($_SESSION['username'])){
     CKEDITOR.replace('content',{
         extraplugins:'filebrowser',
         height:300,
+        width:700,
         filebrowserUploadMethod:"form",
         filebrowserUploadUrl:"./ckeditor_upload.php"
     });

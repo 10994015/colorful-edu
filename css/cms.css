@@ -397,7 +397,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 500px;
+  width: 700px;
   margin: auto;
 }
 
@@ -421,7 +421,9 @@
 #newCreate form > input {
   width: 100%;
   margin: 10px 0;
-  height: 30px;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 10px;
 }
 
 #newCreate form > label {
@@ -433,7 +435,7 @@
           align-items: center;
 }
 
-#newCreate form textarea {
+#newCreate form > textarea {
   width: 100%;
   margin: 10px 0;
   color: #000;
@@ -515,7 +517,7 @@
 }
 
 #newCreate #uplaodImgBox > .box > form > input {
-  width: 80%;
+  width: 100%;
 }
 
 #newCreate #uploadImgBtn {
@@ -562,7 +564,7 @@
 }
 
 #newCreate #selectImgBox > .box {
-  width: 800px;
+  width: 700px;
   height: 500px;
   background-color: #fff;
   display: -webkit-box;
@@ -826,7 +828,7 @@
 }
 
 #newsUpdate > form {
-  width: 600px;
+  width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,13 +885,16 @@
   font-weight: 600;
   margin-top: 10px;
   color: #fff;
+  margin-bottom: 10px;
 }
 
 #newsUpdate > form > input {
   width: 100%;
-  margin: 10px 0;
-  height: 30px;
+  height: 40px;
   color: #000;
+  border-radius: 20px;
+  padding: 0 10px;
+  outline: none;
 }
 
 #newsUpdate > form > input[type='file'] {
@@ -899,7 +904,6 @@
 #newsUpdate > form > textarea {
   width: 100%;
   margin: 10px 0;
-  resize: vertical;
 }
 
 #newsUpdate > form > #smallimglist {
@@ -967,7 +971,7 @@
   height: 40px;
   outline: none;
   border: none;
-  background-color: #14844C;
+  background-color: #B80816;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
@@ -1999,13 +2003,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  width: 700px;
 }
 
 #create_course > form > input {
   width: 100%;
-  height: 35px;
+  height: 40px;
   margin: 5px 0;
+  padding: 0 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px #ccc solid;
 }
 
 #create_course > form > a {
@@ -2029,7 +2037,12 @@
 
 #create_course > form > select {
   width: 100%;
-  height: 30px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px #ccc solid;
+  cursor: pointer;
 }
 
 #create_course > form > .urlbox {
@@ -2038,7 +2051,11 @@
 
 #create_course > form > .createTypeBtn {
   width: 150px;
-  margin: 5px 0;
+  margin: 10px 0;
+  background-color: #B80816;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
 }
 
 #create_course > form > label {
@@ -2048,24 +2065,27 @@
 #create_course > form > textarea {
   width: 100%;
   resize: vertical;
-  margin: 3px 0;
+  margin: 10px 0;
 }
 
-#create_course > form > #listnameBox {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#create_course > form > input[type="submit"] {
+  width: 150px;
+  margin: 10px auto;
+  cursor: pointer;
+  background-color: #B80816;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
 }
 
-#create_course > form > #listnameBox > input {
-  width: 100%;
-  height: 30px;
-  margin: 3px 0;
+#create_course > form > input[type="submit"]:hover {
+  background-color: #85050f;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #course {
@@ -2267,13 +2287,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 400px;
+  width: 700px;
 }
 
 #courseupdate > form > input {
   width: 100%;
-  height: 35px;
+  height: 40px;
   margin: 5px 0;
+  padding: 0 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px #ccc solid;
 }
 
 #courseupdate > form > a {
@@ -2297,11 +2321,16 @@
 
 #courseupdate > form > select {
   width: 100%;
-  height: 30px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 20px;
+  outline: none;
+  border: 1px #ccc solid;
+  cursor: pointer;
 }
 
-#courseupdate > form > .urlbox {
-  margin-bottom: 15px;
+#courseupdate > form > p {
+  margin-top: 5px;
 }
 
 #courseupdate > form > .createTypeBtn {
@@ -2310,61 +2339,30 @@
 }
 
 #courseupdate > form > label {
-  margin: 3px 0;
+  margin: 5px 0;
 }
 
 #courseupdate > form > textarea {
   width: 100%;
   resize: vertical;
-  margin: 3px 0;
+  margin-top: 5px;
 }
 
-#courseupdate > form > #listnameBox {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#courseupdate > form > #listnameBox > input {
-  width: 100%;
-  height: 30px;
-  margin: 3px 0;
-}
-
-#courseupdate > form > #changeimg {
-  width: 200px;
-  height: 35px;
-  line-height: 35px;
-  text-align: center;
+#courseupdate > form > input[type="submit"] {
+  width: 150px;
+  margin: 10px auto;
   cursor: pointer;
-  background-color: rgba(255, 0, 0, 0.623);
+  background-color: #B80816;
+  outline: none;
+  border: none;
   color: #fff;
   font-weight: 600;
-  margin: 6px 0;
+  font-size: 16px;
 }
 
-#courseupdate > form > .courselistBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: #ccc solid 1px;
-  padding: 3px 0;
-}
-
-#courseupdate > form > .courselistBox > small {
-  width: 90%;
-}
-
-#courseupdate > form > .courselistBox > a {
-  color: #f00;
-  text-decoration: none;
+#courseupdate > form > input[type="submit"]:hover {
+  background-color: #85050f;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=cms.css.map */
