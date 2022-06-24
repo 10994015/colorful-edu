@@ -25,6 +25,7 @@ if(isset($_GET['id'])){
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?>
         <div id="updateSortBanner">
             <form action="./updataSortChk.php" method="post">
                 <input type="text" value="<?php echo $row_sort['sortnum']; ?>" name="sort">

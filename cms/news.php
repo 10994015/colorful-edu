@@ -24,6 +24,8 @@ if(isset($_SESSION['username'])){
 <body>
 <div id="news">
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?>
+    
     <div class="news">
         <a href="./newsCreate.php">新增公告</a>
         <?php foreach($RS_mb as $item){ ?>

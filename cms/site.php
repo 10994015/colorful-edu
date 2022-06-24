@@ -85,6 +85,7 @@ if (isset($_FILES['upload_file'])) {
 </head>
 <body>
 <?php include_once('./header.php'); ?>
+<?php include_once('./toolbar.php'); ?>
     <div id="site">
         <form name="uploadForm" enctype="multipart/form-data" method="POST" action="">
             <p> (上傳的檔案名稱請符合英數字及減號或底線，檔案類型必須是jpg、png、gif，檔案容量必須小於1M) </p>

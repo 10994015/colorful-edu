@@ -1,6 +1,6 @@
 <?php
 require_once('../config/conn.php');
-
+session_start();
 $sql_str_text = "SELECT * FROM storetext";
 $RS_store_text = $conn -> query($sql_str_text);
 
@@ -31,6 +31,7 @@ if(isset($_POST['name'])){
 </head>
 <body>
     <?php include_once('header.php'); ?>
+    <?php include_once('./toolbar.php'); ?>
     <div id="storeText">
         <h2>新增企業名稱</h2>
         <div id="textBox">

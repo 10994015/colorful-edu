@@ -85,6 +85,7 @@ if(isset($_SESSION['username'])){
 </head>
 <body>
 <?php include_once('./header.php');?>
+<?php include_once('./toolbar.php'); ?>
     <div id="uploadImg">
        
         <form name="uploadForm" enctype="multipart/form-data" method="POST" action="">

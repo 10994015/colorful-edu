@@ -34,6 +34,8 @@ if(isset($_GET['id']) && $_GET['id']!=""){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
+<?php include_once('./header.php'); ?>
+<?php include_once('./toolbar.php'); ?>
    <div id="newsUpdate">
     <form action="./chkupdateNews.php" method="post" enctype="multipart/form-data">
         <!-- <span id="updateImgBtn">編輯封面</span> -->

@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?> 
     <div id="createSite">
         <form action="./createSiteChk.php" method="post">
             <h2>新增場地</h2>

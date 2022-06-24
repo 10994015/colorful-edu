@@ -1,5 +1,6 @@
 <?php
 require_once('../config/conn.php');
+session_start();
 try{
     $sql_str = "SELECT * FROM store";
     $RS_store = $conn -> query($sql_str);
@@ -84,6 +85,7 @@ if (isset($_FILES['upload_file'])) {
 </head>
 <body>
     <?php include_once('./header.php');?>
+    <?php include_once('./toolbar.php'); ?>
        <div id="store">
         <form name="uploadForm" enctype="multipart/form-data" method="POST" action="">
                 <p> (上傳的檔案名稱請符合英數字及減號或底線，檔案類型必須是jpg、png、gif，檔案容量必須小於1M) </p>

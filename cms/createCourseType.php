@@ -16,6 +16,7 @@ $RS_coursetype = $conn -> query($sql_str);
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?> 
     <div id="createCourseType">
         <form action="./createCourseTypeChk.php" method="post">
             <h2>新增課程類別</h2>

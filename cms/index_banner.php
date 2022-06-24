@@ -25,6 +25,7 @@ try{
 </head>
 <body>
 <?php include_once('./header.php'); ?>
+<?php include_once('./toolbar.php'); ?> 
     <div id="index_banner">
         <a href="./create_index_banner.php">點擊新增輪播圖</a>
         <div class="imgBox">

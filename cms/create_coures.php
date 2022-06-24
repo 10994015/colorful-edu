@@ -1,5 +1,6 @@
 <?php
 require_once('../config/conn.php');
+session_start();
 $sql_str = "SELECT * FROM coursetype ORDER BY id ASC";
 $RS_course_type = $conn -> query($sql_str);
 
@@ -16,6 +17,7 @@ $RS_course_type = $conn -> query($sql_str);
 </head>
 <body>
 <?php include_once('./header.php'); ?>
+<?php include_once('./toolbar.php'); ?> 
     <div id="create_course">
         <form action="create_course_chk.php" method="post">
             <p>課程類別:</p>

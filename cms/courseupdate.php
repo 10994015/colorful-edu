@@ -33,6 +33,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?> 
     <div id="courseupdate">
         <form action="./courseupdateChk.php" method="post">
             <p>課程類別:</p>

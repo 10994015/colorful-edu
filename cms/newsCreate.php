@@ -18,19 +18,19 @@ if(isset($_SESSION['username'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
-    <title>新增文章</title>
+    <title>新增最新公告</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="../css/cms.css">
 </head>
 <body>
    <div id="newCreate">
        <?php include_once('./header.php'); ?> 
+       <?php include_once('./toolbar.php'); ?> 
     <div class="createNews">
-            <h3>新增公告</h3>
             <form action="./newsCreateCheck.php" method="POST" enctype="multipart/form-data">
                 <!-- <div id="selectImgBtn">選擇封面照</div> -->
-                <p>上傳封面照</p>
                 <input type="file" name="imgsrc"  id="fileimgBtn">
+                <label for="fileimgBtn" class="chooseFile"><i class="fa-solid fa-image"></i>選擇封面照</label>
                 <!-- <img src="../images/no.png" id="beforeImg"> -->
                 <label for="show"> <input type="checkbox" value="" id="show" name="isShow"> <p>顯示</p></label>
                 <div class="focus"> 

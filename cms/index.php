@@ -16,6 +16,7 @@ if(isset($_SESSION['username'])){
 <body>
     <div id="index">
         <?php include_once('./header.php'); ?>
+        <?php include_once('./toolbar.php'); ?> 
         <div id="content">
             <h2>~歡迎來到冰芬管理後台~</h2>
         </div>

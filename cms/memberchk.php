@@ -21,6 +21,7 @@ if(isset($_POST['member'])){
           $row_RS = $RS -> fetch(PDO::FETCH_ASSOC);
          
           $_SESSION['username']  = $row_RS['username'];   //將會員名稱記錄到SESSION系統變數
+          $_SESSION['name']  = $row_RS['name'];   //將會員名稱記錄到SESSION系統變數
           $url = './';  //登入成功要前往的位址
        
         }else{

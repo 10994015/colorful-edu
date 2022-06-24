@@ -27,6 +27,7 @@ if(isset($_GET['site']) && $_GET['site']!=""){
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?>
     <div id="sitePhoto">
         <h2>照片牆</h2>
         <div class="photoList">

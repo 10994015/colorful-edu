@@ -34,6 +34,7 @@ if(isset($_SESSION['username'])){
 <body>
    <div id="create_index_banner">
        <?php include_once('./header.php'); ?>
+       <?php include_once('./toolbar.php'); ?> 
 
         <form action="./uploadBannerChk.php" method="post" enctype="multipart/form-data">
              <div id="selectBannerBoxBtn">選擇banner</div>

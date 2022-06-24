@@ -1,5 +1,6 @@
 <?php
 require_once('../config/conn.php');
+session_start();
 $sql_str = "SELECT * FROM course ORDER BY id DESC";
 $RS_course = $conn -> query($sql_str);
 ?>
@@ -15,6 +16,7 @@ $RS_course = $conn -> query($sql_str);
 </head>
 <body>
     <?php include_once('./header.php'); ?>
+    <?php include_once('./toolbar.php'); ?> 
     <div id="course">
        <a href="./create_coures.php">新增課程</a>
        <div class="courseList">
