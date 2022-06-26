@@ -1,6 +1,6 @@
 <?php
 require_once('../config/conn.php');
-
+session_start();
 if(isset($_GET['id']) && $_GET['id']!=""){
     try{
         $id = $_GET['id'];
@@ -29,7 +29,7 @@ if(isset($_GET['id']) && $_GET['id']!=""){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
-    <title>編輯</title>
+    <title>編輯文章</title>
     <link rel="stylesheet" href="../css/cms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
@@ -39,7 +39,9 @@ if(isset($_GET['id']) && $_GET['id']!=""){
    <div id="newsUpdate">
     <form action="./chkupdateNews.php" method="post" enctype="multipart/form-data">
         <!-- <span id="updateImgBtn">編輯封面</span> -->
-        <input type="file" name="imgsrc" value="0" id="imgsrc">
+        <input type="file" name="imgsrc" value="0" id="imgsrc" hidden="hidden">
+        <label for="imgsrc" class="chooseFile"><i class="fa-solid fa-image"></i>選擇封面照</label>
+        <span id="fileText">尚未選擇圖片</span>
         <img src="../images/img_upload2/<?php echo $row_RS_mb['imgsrc'];?>" id="smallimg">
         <label for="show"> <input type="checkbox" name="isShow" id="show" value="<?php echo $row_RS_mb['isShow'];?>"> <p>顯示</p></label>
         <?php if($row_RS_mb['focus']==1){?>
@@ -103,6 +105,15 @@ if(isset($_GET['id']) && $_GET['id']!=""){
    <script src="../js/newsUpdate.js"></script>
 
    <script>
+    const fileimgBtn = document.getElementById('imgsrc');
+    const fileText = document.getElementById('fileText');
+    fileimgBtn.addEventListener('change',()=>{
+        if(fileimgBtn.value){
+            fileText.innerHTML = fileimgBtn.value;
+        }else{
+            fileText.innerHTML = "尚未選擇圖片";
+        }
+    })
      CKEDITOR.replace('content',{
         extraplugins:'filebrowser',
         height:300,

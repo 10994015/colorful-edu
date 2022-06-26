@@ -30,7 +30,9 @@ if(isset($_SESSION['username'])){
             <form action="./newsCreateCheck.php" method="POST" enctype="multipart/form-data">
                 <!-- <div id="selectImgBtn">選擇封面照</div> -->
                 <input type="file" name="imgsrc"  id="fileimgBtn">
+                
                 <label for="fileimgBtn" class="chooseFile"><i class="fa-solid fa-image"></i>選擇封面照</label>
+                <span id="fileText">尚未選擇圖片</span>
                 <!-- <img src="../images/no.png" id="beforeImg"> -->
                 <label for="show"> <input type="checkbox" value="" id="show" name="isShow"> <p>顯示</p></label>
                 <div class="focus"> 
@@ -98,6 +100,15 @@ if(isset($_SESSION['username'])){
 <script src="https://ckeditor.com/apps/ckfinder/3.5.0/ckfinder.js"></script>
 
 <script>
+    const fileimgBtn = document.getElementById('fileimgBtn');
+    const fileText = document.getElementById('fileText');
+    fileimgBtn.addEventListener('change',()=>{
+        if(fileimgBtn.value){
+            fileText.innerHTML = fileimgBtn.value;
+        }else{
+            fileText.innerHTML = "尚未選擇圖片";
+        }
+    })
     CKEDITOR.replace('content',{
         extraplugins:'filebrowser',
         height:300,

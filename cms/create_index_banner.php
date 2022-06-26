@@ -28,7 +28,7 @@ if(isset($_SESSION['username'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="robots" content="noindex">
-    <title>上傳Banner</title>
+    <title>上傳輪播圖</title>
     <link rel="stylesheet" href="../css/cms.css">
 </head>
 <body>
@@ -39,7 +39,9 @@ if(isset($_SESSION['username'])){
         <form action="./uploadBannerChk.php" method="post" enctype="multipart/form-data">
              <div id="selectBannerBoxBtn">選擇banner</div>
              <!-- <input type="hidden" name="banner" value="" id="banner"> -->
-             <input type="file" name="banner">
+             <input type="file" name="banner" id="filebtn" hidden="hidden">
+             <label for="filebtn"" class="chooseFile"><i class="fa-solid fa-image"></i>選擇封面照</label>
+             <span id="fileText">尚未選擇圖片</span>
              <div id="createImgBox"></div>
              <input type="text" name="url" placeholder="請輸入連結...">
              <input type="text" placeholder="排序(請輸入數字)" name="sort" value="<?php echo $pre; ?>">
@@ -65,6 +67,17 @@ if(isset($_SESSION['username'])){
    </div>
 
    <script src="../js/index_banner.js"></script>
+   <script>
+   const fileimgBtn = document.getElementById('filebtn');
+    const fileText = document.getElementById('fileText');
+    fileimgBtn.addEventListener('change',()=>{
+        if(fileimgBtn.value){
+            fileText.innerHTML = fileimgBtn.value;
+        }else{
+            fileText.innerHTML = "尚未選擇圖片";
+        }
+    });
+   </script>
 </body>
 </html>
 

@@ -89,7 +89,9 @@ if (isset($_FILES['upload_file'])) {
        <div id="store">
         <form name="uploadForm" enctype="multipart/form-data" method="POST" action="">
                 <p> (上傳的檔案名稱請符合英數字及減號或底線，檔案類型必須是jpg、png、gif，檔案容量必須小於1M) </p>
-                <input type="file" name="upload_file[]" multiple>
+                <input type="file" name="upload_file[]" multiple hidden="hidden" id="fileimgBtn">
+                <label for="fileimgBtn" class="chooseFile"><i class="fa-solid fa-image"></i>選擇封面照</label>
+                <span id="fileText">尚未選擇圖片</span>
                 <input type="submit" value="確定上傳">
             </form>
             <div class="content">
@@ -102,5 +104,16 @@ if (isset($_FILES['upload_file'])) {
        </div>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
        <script src="../js/cmsStore.js"></script>
+       <script>
+       const fileimgBtn = document.getElementById('fileimgBtn');
+        const fileText = document.getElementById('fileText');
+        fileimgBtn.addEventListener('change',()=>{
+            if(fileimgBtn.value){
+                fileText.innerHTML = fileimgBtn.value;
+            }else{
+                fileText.innerHTML = "尚未選擇圖片";
+            }
+        });
+       </script>
 </body>
 </html>

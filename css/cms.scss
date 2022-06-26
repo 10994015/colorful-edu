@@ -374,6 +374,11 @@
         font-weight: 500;
         border-radius: 50px;
     }
+    form > #fileText{
+        color:#ccc;
+        margin-bottom: 15px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
     #uplaodImgBox{
         width:100%;
         height: 100vh;
@@ -645,6 +650,26 @@
     background-color: #212121;
     padding: 50px 0;
     padding-top:80px;
+    form > label.chooseFile{
+        width:180px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+        background-color: #FAAA00;
+        padding: 0;
+        margin:10px 0;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    form > #fileText{
+        color:#ccc;
+        margin-bottom: 15px;
+        background-color: transparent;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
     > form{
         width:700px;
         display: flex;
@@ -1054,6 +1079,26 @@
     color:#fff;
     padding: 50px 0;
     padding-top:80px;
+    form > label.chooseFile{
+        width:180px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+        background-color: #FAAA00;
+        padding: 0;
+        margin:10px 0;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    form > #fileText{
+        color:#ccc;
+        margin-bottom: 15px;
+        background-color: transparent;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
     form{
         display: flex;
         flex-direction: column;
@@ -1363,6 +1408,26 @@
     color:#fff;
     padding: 50px 0;
     padding-top:80px;
+    form > label.chooseFile{
+        width:180px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#fff;
+        background-color: #FAAA00;
+        padding: 0;
+        margin:10px 0;
+        cursor: pointer;
+        font-weight: 500;
+        border-radius: 50px;
+    }
+    form > #fileText{
+        color:#ccc;
+        margin-bottom: 15px;
+        background-color: transparent;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
     > form{
         display: flex;
         justify-content: center;
@@ -1373,6 +1438,12 @@
             width:150px;
             margin-top: 15px;
             cursor: pointer;
+            background-color: #2391D7;
+            color:#fff;
+            height: 35px;
+            border:none;
+            outline: none;
+            border-radius: 25PX;
         }
     }
     >.content{
