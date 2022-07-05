@@ -42,7 +42,7 @@ catch(PDOException $e){
               <img src="./images/img_upload2/<?php echo $item['imgsrc']; ?>" alt="">
               <div class="content">
                   <h2 class="title"><?php echo $item['title'];?></h2>
-                  <p><?php echo nl2br($item['content']); ?> </p>
+                  <div class="content-p"><?php echo nl2br($item['content']); ?> </div>
                   <a href="?page=post&id=<?php echo $item['id']; ?>" class="continue"><span>CONTINUE READING</span> <i class="fas fa-arrow-right"></i></a>
               </div>
           </div>

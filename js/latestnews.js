@@ -13,6 +13,17 @@ searchBox.addEventListener('keyup',(e)=>{
     let keyword = searchBox.value;
     window.location.href = `?page=latestnews&search=${keyword}`;
 })
+// let contxt = "";
+const contentP = document.getElementsByClassName('content-p');
+let contentImg = '';
+for(let i=0;i<contentP.length;i++){
+    contentImg = contentP[i].querySelectorAll('img');
+    for(let j=0;j<contentImg.length;j++){
+        contentImg[j].style.display = "none";
+    }
+    
+}
+
 // const cleraList = ()=>{
 //     for(let i=0;i<postItem.length;i++){
 //         postItem[i].style.display = "none";

@@ -18,27 +18,29 @@
 
 <?php if($total>=1){ ?>
     <div id="text">
-      <h2><?php echo $row_RS['title'];?></h2>
-      <img src="./images/img_upload2/<?php echo $row_RS['imgsrc'];?>" alt="">
-      <p><?php echo nl2br($row_RS['content']);?></p>
-      <div class="smallImgBox">
-          <!-- <img class="smallImg" src="<?php echo $row_RS['imgsrc'];?>"> -->
-          <?php echo $row_RS['smallimg'];?>
-      </div>
-      <!-- <div class="smallVideoBox">
-          <video  width="320" height="240"  controls>
-                <source  src="svideo.video" type="video/mp4" >
-          </video>
-      </div> -->
-
-      <div class="moudel" id="moudel">
+    <div class="moudel" id="moudel">
           <div class="back"></div>
           <div class="moudel-imgbox">
             <img src="" id="moudelImg">
             <i class="fa fa-times" id="closeMoudel"></i>
           </div>
       </div>
+      <h2><?php echo $row_RS['title'];?></h2>
+      <img src="./images/img_upload2/<?php echo $row_RS['imgsrc'];?>" alt="">
+      <p><?php echo nl2br($row_RS['content']);?></p>
+      <!-- <div class="smallImgBox">
+          <!-- <img class="smallImg" src="<?php echo $row_RS['imgsrc'];?>"> -->
+          <?php echo $row_RS['smallimg'];?>
+      </div> -->
+      <!-- <div class="smallVideoBox">
+          <video  width="320" height="240"  controls>
+                <source  src="svideo.video" type="video/mp4" >
+          </video>
+      </div> -->
+
+      
   </div>
+  
 <?php }else{ ?>
     <div id="error">
         <img src="./images/logo.pn" alt="">

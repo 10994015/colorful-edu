@@ -1753,7 +1753,7 @@ footer{
                     padding-bottom: 80px; 
                     margin: auto;
                 }
-                >p{
+                >.content-p{
                     color:#777;
                     font-size: 16px;
                     overflow: hidden;
@@ -2338,6 +2338,7 @@ footer{
     padding-top: 8em;
     padding-bottom: 50px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    
     @media screen and (max-width:1024px){
         width:80%;
     }
@@ -2365,6 +2366,9 @@ footer{
         font-size: 18px;
         @media screen and (max-width:1024px){
             margin:25px auto 75px;
+        }
+        img{
+            cursor: pointer;
         }
     }
     > .smallVideoBox{
@@ -2404,6 +2408,14 @@ footer{
             }
         }
     }
+    @keyframes openmoudel {
+        0%{
+            transform: scale(0);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
     >.moudel{
         width:100%;
         height: 100vh;
@@ -2430,6 +2442,7 @@ footer{
             overflow: hidden;
             z-index: 999999999999999;
             position: relative;
+            animation: openmoudel 0.2s linear;
             >img{
                 height: 600px;
                 width:auto;
