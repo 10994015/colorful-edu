@@ -5,8 +5,13 @@
     <h2>冰芬文教後台管理系統</h2>
     <div class="link">
         <!-- <a href="./uploadImg.php">上傳圖片</a> -->
+        <a href="javascript:;" id="home">首頁</a>
+        <ul id="homeel">
+            <a href="./index_banner.php">上傳首頁輪播圖</a>
+            <a href="./card.php">新增卡片</a>
+        </ul>
         <a href="./news.php">最新消息</a>
-        <a href="./index_banner.php">上傳首頁輪播圖</a>
+        
         <!-- <a href="./site.php">場地租借後台</a> -->
         <a href="./course.php">新增課程</a>
         <a href="./company.php">企業特約</a>
@@ -18,6 +23,18 @@
 const menu = document.getElementById('menu');
 const header = document.getElementById('header');
 const menuIcon = document.getElementById('menuIcon');
+
+const home = document.getElementById('home');
+const homeel = document.getElementById('homeel');
+home.addEventListener('click',()=>{
+    if(homeel.style.display === "block"){
+        homeel.style.display = "none"
+
+    }else{
+        homeel.style.display = "block"
+    }
+})
+
 menu.addEventListener('click',()=>{
     header.classList.toggle('close');
     
