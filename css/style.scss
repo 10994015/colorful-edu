@@ -618,6 +618,7 @@ footer{
         padding-top: 4em;
         padding-bottom: 50px;
         justify-content: center;
+        flex-wrap: wrap;
         @media screen and (max-width:768px){
           flex-direction: column;
           align-items: center;
@@ -1872,6 +1873,7 @@ footer{
           padding-top: 4em;
           padding-bottom: 50px;
           justify-content: center;
+          flex-wrap: wrap;
           @media screen and (max-width:768px){
             flex-direction: column;
             align-items: center;
