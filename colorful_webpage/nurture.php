@@ -17,6 +17,7 @@ $total_RS_card = $RS_card -> rowCount();
             <p><?php echo nl2br($item['content']); ?></p>
         </div>
         <?php } ?>
+      
         
     </div>
     <div class="step">
