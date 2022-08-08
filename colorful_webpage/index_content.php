@@ -148,7 +148,6 @@ try{
     <div class="partners">
         <h1>企業合作</h1>
         <div class="responsive2">
-            <div><a href="https://www.edu-aequitas.com/"><img src="./images/chin.png" alt="EA清華"></a></div>
             <div><a href="https://www.evoneic.com/"><img src="./images/evone.png" alt="憶旺智慧股份有限公司"></a></div>
             <div><a href="https://www.esoleducation.com/"><img src="./images/esol.png" alt="伊索教育"></a></div>
         </div>
