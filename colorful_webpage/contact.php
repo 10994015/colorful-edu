@@ -8,28 +8,28 @@ if(isset($_GET['send']) && $_GET['send']=='ok'){
 <div id="contact">
     <div class="banner">
         <img src="./images/contact.jpg" alt="">
-        <div class="box">
-            <div class="item">
-                <i class="fa-solid fa-phone"></i>
-                <h2>來電詢問</h2>
-                <p>
-                    冰芬美語文理補習班<br />
-                    300新竹市東區光復路一段271號3樓(原聯合補習班址、台新銀行樓上)<br />
-                    連絡電話：03-567-0018
-                </p>
-                <span>03-567-0018</span>
-            </div>
-            <div class="item">
-                <i class="fa-solid fa-comments"></i>
-                <h2>線上詢問</h2>
-                <p>歡迎於以下官方臉書專頁、Instagram及line@訊息詢問更多優惠課程及相關資訊內容喔！</p>
-                <div>
-                    <a target="_blank" href="https://www.facebook.com/icefinland/" class="icon"><i class="fab fa-facebook-square"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/colorful.institute/" class="icon"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://lin.ee/7TPK9Fd" class="icon"><i class="fab fa-line"></i></a>
+            <div class="box">
+                <div class="item">
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>來電詢問</h2>
+                    <p>
+                        冰芬美語文理補習班<br />
+                        300新竹市東區光復路一段271號3樓(原聯合補習班址、台新銀行樓上)<br />
+                        連絡電話：03-567-0018
+                    </p>
+                    <span>03-567-0018</span>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-comments"></i>
+                    <h2>線上詢問</h2>
+                    <p>歡迎於以下官方臉書專頁、Instagram及line@訊息詢問更多優惠課程及相關資訊內容喔！</p>
+                    <div>
+                        <a target="_blank" href="https://www.facebook.com/icefinland/" class="icon"><i class="fab fa-facebook-square"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/colorful.institute/" class="icon"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://lin.ee/7TPK9Fd" class="icon"><i class="fab fa-line"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
     <div class="content">
         <form action="./ref/send.php" method="post">
